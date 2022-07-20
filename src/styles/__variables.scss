@@ -1,6 +1,26 @@
 :root
-{
-  --fz-default: 15px;
-  --ff-default: Verdana, sans-serif;
+{  
+// font-size destop
+  --fz-destop-1:14px;
+  --fz-destop-2:18px;
+  --fz-destop-3:28px;
+  --fz-destop-4:40px;
+// font-size mobile
+--fz-mobile-1: 12px;
+--fz-mobile-1: 16px;
+--fz-mobile-1: 24px;
+--fz-mobile-1: 32px;
+  // font-weight
+  --fw-1:300;
+  --fw-2:400;
+  --fw-3:500;
+  --fw-4:600;
+  --fw-5:700;
+  // color
+ --color-1: #000000;
+ --color-2: #232323;
+ --color-3: #22BBEA;
+ --color-4: #FF8643;
 
 }
+
