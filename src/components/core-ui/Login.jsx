@@ -4,10 +4,14 @@ export default function Login() {
   return(
       <div>
         <form action="">
-          <label htmlFor="">
-            <input type="text"/>
-
-          </label>
+          <div className="form-group">
+            <label htmlFor="email"></label>
+            <input type="text" name="email" placeholder="Email address"/>
+          </div>
+          <div className="form-group">
+            <label htmlFor="password"></label>
+            <input type="password" name="password" placeholder="password"/>
+          </div>
         </form>
       </div>
   )

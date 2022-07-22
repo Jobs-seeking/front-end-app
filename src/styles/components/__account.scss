@@ -51,11 +51,12 @@ html{
 .account__form {
   display: flex;
   height: 1000px;
-
+  //margin-top: 10px;
   &__login, &__register{
     width: 50%;
     display: flex;
     justify-content: center;
+    padding-top: 10px;
     &--text span{
       font-size: var(--fz-destop-4);
     }

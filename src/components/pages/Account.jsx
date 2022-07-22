@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+import Login from '../core-ui/Login'
+
 export default function() {
   return(
       <div>
@@ -14,7 +17,7 @@ export default function() {
           <div className="account__form__login">
             <div className="account__form__login--text">
               <span>LOGIN</span>
-              <p>Sign in for quick reordering or to edit your subscription.</p>
+              <Login/>
             </div>
           </div>
           <div className="account__form__register">
