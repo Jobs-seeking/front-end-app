@@ -3,10 +3,14 @@ import React from 'react';
 export default function JobCard(props)
 {
 
-    const {type, children, jobCardStyle} = props
-    const checkJobCardStyle =  STYLES.includes(jobCardStyle)
-        ? jobCardStyle
-        : STYLES[0]
+    const STYLES = [
+        ""
+    ]
+
+    // const {type, children, jobCardStyle} = props
+    // const checkJobCardStyle =  STYLES.includes(jobCardStyle)
+    //     ? jobCardStyle
+    //     : STYLES[0]
     return (
 
       <div className="job-card">
