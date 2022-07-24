@@ -13,10 +13,10 @@ export default function Job() {
         <h4 className="job-infor__top">Web Designer</h4>
         <div className="job-infor__bot">
           <p>
-            <MdLocationOn /> Da Nang
+            <MdLocationOn className="icon" /> Da Nang
           </p>
           <p>
-            <GoClock /> 3 months ago
+            <GoClock className="icon" /> 3 months ago
           </p>
         </div>
       </div>

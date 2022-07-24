@@ -13,7 +13,7 @@ export default function CompanyProfileInfor() {
         <h4>Passerelles numériques</h4>
         <p>IT company</p>
         <p>
-          <MdLocationOn /> Da Nang
+          <MdLocationOn className="icon"/> Da Nang
         </p>
       </div>
     </div>

@@ -2,6 +2,10 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+.icon {
+  color: orangered;
+}
+
 .company-profile {
   position: relative;
 
@@ -41,6 +45,9 @@ html {
     &__right {
       margin: auto 0;
       line-height: 25px;
+      // h4{
+      //   font-weight: bold;
+      // }
     }
   }
 
@@ -135,5 +142,68 @@ html {
     height: 100%;
     background-color: lightblue;
     border-radius: 1rem;
+  }
+}
+
+.student-profile {
+  &-infor {
+    padding: 5% 0;
+  
+    &__top {
+      padding: 2% 5%;
+      border-bottom: 1px solid gray;
+      display: grid;
+      grid-template-columns: 30% 60% 10%;
+      justify-content: center;
+      width: 42%;
+      margin: 0 auto;
+      background-color: lightgray;
+      border-radius: 15px 15px 0 0;
+
+      &__left {
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          border: 3px solid orangered;
+          object-fit: cover;
+          object-position: 50% 50%;
+        }
+      }
+
+      &__mid {
+        line-height: 25px;
+        margin: auto 0;
+      }
+
+      &__right {
+        margin: auto 0;
+      }
+    }
+
+    &__bot {
+      line-height: 50px;
+      padding: 2% 5%;
+      width: 42%;
+      margin: 0 auto;
+      background-color: lightgray;
+      border-radius: 0 0 15px 15px;
+    }
+  }
+}
+.applied-job{
+  width: 15%;
+  margin-left: 24%;
+  background-color: lightgray;
+  display: flex;
+  gap: 5%;
+  line-height: 25px;
+  padding: 1%;
+  border-radius: 20px;
+  &__right{
+    font-size: 30px;
+    font-weight: bold;
+    color: orangered;
+    margin: auto;
   }
 }
