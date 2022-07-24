@@ -15,7 +15,7 @@ export default function Login() {
             data.append("email", dataForm.email)
             data.append("password", dataForm.password)
             console.log(dataForm)
-            const res = axios.post(BASE_URL, data);
+            // const res = axios.post(BASE_URL, data);
         }
     }
   return(
@@ -31,10 +31,10 @@ export default function Login() {
             <input type="password" name="password" placeholder="Password"
             onChange={(e) => setDataForm({...dataForm, "password":e.target.value})}/>
           </div>
-            <button className="login__submit--btn" onClick={()=>onLogin()}></button>
+            <button className="login__submit--btn" onClick={()=>onLogin()}>Login</button>
         </form>
           <div className="forgot__password">
-              Forgot password?
+              <a href="">Forget password?</a>
           </div>
       </div>
   )

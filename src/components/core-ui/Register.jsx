@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+// import axios from 'axios';
+// import BASE_URL from '../../utils/constants'
 
 
 export default function Register() {
@@ -12,14 +14,14 @@ export default function Register() {
 
     const [token, setToken] = useState("")
 
-    const getToken = async () => {
-        const response = axios.get(BASE_URL)
-        setToken({token: response.data.token})
-    }
+    // const getToken = async () => {
+    //     const response = axios.get(BASE_URL)
+    //     setToken({token: response.data.token})
+    // }
 
-    useEffect(() => {
-        getToken()
-    },[])
+    // useEffect(() => {
+    //     getToken()
+    // },[])
     return(
       <div className="form__signup">
           <form action="">
@@ -43,7 +45,7 @@ export default function Register() {
                   <label htmlFor="password"></label>
                   <input type="password" name="password" placeholder="Confirm password"/>
               </div>
-              <button className="register__submit--btn"></button>
+              <button className="register__submit--btn">Sign up</button>
           </form>
       </div>
   )

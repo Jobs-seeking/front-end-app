@@ -105,7 +105,7 @@ html{
     display: flex;
     justify-content: center;
     padding-right: 16%;
-
+    margin-top: 1rem;
 
   }
 }
@@ -136,7 +136,6 @@ html{
     border-bottom: 1px solid var(--color-4);
     &::placeholder{
       color: var(--color-4);
-
     }
   }
 }
@@ -148,6 +147,10 @@ html{
   height: 4.5rem;
   transition: 0.5s;
   margin-left: 12%;
+  font-weight: var(--fw-3);
+  font-size: var(--fz-destop-2);
+  color: white;
+  cursor: pointer;
 }
 
 .register__submit--btn{
