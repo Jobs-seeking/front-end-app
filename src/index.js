@@ -2,11 +2,15 @@ import React from 'react';
 import '../src/styles/__app.scss';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
+// import EditAccount from './components/pages/EditAccount';
+import EditStudentAccount from './components/pages/EditStudentAccount';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <h1>ho quoc ttri</h1>
+    <h1><EditStudentAccount/></h1>
   </React.StrictMode>
 );
 
