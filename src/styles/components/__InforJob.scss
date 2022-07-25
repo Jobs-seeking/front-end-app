@@ -1,0 +1,30 @@
+.Information{
+    font-size:14px;
+    border: 1px lightgray double;
+    display:flex;
+    width: 54%;
+    margin: 0 0 5%  0 ;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 0 lightgray, 0 12px 20px 0 lightgray;
+    &__Denform{
+        margin-left:4%;
+    }
+
+}
+.Time-posting{
+    font-size: 12px;
+    color: lightgray;
+}
+.Content-recruiment{
+    padding: 3% 0;
+}
+// .Information{
+//     margin: 4% 0;
+// }
+
+@media only screen and (max-width : 850px) {
+    .Saving-descrpition{
+        width: 100%;
+    }
+  }
