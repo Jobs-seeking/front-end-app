@@ -1,12 +1,13 @@
 import React from 'react';
 import '../src/styles/__app.scss';
 import ReactDOM from 'react-dom/client';
+import _BasePage from './components/pages/_BasePage';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <h1>ho quoc ttri</h1>
+   <_BasePage></_BasePage>
   </React.StrictMode>
 );
 
