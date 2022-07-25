@@ -4,6 +4,7 @@ html {
 
 .icon {
   color: orangered;
+  // font-size: 20px;
 }
 
 .company-profile {
@@ -50,7 +51,6 @@ html {
       // }
     }
   }
-
 
   &-job {
     margin-top: 3%;
@@ -127,11 +127,9 @@ html {
       gap: 5%;
     }
   }
-
 }
 
 .details {
-
   // span {
   //     padding-bottom: 5%;
   //     width: 10rem;
@@ -148,12 +146,12 @@ html {
 .student-profile {
   &-infor {
     padding: 5% 0;
-  
+    
     &__top {
       padding: 2% 5%;
       border-bottom: 1px solid gray;
       display: grid;
-      grid-template-columns: 30% 60% 10%;
+      grid-template-columns: 25% 60% 10%;
       justify-content: center;
       width: 42%;
       margin: 0 auto;
@@ -184,14 +182,20 @@ html {
     &__bot {
       line-height: 50px;
       padding: 2% 5%;
-      width: 42%;
       margin: 0 auto;
+      width: 42%;
       background-color: lightgray;
-      border-radius: 0 0 15px 15px;
+      border-radius: 0 0 15px 15px; 
+      table{
+        width: 100%;
+      }
+      .data-col{
+        text-align: right;
+      }
     }
   }
 }
-.applied-job{
+.applied-job {
   width: 15%;
   margin-left: 24%;
   background-color: lightgray;
@@ -200,7 +204,7 @@ html {
   line-height: 25px;
   padding: 1%;
   border-radius: 20px;
-  &__right{
+  &__right {
     font-size: 30px;
     font-weight: bold;
     color: orangered;
