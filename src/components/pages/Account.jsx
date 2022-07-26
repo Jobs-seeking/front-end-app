@@ -1,8 +1,7 @@
 import React from 'react';
-
-
 import Login from '../core-ui/Login'
 import Register from "../core-ui/Register";
+
 
 export default function() {
   return(
