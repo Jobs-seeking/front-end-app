@@ -1,13 +1,13 @@
 import React from 'react';
 import '../src/styles/__app.scss';
 import ReactDOM from 'react-dom/client';
+import _BasePage from './components/pages/_BasePage';
 import reportWebVitals from './reportWebVitals';
-import BasePage from './components/pages/_BasePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BasePage></BasePage>
+   <_BasePage></_BasePage>
   </React.StrictMode>
 );
 
