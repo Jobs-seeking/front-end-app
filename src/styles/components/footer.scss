@@ -49,6 +49,9 @@
     .footer--content{
         flex-direction: column;
     }
+    .Footer a{
+        font-size: var(--fz-destop-2);
+    }
 }
 @media screen and (min-width: 1061px){
     .nav-list{
