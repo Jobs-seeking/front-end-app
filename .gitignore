@@ -23,5 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 /.idea/
 
-package-logk.json
+package-lock.json
 packege.json

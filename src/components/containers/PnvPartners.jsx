@@ -13,19 +13,6 @@ export default function PnvPartners() {
                 <PartnerLogo/>
                 <PartnerLogo/>
                 <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-
             </div>
         </section>
     )
