@@ -3,9 +3,9 @@
     margin: 20vh auto;
     display: flex;
     flex-direction: column;
-    gap: 3vh;
-    align-items: center;
-    justify-content: center;
+    gap: 5vh;
+    // align-items: center;
+    justify-content:left;
     & .titel{
         display: flex;
         flex-direction: column;
@@ -26,5 +26,19 @@
         align-items: center;
         justify-content: center;
         margin: 0 auto;
+    }
+    & .content--btn{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    .content {
+        & .content--btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+        }
     }
 }
