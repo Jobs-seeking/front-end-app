@@ -1,14 +1,13 @@
-:root {
-  // font-size destop
-  --fz-destop-1: 14px;
-  --fz-destop-2: 18px;
-  --fz-destop-3: 28px;
-  --fz-destop-4: 40px;
-  // font-size mobile
-  --fz-mobile-1: 12px;
-  --fz-mobile-1: 16px;
-  --fz-mobile-1: 24px;
-  --fz-mobile-1: 32px;
+
+:root
+{  
+// font-size destop
+  --fz-destop-1:14px;
+  --fz-destop-2:18px;
+  --fz-destop-3:28px;
+  --fz-destop-4:40px;
+  --fz-destop-5:3.7vw;
+  
   // font-weight
   --fw-1: 300;
   --fw-2: 400;
@@ -16,8 +15,19 @@
   --fw-4: 600;
   --fw-5: 700;
   // color
-  --color-1: #000000;
-  --color-2: #232323;
-  --color-3: #22bbea;
-  --color-4: #ff8643;
+ --color-1: #000000;
+ --color-2: #232323;
+ --color-3: #22BBEA;
+ --color-4: #FF8643;
+ --color-5: #ffffff; 
+}
+@media only screen and (max-width: 798px){
+  :root
+  {  
+  // font-size destop
+    --fz-destop-1:12px;
+    --fz-destop-2:16px;
+    --fz-destop-3:24px;
+    --fz-destop-4:32px;
+}
 }

@@ -1,5 +1,6 @@
 import { MdLocationOn } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
+import image from "../../../assets/images/image.png"
 
 export default function StudentProfileInfor() {
   return (
@@ -7,7 +8,7 @@ export default function StudentProfileInfor() {
       <div className="student-profile-infor__top">
         <div className="student-profile-infor__top__left">
           <img
-            src="https://play-lh.googleusercontent.com/okxWlMuA3h9G1vVy-MJY57V300Mykjc8yhbJGtQCuYXOCC1wiRFvk1XmQLuycR3Rgh8"
+            src={image}
             alt=""
           />
         </div>
