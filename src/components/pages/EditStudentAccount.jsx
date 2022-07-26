@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../core-ui/Button";
+import Input from "../core-ui/Input";
 
 export default function EditStudentAccount() {
   return (
@@ -14,7 +15,7 @@ export default function EditStudentAccount() {
             />
             <div className="user-name">Ngô Luyên</div>
             <div className="upload-picture">
-            <button class="btn btn--outline btn-item">Upload a picture</button>
+            <button className="btn btn--outline btn-item">Upload a picture</button>
               <input type="file" name="myfile" />
             </div>
           </div>
@@ -23,35 +24,37 @@ export default function EditStudentAccount() {
             <form action="">
               <div className="edit-item">
                 <div className="edit item-left ">
-                  <div className="field_username fields">
+                  <div className="field_item fields">
                     <label>Username</label>
-                    <input type="text" name="Username" required="" />
+                    <Input inputStyle="field_item "></Input>
                   </div>
-                  <div className="field_gender fields">
+                  <div className="field_item fields">
                     <label>Gender</label>
+                    <Input inputStyle="select"> 
                     <select className="select">
                       <option value="">Select an option&hellip;</option>
                       <option value="male">Male</option>
                       <option value="female">Female</option>
                       <option value="other">Orther</option>
                     </select>
+                    </Input>
                   </div>
-                  <div className="field email fields">
+                  <div className="field_item fields">
                     <label>Email</label>
                     <input type="email" name="email" required="" />
                   </div>
                 </div>
                 <div className="edit item-right">
-                  <div className="field_bod fields">
+                  <div className="field_item fields">
                     <label>Birth of day</label>
-                    <input type="tel" name="phone" id="Phone_" />
+                    <Input type="date" inputStyle="field_item "></Input>
                   </div>
-                  <div className="field_phone fields">
+                  <div className="field_item fields">
                     <label>Phone</label>
-                    <input type="tel" name="phone" />
+                    <Input inputStyle="field_item "></Input>
                   </div>
                   <div className="fields">
-                    <label htmlFor="Address_">Address</label>
+                    <label> Address</label>
                     <textarea className="field_address" defaultValue={""} />
                   </div>
                 </div>
