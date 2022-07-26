@@ -1,0 +1,1 @@
+export {default as profileBanner} from '../images/profile-banner.png';
