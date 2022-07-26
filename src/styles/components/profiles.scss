@@ -8,13 +8,11 @@ html {
 }
 
 .company-profile {
-  position: relative;
-
   &-banner {
     z-index: -1;
     position: absolute;
     width: 100%;
-    height: 15rem;
+    height: 20rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../../assets/images/profile-banner.png);
@@ -26,11 +24,10 @@ html {
     grid-template-columns: 30% 30%;
     justify-content: center;
     z-index: 1;
-    padding-top: 7rem;
+    padding-top: 12rem;
   }
 
   &-infor {
-    height: 150px;
     display: flex;
     gap: 3%;
 
@@ -98,7 +95,7 @@ html {
   border: 1px solid white;
   box-shadow: 1px 1px 3px orange;
   // box-shadow: rgba(251, 14, 14, 0.1) 0 10px 40px 0px;
-  border-radius: 1rem;
+  border-radius: 10px;
 
   &:hover {
     background-color: lightblue;
@@ -139,24 +136,27 @@ html {
     width: 100%;
     height: 100%;
     background-color: lightblue;
-    border-radius: 1rem;
+    border-radius: 10px;
   }
 }
 
 .student-profile {
+  display: grid;
+  grid-template-columns: 20% 40%;
+  gap: 5%;
+  justify-content: center;
   &-infor {
     padding: 5% 0;
-    
+
     &__top {
-      padding: 2% 5%;
+      padding: 5% 5%;
       border-bottom: 1px solid gray;
       display: grid;
-      grid-template-columns: 25% 60% 10%;
+      grid-template-columns: 30% 60% 10%;
       justify-content: center;
-      width: 42%;
       margin: 0 auto;
       background-color: lightgray;
-      border-radius: 15px 15px 0 0;
+      border-radius: 10px 10px 0 0;
 
       &__left {
         img {
@@ -181,33 +181,34 @@ html {
 
     &__bot {
       line-height: 50px;
-      padding: 2% 5%;
+      padding: 5%;
       margin: 0 auto;
-      width: 42%;
       background-color: lightgray;
-      border-radius: 0 0 15px 15px; 
-      table{
+      border-radius: 0 0 10px 10px;
+      table {
         width: 100%;
       }
-      .data-col{
+      .data-col {
         text-align: right;
       }
     }
   }
 }
-.applied-job {
-  width: 15%;
-  margin-left: 24%;
-  background-color: lightgray;
-  display: flex;
-  gap: 5%;
-  line-height: 25px;
-  padding: 1%;
-  border-radius: 20px;
-  &__right {
-    font-size: 30px;
-    font-weight: bold;
-    color: orangered;
-    margin: auto;
+.applied {
+  padding: 10% 0;
+  &-job {
+    height: 10%;
+    background-color: lightgray;
+    display: flex;
+    gap: 5%;
+    line-height: 25px;
+    padding: 4% 10%;
+    border-radius: 10px;
+    &__right {
+      font-size: 30px;
+      font-weight: bold;
+      color: orangered;
+      margin: auto;
+    }
   }
 }
