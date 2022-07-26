@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 // import axios from 'axios';
-import BASE_URL from '../../utils/constants'
+import BASE_URL from '../../utils/constants';
 
 export default function Login() {
 
@@ -23,8 +23,10 @@ export default function Login() {
         <form action="">
           <div className="input-field">
             <label htmlFor="email"></label>
-            <input type="email" name="email" placeholder="Email address"
-            onChange={(e) => setDataForm({...dataForm, "email":e.target.value})}/>
+            {/*<input type="email" name="email" placeholder="Email address"*/}
+            {/*onChange={(e) => setDataForm({...dataForm, "email":e.target.value})}/>*/}
+            <Input type="email" name="email" placeholder="Email address"
+                   onChange={(e) => setDataForm({...dataForm, "email":e.target.value})}/>
           </div>
           <div className="input-field">
             <label htmlFor="password"></label>
