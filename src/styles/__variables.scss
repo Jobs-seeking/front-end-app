@@ -1,5 +1,11 @@
-:root
-{  
+
+:root {
+  // font-size mobile
+  --fz-mobile-1: 12px;
+  --fz-mobile-1: 16px;
+  --fz-mobile-1: 24px;
+  --fz-mobile-1: 32px;
+ 
 // font-size destop
   --fz-destop-1:14px;
   --fz-destop-2:18px;
@@ -8,11 +14,11 @@
   --fz-destop-5:3.7vw;
   
   // font-weight
-  --fw-1:300;
-  --fw-2:400;
-  --fw-3:500;
-  --fw-4:600;
-  --fw-5:700;
+  --fw-1: 300;
+  --fw-2: 400;
+  --fw-3: 500;
+  --fw-4: 600;
+  --fw-5: 700;
   // color
  --color-1: #000000;
  --color-2: #232323;
@@ -30,4 +36,3 @@
     --fz-destop-4:32px;
 }
 }
-

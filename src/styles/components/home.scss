@@ -1,0 +1,44 @@
+.content{
+    width: 88vw;
+    margin: 20vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    // align-items: center;
+    justify-content:left;
+    & .titel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+        color: var(--color-3);
+        font-size: var(--fz-destop-5);
+        font-style: italic;
+        font-weight: var(--fw-5);
+        & h1{
+        }
+    }
+    & .banner{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    & .content--btn{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    .content {
+        & .content--btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
