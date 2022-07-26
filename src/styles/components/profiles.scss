@@ -128,6 +128,7 @@ html {
 }
 
 .details {
+
   // span {
   //     padding-bottom: 5%;
   //     width: 10rem;
@@ -143,12 +144,11 @@ html {
 
 .student-profile {
   display: grid;
-  grid-template-columns: 20% 40%;
+  grid-template-columns: 20% 50%;
   gap: 5%;
   justify-content: center;
+  margin: 10% 0;
   &-infor {
-    padding: 5% 0;
-
     &__top {
       padding: 5% 5%;
       border-bottom: 1px solid gray;
@@ -186,17 +186,20 @@ html {
       margin: 0 auto;
       background-color: lightgray;
       border-radius: 0 0 10px 10px;
+
       table {
         width: 100%;
       }
+
       .data-col {
         text-align: right;
       }
     }
   }
 }
+
 .applied {
-  padding: 10% 0;
+
   &-job {
     height: 10%;
     background-color: lightgray;
@@ -205,6 +208,7 @@ html {
     line-height: 25px;
     padding: 4% 10%;
     border-radius: 10px;
+
     &__right {
       font-size: 30px;
       font-weight: bold;
