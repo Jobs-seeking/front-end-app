@@ -1,0 +1,206 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --bg-component:#EE712F;
+    --bg-color:#FFFFFF;
+    --fs-content:13px;
+    --martop-title:1%;
+    --wofferbu-Fircom:10%;
+    --wofferbu-Fircom2:10%;
+    --heigt-Fircom:40px;
+    --magl-fircom:5%;
+    --word-color:white;
+    --pd-buton:10px;
+    --boder-radi:10px;
+    --width-option:100%;
+    --fx-option:14px;
+}
+
+.Offering{
+    margin-top:var(--martop-title);
+    display:flex;
+    &__Saved-jobs  {    
+        font-size: var(--fs-content); 
+        text-align:center;
+        width: var(--wofferbu-Fircom2);
+        h1{
+          width: 124px;
+            border-radius:var(--boder-radi);
+            border:1px double lightgray; 
+            padding:var(--pd-buton);
+        }
+        span{
+            color: var(--bg-component)
+        } 
+    }
+    &__application {    
+        font-size: var(--fs-content); 
+        text-align:center;
+        color: black;
+        margin-left: var(--magl-fircom);
+        width: var(--wofferbu-Fircom);
+        h1{
+          width: 124px;
+            border-radius:var(--boder-radi);
+            padding:var(--pd-buton);
+            border:1px double lightgray; 
+        } 
+    }
+}
+
+
+/* Design select */
+select {
+  
+  font-size: 13px;
+  outline: 0;
+  border: 0 !important;
+  background: white;
+  background-image: none;
+}
+.select {
+  display: flex;
+  width: 12%;
+  height: 1.5em;
+  line-height: 3;
+  background: #fff;
+  overflow: hidden;
+  border: 1px double lightgray;
+  border-radius: 10px;
+  border-radius: .25em;
+}
+
+select {
+  flex: 1;
+  padding: 0 ;
+  
+  cursor: pointer;
+}
+
+// .select::after {
+//   content: '';
+//   position: absolute;
+//   top: -17px;
+//   font-size: 14px;
+//   right: 0;
+//   padding:  0;
+//   cursor: pointer;
+//   pointer-events: none;
+//   -webkit-transition: .25s all ease;
+//   -o-transition: .25s all ease;
+//   transition: .25s all ease;
+//   color:var(--bg-component);
+// }
+
+.Chosing{
+  display: flex;
+  margin: 0px 5.5%;
+}
+
+.select{
+  margin: 10px 0.4%;
+}
+.Offering{
+  margin: 1% 6%;
+}
+.overal-Chosingg{
+	background-color: #F7F7F8;
+
+}
+@media only screen and (max-width : 1290px) {
+  .select{
+    width:11%;
+  }
+
+}
+@media only screen and (max-width : 1072px) {
+  .select{
+    width:15%;
+  }
+  }
+@media only screen and (max-width : 773px) {
+.select{
+  width:20%;
+}
+.Offering__Saved-jobs h1{
+  width:129px;
+  margin-right: 0%;
+}
+}
+
+@media only screen and (max-width : 579px) {
+  .select{
+    width:26%;
+  }
+  
+}
+
+@media only screen and (max-width : 464px) {
+  .select{
+    width:37%;
+
+  }
+  select{
+    font-size: 11px;
+  }
+  .Offering__application h1{
+    font-size: 12px;
+  }
+  .Offering__Saved-jobs h1 {
+    font-size: 12px;
+    width: 90%;
+  }
+  .Offering{
+    width: 500px;
+  }
+  .Chosing{
+    width: 115%;
+    display: flex;
+    margin: 0px -1%;
+
+    }
+}
+@media only screen and (max-width : 1120px) {
+  .Offering__Saved-jobs{
+    width:14%;
+  }
+  .select{
+    width: 19%;
+  }
+}
+@media only screen and (max-width : 900px) {
+  .Offering__Saved-jobs{
+    width:14%;
+    margin-right: 4%;
+  }
+}
+@media only screen and (max-width : 592px) {
+  .Offering__Saved-jobs h1 {
+    width:120px;
+  }
+  .Offering__application h1{
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width : 850px) {
+  .Chosing{
+    margin: 0px 2%;
+    }
+    .select{
+    margin: 5px 1%;
+    }
+  .Offering{
+    margin: 2% 2%;
+  }
+  .Offering__application h1{
+    font-size: 13px;
+  }
+  .Offering__Saved-jobs h1 {
+    font-size: 13px;
+  }
+}
