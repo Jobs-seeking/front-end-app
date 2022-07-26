@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react';
-// import axios from 'axios';
-import BASE_URL from '../../utils/constants';
+import axios from 'axios';
+import {BASE_URL} from '../../utils/constants';
+import Input from './Input';
+import Button from './Button'
+
 
 export default function Login() {
 
@@ -30,14 +33,15 @@ export default function Login() {
           </div>
           <div className="input-field">
             <label htmlFor="password"></label>
-            <input type="password" name="password" placeholder="Password"
+            <Input type="password" name="password" placeholder="Password"
             onChange={(e) => setDataForm({...dataForm, "password":e.target.value})}/>
           </div>
-            <button className="login__submit--btn" onClick={()=>onLogin()}>Login</button>
+            <Button buttonStyle="btn--login__submit" onClick={()=>onLogin()}>Login</Button>
         </form>
           <div className="forgot__password">
               <a href="">Forget password?</a>
           </div>
       </div>
   )
+
 }

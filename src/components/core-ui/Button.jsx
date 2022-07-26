@@ -1,7 +1,9 @@
 import React from "react"
 const Style = [
     "btn--solid",
-    "btn--outline"
+    "btn--outline",
+    "btn--register__submit",
+    "btn--login__submit"
 ]
 
 export default function Button({children, type, onClick, buttonStyle}){

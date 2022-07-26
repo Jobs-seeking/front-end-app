@@ -1,5 +1,8 @@
 :root {
-  //--w-
+  --w-lg-rgt: 50%;
+  --pd-form: 13%;
+  --w-input-field: 85%;
+  --mgf-submit-btn: 12%;
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
@@ -15,6 +18,7 @@ html{
   border-bottom: 1px solid var(--color-4);
   height: 200px;
   align-items: center;
+  margin-top: 2rem;
 
   & span:nth-child(2n+1){
     color: var(--color-3);
@@ -52,11 +56,12 @@ html{
 }
 
 .account__form {
-  height: 1000px;
+  //height: 1000px;
   display: flex;
+  margin-bottom: 2rem;
   //margin-top: 10px;
   &__login, &__register{
-    width: 50%;
+    width: var(--w-lg-rgt);
     padding-top: 10px;
     &--text span{
       display: flex;
@@ -85,6 +90,10 @@ html{
           display: block;
         }
       }
+
+      & p {
+        text-align: center;
+      }
     }
   }
   &__register {
@@ -97,7 +106,7 @@ html{
 }
 
 .form__login, .form__signup{
-  padding-left: 13%;
+  padding-left: var(--pd-form);
   & form {
     display: flex;
     flex-direction: column;
@@ -115,7 +124,7 @@ html{
 
 
 .input-field{
-  width: 85%;
+  width: var(--w-input-field);
 
   & input{
     width: 100%;
@@ -143,35 +152,46 @@ html{
   }
 }
 
-.register__submit--btn, .login__submit--btn{
+.btn--login__submit, .btn--register__submit{
   //margin-top: 1.5rem;
   width: 60%;
   border: none;
   height: 4.5rem;
   transition: 0.5s;
-  margin-left: 12%;
+  margin-left: var(--mgf-submit-btn);
   font-weight: var(--fw-3);
   font-size: var(--fz-destop-2);
   color: white;
   cursor: pointer;
 }
 
-.register__submit--btn{
+.btn--register__submit{
   background-color: var(--color-3);
   &:hover{
     background-color: var(--color-4);
   }
 }
 
-.login__submit--btn{
+.btn--login__submit{
   background-color: var(--color-4);
   &:hover{
     background-color: var(--color-3);
   }
 }
 @media only screen and (max-width: 500px) {
+  :root{
+    --w-lg-rgt: 100%;
+    --pd-form: 5%;
+    --w-input-field: 95%;
+    --mgf-submit-btn: 16%;
+  }
   .account__form{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+    &__login {
+      border-right: none ;
+      border-bottom: 1px solid var(--color-3);
+      padding-bottom: 3rem;
+    ;
+    }
   }
 }
