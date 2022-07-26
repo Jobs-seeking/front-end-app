@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ReactComponent as BannerPN } from "../../assets/images/BannerPN.svg"
 import PnvPartners from '../containers/PnvPartners';

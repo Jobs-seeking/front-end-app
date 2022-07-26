@@ -3,7 +3,8 @@ const Style = [
     "btn--solid",
     "btn--outline",
     "btn--register__submit",
-    "btn--login__submit"
+    "btn--login__submit",
+    "btn-item"
 ]
 
 export default function Button({children, type, onClick, buttonStyle}){

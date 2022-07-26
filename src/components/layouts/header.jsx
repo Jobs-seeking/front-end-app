@@ -20,7 +20,7 @@ export default function Header() {
                 <nav>
                     <ul className="nav-list" id="nav-list">
                         <li>
-                            <a href="#!">RECRULTERS</a>
+                            <a href="#!">RECRUITERS</a>
                         </li>
                         <li>
                             <a href="#!">HOME</a>

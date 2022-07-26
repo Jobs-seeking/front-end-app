@@ -1,0 +1,124 @@
+.edit-account,
+.select {
+  font-size: var(--fz-destop-1);
+
+}
+.form-edit {
+  width: 70%;
+  margin: 60px auto 0;
+}
+.form-edit .main_title {
+  text-align: center;
+  font-size: var(--fz-destop-3);
+  margin-bottom: 10px;
+  color: var(--color-3);
+}
+.edit-avatar {
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 18px 50px -10px;
+  width: 43%;
+  text-align: center;
+  padding: 37px;
+}
+.edit-avatar .user-name {
+  margin: 25px;
+}
+.btn-item {
+  width: 100%;
+  font-size: 14px;
+}
+.upload-picture {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.upload-picture input[type=file] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.form-edit .form-edit-account {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 10px;
+  padding: 3px;
+  font-size: 16px;
+  margin-top: 36px;
+}
+
+.form-edit-account .edit-avatar {
+  margin: 25px 94px;
+}
+.form-edit-information .edit-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fields {
+  margin: 17px 40px;
+}
+.fields input,
+select,
+textarea {
+  position: relative;
+  padding: 12px;
+  margin-top: 10px;
+  width: 100%;
+  outline: 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.select:hover,textarea:hover,.fields input:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  transition: box-shadow 0.3s;
+}
+
+
+.address label {
+  margin-bottom: 10px;
+}
+textarea {
+  height: 80px;
+}
+.buttont-save{
+  padding: 10px 20px;
+  margin: 5px 0;
+  width: 120px;
+  margin-left: 300px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .form-edit .form-edit-account {
+    grid-template-columns: 100%;
+  }
+  .buttont-save {
+    margin-left: 220px;
+}
+  .button-save {
+    display: flex;
+    justify-content: center;
+}
+}
+@media (max-width: 480px) {
+  .form-edit .form-edit-account {
+    grid-template-columns: 100%;
+  }
+  .form-edit-information .edit-item {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .buttont-save{
+    margin-left: 70px;
+  }
+  .fields {
+    margin: 17px auto;
+  }
+  .form-edit-account .edit-avatar {
+    margin: 0;
+  }
+  .edit-avatar {
+    width: 70%;
+  }
+}
