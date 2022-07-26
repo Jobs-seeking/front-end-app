@@ -45,6 +45,7 @@ function Searchingjob(){
                 <option value="3">All</option>
             </select>
             </div>
+            
             </div>
             </div>
             </div>

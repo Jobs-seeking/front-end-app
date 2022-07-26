@@ -6,7 +6,7 @@ function Tab(){
             <div className="location">
                 <div className="icon-location"><MdOutlineLocationOn/></div><span></span>
                 <div>
-                    <p>Da nang</p>
+                    <p className="Address">Da nang</p>
                 </div>
             </div>
             <div className="location">

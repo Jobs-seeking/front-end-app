@@ -1,12 +1,18 @@
 .location{
     display:flex;
+    font-size: 12px;
+    margin-top: 5px;
 }
 .icon-location{
     color:#ED702E;
+
 }
 .container-tab{
     display: flex;
 }
 .icon-location{
-    margin:0 5px;
+    margin:0 4px;
+}
+.Address{
+    margin-left: -20px;
 }
