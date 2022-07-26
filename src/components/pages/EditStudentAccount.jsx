@@ -1,10 +1,10 @@
 import React from "react";
+import Button from "../core-ui/Button";
 
 export default function EditStudentAccount() {
   return (
     <div className="edit-account">
       <div className="form-edit">
-            <div className="main_title">Edit your account!</div>
         <div className="form-edit-account">
           <div class="edit-avatar">
             <img
@@ -13,12 +13,13 @@ export default function EditStudentAccount() {
               alt="user"
             />
             <div className="user-name">Ngô Luyên</div>
-
-            <div class="buttons">
-              <button class="upload-picture">Upload picture</button>
+            <div className="upload-picture">
+            <button class="btn btn--outline btn-item">Upload a picture</button>
+              <input type="file" name="myfile" />
             </div>
           </div>
           <div className="form-edit-information">
+        <div className="main_title">EDIT YOUR ACCOUNT</div>
             <form action="">
               <div className="edit-item">
                 <div className="edit item-left ">
@@ -55,11 +56,8 @@ export default function EditStudentAccount() {
                   </div>
                 </div>
               </div>
-              <div className="button-save">
-              <button className="btn btn-edit" type="submit">
-                SAVE
-              </button>
-
+              <div className="buttont-save">
+                <Button> SAVE</Button>
               </div>
             </form>
           </div>

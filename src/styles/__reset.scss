@@ -26,7 +26,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
 }
-ol, ul {
+ol, ul {  
   list-style: none;
 }
 blockquote, q {
@@ -44,5 +44,6 @@ table {
 
 html{
   font-size: var(--fz-1);
+  font-family: 'Poppins', sans-serif;
   // font-family: var(--ff-default);
 }
