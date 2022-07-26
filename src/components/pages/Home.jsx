@@ -20,7 +20,7 @@ export default function Home() {
         </section>
     )
 }
-=======
+
 // import React from 'react';
 // import Content from '../layouts/Content';
 // // import Footer from '../layouts/Footer';
@@ -32,4 +32,4 @@ export default function Home() {
 //       </div>
 //   )
 // }
->>>>>>> origin/mh-joblist
+
