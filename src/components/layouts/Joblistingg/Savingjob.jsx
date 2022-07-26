@@ -27,21 +27,21 @@ function Savingjob(){
  said. “That’s what Thatcherism means. I thinlity of tax cut.</p>
         </div>
         <div className='Reference-needs'>
-        <table>
-            <thead>
+        <table className='table-des'>
+            <thead className='Title-requir'>
             <th>Skills needed</th>
             <th>Industry</th>
             <th>Imployment type</th>
             </thead>
             <tbody>
-            <tr>
-            <td><span><TiMediaRecord></TiMediaRecord></span>HTML</td>
-            <td><span><TiMediaRecord></TiMediaRecord></span>Information</td>
-            <td><span><TiMediaRecord></TiMediaRecord></span>Full-time</td>
+            <tr className='name-requir'>
+            <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>HTML</td>
+            <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Information</td>
+            <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Full-time</td>
             </tr>
-            <tr>
-            <td><span><TiMediaRecord></TiMediaRecord></span>HTML</td>
-            <td><span><TiMediaRecord></TiMediaRecord></span>Full-time</td>
+            <tr className='name-requir'>
+            <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>HTML</td>
+            <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Full-time</td>
             </tr>
             </tbody>
             </table>

@@ -13,6 +13,7 @@ function Offeringjob(){
                     <p className='Time-posting'>1 month ago</p>
                     <p className='Content-recruiment'>As a first step, Ukraine’s coastal waters will need to be de-mined, or and do mka eiy do <br></br>
                     at the very least a corridor stretching several kilometres will need to be cleared.corridor<br></br> 
+                    at the very least a corridor stretching several kilometres will need to be cleared.corridor<br></br> 
             
                     </p>
                 </div>

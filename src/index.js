@@ -1,9 +1,9 @@
 import React from 'react';
 import '../src/styles/__app.scss';
 import ReactDOM from 'react-dom/client';
-import _BasePage from './components/pages/_BasePage';
+// import _BasePage from './components/pages/_BasePage';
 import reportWebVitals from './reportWebVitals';
-// import Joblistingjobs from './components/pages/Listingjobs';
+import Joblistingjobs from './components/pages/Joblistingjobs';
 // import Formoption from './components/layouts/Joblistingg/Formoption';
 // import From from './components/core-ui/Joblisting/Form'
 
@@ -16,10 +16,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
-  
-
-   <_BasePage></_BasePage>
+   <Joblistingjobs></Joblistingjobs>
   </React.StrictMode>
 );
 

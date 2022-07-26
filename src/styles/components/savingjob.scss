@@ -37,6 +37,7 @@
     }
     &__save, &__apply{
         margin-top:3%;
+        cursor: pointer;
      
     }
     &__save, &__apply h2{
@@ -82,22 +83,22 @@
     font-size:var(--fs-worddes); 
 }
 
-th{
+.Title-requir th{
     color: var(--color-butoon); 
 }
 
-table{
+.Reference-needs table{
     width:100%;
 }
 
-table td{
+.name-requir td{
     padding: 1% 7%;
 }
-td{
+.name-requir td{
     width: 500px;
 }
 
-span{
+.icon-pur span{
     margin-right: 20px;
     color: var(--color-butoon); 
 }
@@ -106,5 +107,5 @@ span{
     .Saving-descrpition{
         width: 95%;
        
-    }
+}
 }
