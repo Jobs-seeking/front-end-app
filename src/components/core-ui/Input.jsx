@@ -8,7 +8,7 @@ export default function Input({type, id, name, value, onChange, inputStyle, plac
       ? inputStyle
       : Style[0]
   return (
-      <input inputStyle={checkInputStyle} type={type} id={id} name={name}
+      <input className={checkInputStyle} type={type} id={id} name={name}
              value={value} onChange={onChange} placeholder={placeholder}/>
 
   )
