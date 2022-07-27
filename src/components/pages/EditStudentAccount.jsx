@@ -9,13 +9,13 @@ export default function EditStudentAccount() {
         <div className="form-edit-account">
           <div class="edit-avatar">
             <img
-              class="round"
+              class="img-item"
               src="https://randomuser.me/api/portraits/women/79.jpg"
               alt="user"
             />
             <div className="user-name">Ngô Luyên</div>
             <div className="upload-picture">
-            <Button buttonStyle="btn btn--outline btn-item">Upload a picture</Button>
+            <Button buttonStyle="btn-item">Upload a picture</Button>
               <input type="file" name="myfile" />
             </div>
           </div>

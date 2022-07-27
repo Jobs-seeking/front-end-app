@@ -1,22 +1,25 @@
 .edit-account,
 .select {
   font-size: var(--fz-destop-1);
-
 }
 .form-edit {
   width: 70%;
-  margin: 60px auto 0;
+  margin: 100px auto 0;
 }
 .form-edit .main_title {
   text-align: center;
-  font-size: var(--fz-destop-3);
+  font-size: var(--fz-destop-4);
   margin-bottom: 10px;
   color: var(--color-3);
 }
+.form-edit-account .edit-avatar {
+  margin: 60px 76px;
+}
+
 .edit-avatar {
   border-radius: 10px;
   box-shadow: rgb(0 0 0 / 20%) 0px 18px 50px -10px;
-  width: 43%;
+  width: 70%;
   text-align: center;
   padding: 37px;
 }
@@ -26,6 +29,15 @@
 .btn-item {
   width: 100%;
   font-size: 14px;
+  border: 3px solid var(--color-4) ;
+}
+.btn-item:hover{
+  color: var(--color-3);
+  border: 3px solid var(--color-3) ;
+  background-color: var(--color-5);
+}
+.img-item{
+  width: 100%;
 }
 .upload-picture {
   position: relative;
@@ -42,14 +54,10 @@
   display: grid;
   grid-template-columns: 30% 70%;
   gap: 10px;
-  padding: 3px;
   font-size: 16px;
   margin-top: 36px;
 }
 
-.form-edit-account .edit-avatar {
-  margin: 25px 94px;
-}
 .form-edit-information .edit-item {
   width: 100%;
   display: grid;
@@ -86,7 +94,6 @@ textarea {
 }
 .buttont-save{
   padding: 10px 20px;
-  margin: 5px 0;
   width: 120px;
   margin-left: 300px;
 }
