@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './Home';
 import Header from '../layouts/header';
+import Header from '../layouts/Header';
 import Footer from '../layouts/Footer';
 import StudentProfile from '../../components/pages/StudentProfile';
 import Joblistingjobs from '../pages/Joblistingjobs'
@@ -11,7 +12,7 @@ export default function _BasePage() {
   return(
       <div>
         <Header/>
-        <Joblistingjobs/>
+        <Account/>
         <Footer/>
       </div>
   )
