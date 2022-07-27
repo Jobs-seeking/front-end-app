@@ -10,7 +10,7 @@ export default function Header() {
             x.className ="nav-list";
         }
     }
-
+    
     return (
         <section className="navigation">
             <div className="nav-container">
@@ -20,7 +20,7 @@ export default function Header() {
                 <nav>
                     <ul className="nav-list" id="nav-list">
                         <li>
-                            <a href="#!">RECRUITERS</a>
+                            <a href="#!">RECRULTERS</a>
                         </li>
                         <li>
                             <a href="#!">HOME</a>
@@ -34,9 +34,9 @@ export default function Header() {
                     </ul>
                     <div onClick={OpentNavMobile} className="nav-mobile" id="nav-mobile"><span></span><span></span><span></span></div>
                     <div className="nav-button">
-                        <Button buttonStyle="btn--outline">LOGIN</Button>
-                        <Button >SIGN UP</Button>
-                    </div>
+                    <Button buttonStyle="btn--outline">LOGIN</Button>
+                    <Button >SIGN UP</Button>
+                </div>
                 </nav>
             </div>
         </section>

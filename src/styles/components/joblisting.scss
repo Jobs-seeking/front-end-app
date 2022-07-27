@@ -1,6 +1,6 @@
 .container-components{
     display: grid;
-    margin: 2% 0%;
+    margin: 1% 0%;
     z-index: -99;
 }
 .overll-component{
@@ -30,8 +30,6 @@ font-size: 30px;
   }
   @media only screen and (max-width : 500px) {
     .lef-component{
-        // display: block;
-        // background-color: white;
     }
   }
   

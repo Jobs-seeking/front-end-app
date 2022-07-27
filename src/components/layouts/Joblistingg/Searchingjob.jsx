@@ -11,10 +11,10 @@ function Searchingjob(){
             </div>
             <div>      
             </div>
-            <div className="overal-Chosingg">
+      
             <div className="Chosing">
             <div class="select">
-            <select>
+            <select name='job'>
                 <option selected disabled>Location</option>
                 <option value="1">Hà Nội</option>
                 <option value="2">Đà Nẵng</option>
@@ -22,7 +22,7 @@ function Searchingjob(){
             </select>
             </div>
             <div class="select">
-            <select>
+            <select name='job'>
                 <option selected disabled>Distance</option>
                 <option value="1">Far</option>
                 <option value="2">Near</option>
@@ -30,7 +30,7 @@ function Searchingjob(){
             </select>
             </div>
             <div class="select">
-            <select>
+            <select name='job'>
                 <option selected disabled>Salary</option>
                 <option value="1">10 milion</option>
                 <option value="2">20 milion</option>
@@ -38,7 +38,7 @@ function Searchingjob(){
             </select>
             </div>
             <div class="select">
-            <select>
+            <select name='job'>
                 <option selected disabled>Jobs kind</option>
                 <option value="1">Full-time</option>
                 <option value="2">Part-time</option>
@@ -48,7 +48,7 @@ function Searchingjob(){
             
             </div>
             </div>
-            </div>
+  
 
 
     )
