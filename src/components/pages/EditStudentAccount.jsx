@@ -15,11 +15,7 @@ export default function EditStudentAccount() {
             />
             <div className="user-name">Ngô Luyên</div>
             <div className="upload-picture">
-<<<<<<< HEAD
-            <button className="btn btn--outline btn-item">Upload a picture</button>
-=======
             <Button buttonStyle="btn btn--outline btn-item">Upload a picture</Button>
->>>>>>> 4ea47b1b6e9a7b1c8e8d7eb1e6877eceab0434cb
               <input type="file" name="myfile" />
             </div>
           </div>
