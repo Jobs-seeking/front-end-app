@@ -11,7 +11,8 @@ export default function _BasePage() {
   return(
       <div>
         <Header/>
-        <Account/>
+        {/* <Account/> */}
+        <FormApply/>
         <Footer/>
       </div>
   )
