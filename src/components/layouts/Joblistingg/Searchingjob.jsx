@@ -11,7 +11,7 @@ function Searchingjob(){
             </div>
             <div>      
             </div>
-            <div className="overal-Chosingg">
+      
             <div className="Chosing">
             <div class="select">
             <select>
@@ -48,7 +48,7 @@ function Searchingjob(){
             
             </div>
             </div>
-            </div>
+  
 
 
     )

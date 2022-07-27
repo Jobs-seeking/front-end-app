@@ -6,14 +6,15 @@ import reportWebVitals from './reportWebVitals';
 
 // import Joblistingjobs from './components/pages/Joblistingjobs';
 // import Formoption from './components/layouts/Joblistingg/Formoption';
-// import From from './components/core-ui/Joblisting/Form'
+// import From from './components/core-ui/Joblisting/Formmodel'
+// import Apartoffering from './components/core-ui/Joblisting/Offering-part'
 
 
 
 
 
 // import EditAccount from './components/pages/EditAccount';
-import EditStudentAccount from './components/pages/EditStudentAccount';
+// import EditStudentAccount from './components/pages/EditStudentAccount';
 
 
 
@@ -21,13 +22,13 @@ import EditStudentAccount from './components/pages/EditStudentAccount';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-  // <React.StrictMode>
-  //  <Joblistingjobs></Joblistingjobs>
-  // </React.StrictMode>
+  <React.StrictMode>
+   <_BasePage></_BasePage>
+  </React.StrictMode>
 
-    <React.StrictMode>
-        <_BasePage></_BasePage>
-    </React.StrictMode>
+    // <React.StrictMode>
+    //     <Apartoffering></Apartoffering>
+    // </React.StrictMode>
 
 );
 // If you want to start measuring performance in your app, pass a function

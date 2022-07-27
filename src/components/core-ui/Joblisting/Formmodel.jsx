@@ -2,8 +2,8 @@ import Savingjob from "../../layouts/Joblistingg/Savingjob";
 
 function Form(){
     return(
-        <div className="container">
-        <div type="button" className="btn btn-info " data-toggle="modal" data-target="#myModal">See the description</div>
+        <div className="container-model">
+        <div type="button" className="btn btn-info " data-toggle="modal" data-target="#myModal">See description</div>
         <div className="modal fade" id="myModal" role="dialog">
           <div className="modal-dialog">
             <div className="modal-content">

@@ -9,7 +9,7 @@ function Savingjob(){
                 <Avatar></Avatar>
             </div>
             <div className='Savingdesc__tab'>
-            <Tab></Tab>
+                <Tab></Tab>
             <h3>1 day ago</h3>
             </div>
             <div className='Savingdesc__save'>
@@ -36,12 +36,12 @@ function Savingjob(){
             <tbody>
             <tr className='name-requir'>
             <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>HTML</td>
-            <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Information</td>
-            <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Full-time</td>
+            <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Infor</td>
+            <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Full</td>
             </tr>
             <tr className='name-requir'>
             <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>HTML</td>
-            <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Full-time</td>
+            <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Full</td>
             </tr>
             </tbody>
             </table>

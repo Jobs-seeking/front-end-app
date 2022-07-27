@@ -1,27 +1,13 @@
-import Offeringjob from '../layouts/Joblistingg/Offeringjob';
-import Savingjob from '../layouts/Joblistingg/Savingjob';
+
 import Searchingjob from '../layouts/Joblistingg/Searchingjob';
+import OfferingJobContainer from '../containers/OfferingJobContainer';
 
 function Joblistingjobs(){
     return(
         <div className='overll-component'>
-          <Searchingjob></Searchingjob>
-        <div className='container-components'>
-            <div className='Offering-part'>
-            <Offeringjob></Offeringjob>
-            <Offeringjob></Offeringjob>
-            <Offeringjob></Offeringjob>
-            <Offeringjob></Offeringjob>
-            <Offeringjob></Offeringjob>
-            <Offeringjob></Offeringjob>
-            <Offeringjob></Offeringjob>
-            <Offeringjob></Offeringjob>
-
-            </div>
-            <div className='lef-component'>
-            <Savingjob></Savingjob>
-            </div>
-        </div>
+          <Searchingjob/>
+          <OfferingJobContainer/>
+       
         </div>
     )
 }
