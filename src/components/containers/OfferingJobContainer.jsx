@@ -4,7 +4,6 @@ import Savingjob from '../layouts/Joblistingg/Savingjob';
 function OfferingJobContainer(){
 
     // const [] = useState([]);
-
     return(
         <div className='container-components'>
         <div className='Offering-part'>
