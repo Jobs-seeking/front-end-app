@@ -74,14 +74,6 @@ html {
 .btn-follow {
   text-align: right;
   margin: auto 0;
-
-  button {
-    border: 1px solid;
-    color: white;
-    padding: 2% 3%;
-    border-radius: 10px;
-    background-color: var(--color-4);
-  }
 }
 
 .job {
@@ -91,11 +83,9 @@ html {
   grid-template-columns: 20% 80%;
   padding: 3%;
   justify-content: center;
-  height: 70px;
   line-height: 25px;
   border: 1px solid white;
   box-shadow: 1px 1px 3px orange;
-  // box-shadow: rgba(251, 14, 14, 0.1) 0 10px 40px 0px;
   border-radius: 10px;
 
   &:hover {
@@ -148,6 +138,7 @@ html {
   gap: 5%;
   justify-content: center;
   margin: 10% 0;
+
   &-infor {
     &__top {
       padding: 5% 5%;
@@ -160,7 +151,7 @@ html {
       border-radius: 10px 10px 0 0;
 
       &__left {
-        img {
+        & img {
           width: 150px;
           height: 150px;
           border-radius: 50%;
@@ -201,7 +192,6 @@ html {
 .applied {
 
   &-job {
-    height: 10%;
     background-color: lightgray;
     display: flex;
     gap: 5%;
