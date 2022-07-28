@@ -4,8 +4,8 @@ import StudentProfileInfor from "../core-ui/Profile/StudentProfileInfor";
 export default function StudentProfile() {
     return (
       <div className="student-profile">
-        <AppliedJobs />
         <StudentProfileInfor />
+        <AppliedJobs />
       </div>
     );
 }
