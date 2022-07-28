@@ -14,7 +14,7 @@
     width:90%;
     height:auto;
     border-radius:20px;
-    box-shadow: 0 4px 20px 0 lightgray, 0 12px 40px 0 lightgray;
+    box-shadow: 0 2px 10px 0 rgb(243, 242, 242), 0 6px 10px 0 rgb(243, 242, 242);
    
 }
 
@@ -37,6 +37,7 @@
     }
     &__save, &__apply{
         margin-top:3%;
+        cursor: pointer;
      
     }
     &__save, &__apply h2{
@@ -82,22 +83,23 @@
     font-size:var(--fs-worddes); 
 }
 
-th{
+.Title-requir th{
     color: var(--color-butoon); 
 }
 
-table{
+.Reference-needs table{
     width:100%;
 }
 
-table td{
+
+.name-requir td{
     padding: 1% 7%;
 }
-td{
+.name-requir td{
     width: 500px;
 }
 
-span{
+.icon-pur span{
     margin-right: 20px;
     color: var(--color-butoon); 
 }
@@ -106,5 +108,5 @@ span{
     .Saving-descrpition{
         width: 95%;
        
-    }
+}
 }

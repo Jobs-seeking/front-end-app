@@ -45,28 +45,32 @@
         margin-left: var(--magl-fircom);
         width: var(--wofferbu-Fircom);
         h1{
-          width: 124px;
+            width: 124px;
             border-radius:var(--boder-radi);
             padding:var(--pd-buton);
             border:1px double lightgray; 
         } 
+        span{
+          color: var(--bg-component);
+        }
     }
 }
 
 
 /* Design select */
-select {
-  
+.select select{
   font-size: 13px;
   outline: 0;
+  
   border: 0 !important;
   background: white;
   background-image: none;
 }
 .select {
+
   display: flex;
   width: 12%;
-  height: 1.5em;
+  height: 30%;
   line-height: 3;
   background: #fff;
   overflow: hidden;
@@ -75,31 +79,17 @@ select {
   border-radius: .25em;
 }
 
-select {
+.select select {
   flex: 1;
   padding: 0 ;
-  
   cursor: pointer;
 }
-
-// .select::after {
-//   content: '';
-//   position: absolute;
-//   top: -17px;
-//   font-size: 14px;
-//   right: 0;
-//   padding:  0;
-//   cursor: pointer;
-//   pointer-events: none;
-//   -webkit-transition: .25s all ease;
-//   -o-transition: .25s all ease;
-//   transition: .25s all ease;
-//   color:var(--bg-component);
-// }
 
 .Chosing{
   display: flex;
   margin: 0px 5.5%;
+  z-index: -99;
+  position: relative;
 }
 
 .select{
@@ -110,23 +100,25 @@ select {
 }
 .overal-Chosingg{
 	background-color: #F7F7F8;
-
 }
+
 @media only screen and (max-width : 1290px) {
   .select{
     width:11%;
   }
-
 }
+
 @media only screen and (max-width : 1072px) {
   .select{
     width:15%;
   }
-  }
+}
+
 @media only screen and (max-width : 773px) {
 .select{
   width:20%;
 }
+
 .Offering__Saved-jobs h1{
   width:129px;
   margin-right: 0%;
@@ -145,24 +137,28 @@ select {
     width:37%;
 
   }
-  select{
+  .select select{
     font-size: 11px;
   }
   .Offering__application h1{
     font-size: 12px;
+    border:none; 
   }
+
   .Offering__Saved-jobs h1 {
     font-size: 12px;
     width: 90%;
+    border:none; 
   }
+
   .Offering{
-    width: 500px;
+    width: 90%;
   }
+
   .Chosing{
-    width: 115%;
+    width: 90%;
     display: flex;
     margin: 0px -1%;
-
     }
 }
 @media only screen and (max-width : 1120px) {
@@ -173,12 +169,14 @@ select {
     width: 19%;
   }
 }
+
 @media only screen and (max-width : 900px) {
   .Offering__Saved-jobs{
     width:14%;
     margin-right: 4%;
   }
 }
+
 @media only screen and (max-width : 592px) {
   .Offering__Saved-jobs h1 {
     width:120px;
@@ -187,6 +185,7 @@ select {
     margin-left: 20px;
   }
 }
+
 @media only screen and (max-width : 850px) {
   .Chosing{
     margin: 0px 2%;

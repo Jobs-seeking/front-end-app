@@ -4,7 +4,7 @@ function Tab(){
     return(
         <div className='container-tab'>
             <div className="location">
-                <div className="icon-location"><MdOutlineLocationOn/></div><span></span>
+                <div className="icon-location"><MdOutlineLocationOn/></div>
                 <div>
                     <p className="Address">Da nang</p>
                 </div>
