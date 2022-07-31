@@ -7,12 +7,12 @@
         justify-content: center;
         align-items: center;
         height:100vh;
-        width: 100vw;
-        // margin: 100px auto;
+        width: 100%;
+        margin: 12px 0;
+        font-size: var(--fz-destop-2);
         .form{
-            color: #C4C4C4C4;
+            color: var(--color-4);
             width:40%;
-
             .row:after {
                 content: "";
                 display: table;
@@ -32,14 +32,6 @@
                 width: 100%;
             }
             input, select{
-                // margin: 10px 0;
-                // width: 100%;
-                // border: 1px solid #ccc;
-                // border-radius: 12px;
-                // display: block;
-                // padding: 10px;
-                // outline:none
-                position: relative;
                 padding: 15px;
                 margin: 20px 0;
                 width: 100%;
@@ -49,19 +41,13 @@
                 outline: none;
                 border-radius: 10px;
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                font-size: var(--fz-destop-1);
+            }
+            input::placeholder{
+                color: var(--color-4);
             }
             input:focus{
                 box-shadow: 5px 10px 10px 5px rgb(223, 231, 234);
-            }
-            button{
-                margin: 8px 0;
-                padding:12px 20px;
-                border-radius: 8px;
-                background-color: rgb(255, 123, 0);
-                &:hover{
-                    background-color: rgb(233, 75, 8);
-                    cursor: pointer;
-                }
             }
         }
     }
