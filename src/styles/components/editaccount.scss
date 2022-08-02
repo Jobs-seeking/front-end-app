@@ -15,7 +15,11 @@
 .form-edit-account .edit-avatar {
   margin: 60px 76px;
 }
-
+.round {
+  width: 100%;
+  border-radius: 50%;
+  height: 60%;
+}
 .edit-avatar {
   border-radius: 10px;
   box-shadow: rgb(0 0 0 / 20%) 0px 18px 50px -10px;
@@ -29,14 +33,14 @@
 .btn-item {
   width: 100%;
   font-size: 14px;
-  border: 3px solid var(--color-4) ;
+  border: 3px solid var(--color-4);
 }
-.btn-item:hover{
+.btn-item:hover {
   color: var(--color-3);
-  border: 3px solid var(--color-3) ;
+  border: 3px solid var(--color-3);
   background-color: var(--color-5);
 }
-.img-item{
+.img-item {
   width: 100%;
 }
 .upload-picture {
@@ -44,7 +48,7 @@
   overflow: hidden;
   display: inline-block;
 }
-.upload-picture input[type=file] {
+.upload-picture input[type="file"] {
   position: absolute;
   left: 0;
   top: 0;
@@ -65,7 +69,8 @@
 .fields {
   margin: 17px 40px;
 }
-.fields input,#select,
+.fields input,
+#select,
 textarea {
   position: relative;
   padding: 12px;
@@ -76,47 +81,53 @@ textarea {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-#select:hover,textarea:hover,.fields input:hover {
+#select:hover,
+textarea:hover,
+.fields input:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   transition: box-shadow 0.3s;
 }
 textarea {
   height: 80px;
 }
-.buttont-save{
+.buttont-save {
   padding: 10px 20px;
   width: 120px;
   margin-left: 300px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+.btn-upload {
+  width: 100%;
+}
+@media (min-width: 789px) and (max-width: 1024px) {
   .form-edit .form-edit-account {
-    grid-template-columns: 100%;
+    grid-template-columns: 70%;
   }
   .buttont-save {
     margin-left: 220px;
+  }
+  
+  // .button-save {
+  //   display: flex;
+  //   justify-content: center;
+  // }
 }
-  .button-save {
-    display: flex;
-    justify-content: center;
-}
-}
-@media (max-width: 480px) {
-  .form-edit .form-edit-account {
-    grid-template-columns: 100%;
-  }
-  .form-edit-information .edit-item {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .buttont-save{
-    margin-left: 70px;
-  }
-  .fields {
-    margin: 17px auto;
-  }
-  .form-edit-account .edit-avatar {
-    margin: 0;
-  }
-  .edit-avatar {
-    width: 70%;
-  }
-}
+// @media (max-width: 480px) {
+//   .form-edit .form-edit-account {
+//     grid-template-columns: 100%;
+//   }
+//   .form-edit-information .edit-item {
+//     grid-template-columns: repeat(1, 1fr);
+//   }
+//   .buttont-save{
+//     margin-left: 70px;
+//   }
+//   .fields {
+//     margin: 17px auto;
+//   }
+//   .form-edit-account .edit-avatar {
+//     margin: 0;
+//   }
+//   .edit-avatar {
+//     width: 70%;
+//   }
+// }
