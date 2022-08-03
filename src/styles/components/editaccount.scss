@@ -103,31 +103,12 @@ textarea {
     grid-template-columns: 70%;
   }
   .buttont-save {
-    margin-left: 220px;
+    margin-left: 100px;
   }
-  
-  // .button-save {
-  //   display: flex;
-  //   justify-content: center;
-  // }
+  .fields input,
+#select,
+textarea {
+  width: 150%;
 }
-// @media (max-width: 480px) {
-//   .form-edit .form-edit-account {
-//     grid-template-columns: 100%;
-//   }
-//   .form-edit-information .edit-item {
-//     grid-template-columns: repeat(1, 1fr);
-//   }
-//   .buttont-save{
-//     margin-left: 70px;
-//   }
-//   .fields {
-//     margin: 17px auto;
-//   }
-//   .form-edit-account .edit-avatar {
-//     margin: 0;
-//   }
-//   .edit-avatar {
-//     width: 70%;
-//   }
-// }
+}
+
