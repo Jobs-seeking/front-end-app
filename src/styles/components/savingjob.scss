@@ -9,7 +9,9 @@
     --fs-worddes:14px;
 }
 
-.Saving-descrpition{
+.saving-descrpition{
+    overflow-y: scroll;
+    z-index: 99;
     padding: 2%;
     width:90%;
     height:auto;
@@ -17,11 +19,14 @@
     box-shadow: 0 2px 10px 0 rgb(243, 242, 242), 0 6px 10px 0 rgb(243, 242, 242);
    
 }
-.Jobdescription p{
+.saving-descrpition::-webkit-scrollbar {
+    display: none;
+  }
+.jobdescription p{
     line-height: 1.4rem;
 }
 
-.Savingdesc{
+.savingdesc{
     display:flex;
     margin-bottom: 2%;
     
@@ -72,25 +77,25 @@
     }
 }
 
-.Jobdescription h1{
+.jobdescription h1{
     margin: 2% 0;
     font-size:var(--fs-wordjd);
 }
 
-.Jobdescription {
+.jobdescription {
    margin:4% 0;
    font-size:var(--fs-worddes);
 }
 
-.Reference-needs{
+.reference-needs{
     font-size:var(--fs-worddes); 
 }
 
-.Title-requir th{
+.title-requir th{
     color: var(--color-butoon); 
 }
 
-.Reference-needs table{
+.reference-needs table{
     width:100%;
 }
 
@@ -107,7 +112,7 @@
 }
 
 @media only screen and (max-width : 850px) {
-    .Saving-descrpition{
+    .saving-descrpition{
         width: 95%;
        
 }

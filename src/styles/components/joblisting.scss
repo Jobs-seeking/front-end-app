@@ -12,19 +12,14 @@
     background-attachment: fixed;
     position: fixed;
 }
-.Offering-part{
+.offering-part{
 font-size: 30px;
     margin: 0 6%;
 }
-.overll-component{
 
-}
-.container-components{
-    // background-color:red;
-    // margin-top:5%;
-}
+
 @media only screen and (max-width : 850px) {
-    .Offering-part{
+    .offering-part{
             margin: 0 3%;
     }
   }
@@ -33,9 +28,6 @@ font-size: 30px;
         display: none;
     }
   }
-  @media only screen and (max-width : 500px) {
-    .lef-component{
-    }
-  }
+
   
   
