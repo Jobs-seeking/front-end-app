@@ -11,7 +11,6 @@ function Searchingjob(){
             </div>
             <div>      
             </div>
-      
             <div className="Chosing">
             <div class="select">
             <select name='job'>
@@ -45,12 +44,9 @@ function Searchingjob(){
                 <option value="3">All</option>
             </select>
             </div>
-            
+   
             </div>
             </div>
-  
-
-
     )
     
 }
