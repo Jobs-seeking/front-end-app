@@ -1,22 +1,29 @@
 .edit-account,
 .select {
   font-size: var(--fz-destop-1);
-
 }
 .form-edit {
   width: 70%;
-  margin: 60px auto 0;
+  margin: 100px auto;
 }
 .form-edit .main_title {
   text-align: center;
-  font-size: var(--fz-destop-3);
+  font-size: var(--fz-destop-4);
   margin-bottom: 10px;
   color: var(--color-3);
+}
+.form-edit-account .edit-avatar {
+  margin: 60px 76px;
+}
+.round {
+  width: 100%;
+  border-radius: 50%;
+  height: 60%;
 }
 .edit-avatar {
   border-radius: 10px;
   box-shadow: rgb(0 0 0 / 20%) 0px 18px 50px -10px;
-  width: 43%;
+  width: 70%;
   text-align: center;
   padding: 37px;
 }
@@ -26,13 +33,22 @@
 .btn-item {
   width: 100%;
   font-size: 14px;
+  border: 3px solid var(--color-4);
+}
+.btn-item:hover {
+  color: var(--color-3);
+  border: 3px solid var(--color-3);
+  background-color: var(--color-5);
+}
+.img-item {
+  width: 100%;
 }
 .upload-picture {
   position: relative;
   overflow: hidden;
   display: inline-block;
 }
-.upload-picture input[type=file] {
+.upload-picture input[type="file"] {
   position: absolute;
   left: 0;
   top: 0;
@@ -42,25 +58,19 @@
   display: grid;
   grid-template-columns: 30% 70%;
   gap: 10px;
-  padding: 3px;
   font-size: 16px;
   margin-top: 36px;
-}
-
-.form-edit-account .edit-avatar {
-  margin: 25px 94px;
 }
 .form-edit-information .edit-item {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-
 .fields {
   margin: 17px 40px;
 }
 .fields input,
-select,
+#select,
 textarea {
   position: relative;
   padding: 12px;
@@ -71,54 +81,53 @@ textarea {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-
-.select:hover,textarea:hover,.fields input:hover {
+#select:hover,
+textarea:hover,
+.fields input:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   transition: box-shadow 0.3s;
-}
-
-
-.address label {
-  margin-bottom: 10px;
 }
 textarea {
   height: 80px;
 }
-.buttont-save{
+.buttont-save {
   padding: 10px 20px;
-  margin: 5px 0;
   width: 120px;
   margin-left: 300px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+.btn-upload {
+  width: 100%;
+}
+@media (min-width: 789px) and (max-width: 1024px) {
   .form-edit .form-edit-account {
-    grid-template-columns: 100%;
+    grid-template-columns: 70%;
   }
   .buttont-save {
     margin-left: 220px;
+  }
+  
+  // .button-save {
+  //   display: flex;
+  //   justify-content: center;
+  // }
 }
-  .button-save {
-    display: flex;
-    justify-content: center;
-}
-}
-@media (max-width: 480px) {
-  .form-edit .form-edit-account {
-    grid-template-columns: 100%;
-  }
-  .form-edit-information .edit-item {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .buttont-save{
-    margin-left: 70px;
-  }
-  .fields {
-    margin: 17px auto;
-  }
-  .form-edit-account .edit-avatar {
-    margin: 0;
-  }
-  .edit-avatar {
-    width: 70%;
-  }
-}
+// @media (max-width: 480px) {
+//   .form-edit .form-edit-account {
+//     grid-template-columns: 100%;
+//   }
+//   .form-edit-information .edit-item {
+//     grid-template-columns: repeat(1, 1fr);
+//   }
+//   .buttont-save{
+//     margin-left: 70px;
+//   }
+//   .fields {
+//     margin: 17px auto;
+//   }
+//   .form-edit-account .edit-avatar {
+//     margin: 0;
+//   }
+//   .edit-avatar {
+//     width: 70%;
+//   }
+// }

@@ -13,8 +13,8 @@ export default function _BasePage() {
   return(
       <div>
         <Header/>
-        {/* <Home/> */}
         <Outlet/>
+
         <Footer/>
       </div>
   )
