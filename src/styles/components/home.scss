@@ -3,9 +3,7 @@
     margin: 20vh auto;
     display: flex;
     flex-direction: column;
-    gap: 5vh;
-    // align-items: center;
-    justify-content:left;
+    gap: var(--gap);
     & .titel{
         display: flex;
         flex-direction: column;
