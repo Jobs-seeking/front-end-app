@@ -3,6 +3,7 @@
   --content-width: 88vw;
 }
 .navigation {
+  z-index: 10;
   height: var(--nav-height);
   position: fixed;
   top: 0;
@@ -52,6 +53,9 @@ nav {
       & a:hover {
         border-bottom: 3px solid var(--color-4);
       }
+      & .active{
+        border-bottom: 3px solid var(--color-4);
+      }
     }
   }
   & .nav-button {
@@ -76,6 +80,12 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     background-color:var(--color-3);
+    animation: slideNavbar 800ms ;
+    transition-property: top;
+  }
+  @keyframes slideNavbar {
+    from {top:-200px}
+    to { top: 80px;}
   }
   .nav-list{
     display: none;
