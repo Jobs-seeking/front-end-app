@@ -1,7 +1,5 @@
 import React from "react"
-const Style = [
-
-]
+const Style = []
 
 export default function Input({type, id, name, value, onChange, inputStyle, placeholder}) {
   const checkInputStyle = Style.includes(inputStyle)

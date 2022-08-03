@@ -1,34 +1,34 @@
 import Tab from './/../../core-ui/Joblisting/Tab'
 import Avatar from './/../../core-ui/Joblisting/Avatar'
 import { TiMediaRecord } from "react-icons/ti";
-function Savingjob(){
+import { render } from '@testing-library/react';
+const Savingjob=({data})=>{
+    console.log(data);
     return(
-    <div className='Saving-descrpition'>
-        <div className='Savingdesc'>
-            <div className='Savingdesc__image'>
-                <Avatar></Avatar>
+    <div className='saving-descrpition'>
+        <div className='savingdesc'>
+            <div className='savingdesc__image'>
+                <Avatar imagejob={data === undefined ? "":data.image}></Avatar>
             </div>
-            <div className='Savingdesc__tab'>
-                <Tab></Tab>
-            <h3>1 day ago</h3>
+            <div className='savingdesc__tab'>
+                <Tab  location={data === undefined ? "":data.location}  salaryjob={data === undefined ? "":data.salaryjob} ></Tab>
+            <h3>{data === undefined ? "":data.timepostjob}</h3>
             </div>
-            <div className='Savingdesc__save'>
-            <h2> Save</h2>
+            <div className='savingdesc__save'>
+            <h2> Save  </h2> 
             </div>
-            <div className='Savingdesc__apply'>
+            <div className='savingdesc__apply'>
             <h2> Apply</h2>
             </div>
         </div>
         <hr></hr>
-        <div className='Jobdescription'>
+        <div className='jobdescription'>
             <h1>Job description</h1>
-            <p>Shipping companies, as well as graelieved that cutting the  th as “cerbe that she would be very unimpressed by funding tax cuts through increased borrowing, even if it wasn’t at a time of high inflation – but certainly when it is”.
-
- said. “That’s what Thatcherism means. I thinlity of tax cut.</p>
+            <p>{data === undefined ? "":data.detailjob}</p>
         </div>
-        <div className='Reference-needs'>
+        <div className='reference-needs'>
         <table className='table-des'>
-            <thead className='Title-requir'>
+            <thead className='title-requir'>
             <th>Skills needed</th>
             <th>Industry</th>
             <th>Imployment type</th>
@@ -49,4 +49,5 @@ function Savingjob(){
     </div>
 )
 }
+
 export default Savingjob;

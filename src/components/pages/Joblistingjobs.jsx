@@ -7,7 +7,7 @@ function Joblistingjobs(){
         <div className='overll-component'>
           <Searchingjob/>
           <OfferingJobContainer/>
-       
+  
         </div>
     )
 }

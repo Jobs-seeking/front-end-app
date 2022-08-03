@@ -1,22 +1,24 @@
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RiMoneyPoundCircleLine } from "react-icons/ri";
-function Tab(){
-    return(
-        <div className='container-tab'>
+import React from "react";
+const Tab =(props)=> {
+        return (
+            <>  
+                <div className='container-tab'>
             <div className="location">
                 <div className="icon-location"><MdOutlineLocationOn/></div>
                 <div>
-                    <p className="Address">Da nang</p>
+                    <p className="address">{props.location}</p>
                 </div>
             </div>
             <div className="location">
                 <div className="icon-location"><RiMoneyPoundCircleLine/></div>
                 <div>
-                <p>30,000$</p>
+                <p>{props.salaryjob}$</p>
                 </div>
             </div>
-        </div>
-    )
+        </div>      
+            </>
+        );
 }
-            
 export default Tab;
