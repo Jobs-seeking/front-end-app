@@ -11,7 +11,7 @@ export default function _BasePage() {
   return(
       <div>
         <Header/>
-        <Account/>
+        <EditStudentAccount/>
         <Footer/>
       </div>
   )
