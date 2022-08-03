@@ -9,21 +9,13 @@
     --fs-worddes:14px;
 }
 
-.saving-descrpition{
-    overflow-y: scroll;
-    z-index: 99;
+.Saving-descrpition{
     padding: 2%;
     width:90%;
     height:auto;
     border-radius:20px;
-    box-shadow: 0 2px 10px 0 rgb(243, 242, 242), 0 6px 10px 0 rgb(243, 242, 242);
+    box-shadow: 0 4px 20px 0 lightgray, 0 12px 40px 0 lightgray;
    
-}
-.saving-descrpition::-webkit-scrollbar {
-    display: none;
-  }
-.jobdescription p{
-    line-height: 1.4rem;
 }
 
 .Savingdesc{
@@ -45,7 +37,6 @@
     }
     &__save, &__apply{
         margin-top:3%;
-        cursor: pointer;
      
     }
     &__save, &__apply h2{
@@ -91,22 +82,22 @@
     font-size:var(--fs-worddes); 
 }
 
-.Title-requir th{
+th{
     color: var(--color-butoon); 
 }
 
-.Reference-needs table{
+table{
     width:100%;
 }
 
-.name-requir td{
+table td{
     padding: 1% 7%;
 }
-.name-requir td{
+td{
     width: 500px;
 }
 
-.icon-pur span{
+span{
     margin-right: 20px;
     color: var(--color-butoon); 
 }
@@ -115,5 +106,5 @@
     .Saving-descrpition{
         width: 95%;
        
-}
+    }
 }

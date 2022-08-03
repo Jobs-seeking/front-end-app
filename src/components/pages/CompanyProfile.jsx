@@ -1,9 +1,10 @@
 
 import BtnFollow from "../core-ui/Profile/BtnFollow";
 import Details from "../core-ui/Profile/Details";
-import Job from "../core-ui/Profile/Job";
+import Offeringjob from "../layouts/Joblistingg/Offeringjob";
+// import Job from "../core-ui/Profile/Job";
 import CompanyProfileInfor from "../core-ui/Profile/CompanyProfileInfor";
-
+import Savingjob from "../layouts/Joblistingg/Savingjob";
 export default function CompanyProfile() {
   return (
     <div className="company-profile">
@@ -15,11 +16,14 @@ export default function CompanyProfile() {
       <div className="company-profile-job">
         <div className="company-profile-job-list">
           <span>All Jobs</span>
-          <Job></Job>
-          <Job></Job>
-          <Job></Job>
+          <Offeringjob />
+          <Offeringjob />
+          <Offeringjob />
         </div>
-        <Details></Details>
+        <div className="company-profile-job-details">
+          <span className="span-Details">Details</span>
+          <Details />
+        </div>
       </div>
     </div>
   );

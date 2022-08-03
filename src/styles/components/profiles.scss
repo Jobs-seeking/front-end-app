@@ -36,7 +36,7 @@ html {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      border: 3px solid orangered;
+      border: 3px solid var(--color-4);
       object-fit: cover;
       object-position: 50% 50%;
     }
@@ -44,16 +44,16 @@ html {
     &__right {
       margin: auto 0;
       line-height: 25px;
-      // h4{
-      //   font-weight: bold;
-      // }
+      h4 {
+        font-weight: bold;
+      }
     }
   }
 
   &-job {
     margin-top: 3%;
     display: grid;
-    grid-template-columns: 30% 30%;
+    grid-template-columns: 40% 40%;
     gap: 5%;
     justify-content: center;
 
@@ -61,11 +61,26 @@ html {
       display: flex;
       flex-direction: column;
       gap: 2rem;
-
+      .Information {
+        width: 100%;
+        text-align: justify;
+      }
       span {
         padding-bottom: 5%;
-        width: 10rem;
+        width: 25%;
         border-bottom: 1px solid black;
+      }
+    }
+    &-details {
+      .span-Details {
+        padding-bottom: 5%;
+        width: 15rem;
+        border-bottom: 1px solid black;
+      }
+      .Saving-descrpition {
+        width: 100%;
+        text-align: justify;
+        margin-top: 9.5%;
       }
     }
   }
@@ -74,80 +89,15 @@ html {
 .btn-follow {
   text-align: right;
   margin: auto 0;
-
-  button {
-    border: 1px solid;
-    color: white;
-    padding: 2% 3%;
-    border-radius: 10px;
-    background-color: var(--color-4);
-  }
-}
-
-.job {
-  // display: flex;
-  // flex-direction: row;
-  display: grid;
-  grid-template-columns: 20% 80%;
-  padding: 3%;
-  justify-content: center;
-  height: 70px;
-  line-height: 25px;
-  border: 1px solid white;
-  box-shadow: 1px 1px 3px orange;
-  // box-shadow: rgba(251, 14, 14, 0.1) 0 10px 40px 0px;
-  border-radius: 10px;
-
-  &:hover {
-    background-color: lightblue;
-    box-shadow: 1px 1px 3px blue;
-  }
-
-  &-avt {
-    width: 30%;
-    text-align: center;
-
-    & img {
-      width: 70px;
-      height: 70px;
-      object-fit: cover;
-      object-position: 50% 50%;
-      border-radius: 50%;
-    }
-  }
-
-  &-infor {
-    width: 70%;
-    margin: auto 0;
-
-    &__bot {
-      display: flex;
-      gap: 5%;
-    }
-  }
-}
-
-.details {
-
-  // span {
-  //     padding-bottom: 5%;
-  //     width: 10rem;
-  //     border-bottom: 1px solid black;
-  //   }
-  &-abc {
-    width: 100%;
-    height: 100%;
-    background-color: lightblue;
-    border-radius: 10px;
-  }
 }
 
 .student-profile {
   display: grid;
-  grid-template-columns: 20% 50%;
+  grid-template-columns: 50% 20%;
   gap: 5%;
   justify-content: center;
   margin: 10% 0;
+
   &-infor {
     &__top {
       padding: 5% 5%;
@@ -160,7 +110,7 @@ html {
       border-radius: 10px 10px 0 0;
 
       &__left {
-        img {
+        & img {
           width: 150px;
           height: 150px;
           border-radius: 50%;
@@ -199,9 +149,7 @@ html {
 }
 
 .applied {
-
   &-job {
-    height: 10%;
     background-color: lightgray;
     display: flex;
     gap: 5%;
@@ -212,8 +160,82 @@ html {
     &__right {
       font-size: 30px;
       font-weight: bold;
-      color: orangered;
+      color: var(--color-4);
       margin: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .company-profile {
+    font-size: var(--fz-mobile-1);
+    &-banner {
+      height: 15rem;
+      background-image: url(../../assets/images/profile-banner-responsive.png);
+    }
+    &-title {
+      display: grid;
+      grid-template-columns: 70% 20%;
+      padding-top: 10rem;
+    }
+    &-infor {
+      &__left img {
+        width: 100px;
+        height: 100px;
+        border: 2px solid var(--color-4);
+      }
+
+      &__right {
+        line-height: 20px;
+      }
+    }
+  }
+  .btn-follow {
+    .btn {
+      width: 75px;
+      height: 30px;
+    }
+  }
+  .student-profile {
+    font-size: var(--fz-mobile-1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 0.5%;
+    padding-top: 11%;
+    &-infor {
+      &__top {
+        padding: 5%;
+        border-bottom: 1px solid gray;
+        display: grid;
+        grid-template-columns: 35% 55% 10%;
+        &__left {
+          & img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--color-4);
+          }
+        }
+
+        &__mid {
+          line-height: 20px;
+          h4 {
+            font-weight: bold;
+            color: var(--color-4);
+          }
+        }
+      }
+      &__bot {
+        line-height: 40px;
+        padding: 5% 3%;
+      }
+    }
+  }
+  .applied {
+    &-job {
+      padding: 2%;
+      width: 50%;
+      line-height: 20px;
     }
   }
 }

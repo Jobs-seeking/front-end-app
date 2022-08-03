@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Offeringjob from '../layouts/Joblistingg/Offeringjob';
 import Savingjob from '../layouts/Joblistingg/Savingjob';
 import axios from 'axios';
+
 function OfferingJobContainer(){
     const [jobs,setJobs] = useState( {isLoaded: false, data:[]})
     const [detailJob,setDetailJob]= useState(0);

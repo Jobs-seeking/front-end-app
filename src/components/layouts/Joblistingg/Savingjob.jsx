@@ -1,34 +1,32 @@
 import Tab from './/../../core-ui/Joblisting/Tab'
 import Avatar from './/../../core-ui/Joblisting/Avatar'
 import { TiMediaRecord } from "react-icons/ti";
-import { render } from '@testing-library/react';
-const Savingjob=({data})=>{
-    console.log(data);
+function Savingjob(){
     return(
-    <div className='saving-descrpition'>
-        <div className='savingdesc'>
-            <div className='savingdesc__image'>
-                <Avatar imagejob={data === undefined ? "":data.image}></Avatar>
+    <div className='Saving-descrpition'>
+        <div className='Savingdesc'>
+            <div className='Savingdesc__image'>
+                <Avatar></Avatar>
             </div>
-            <div className='savingdesc__tab'>
-                <Tab  location={data === undefined ? "":data.location}  salaryjob={data === undefined ? "":data.salaryjob} ></Tab>
-            <h3>{data === undefined ? "":data.timepostjob}</h3>
+            <div className='Savingdesc__tab'>
+                <Tab></Tab>
+            <h3>1 day ago</h3>
             </div>
-            <div className='savingdesc__save'>
-            <h2> Save  </h2> 
+            <div className='Savingdesc__save'>
+            <h2> Save</h2>
             </div>
-            <div className='savingdesc__apply'>
+            <div className='Savingdesc__apply'>
             <h2> Apply</h2>
             </div>
         </div>
         <hr></hr>
-        <div className='jobdescription'>
+        <div className='Jobdescription'>
             <h1>Job description</h1>
             <p>{data === undefined ? "":data.detailjob}</p>
         </div>
-        <div className='reference-needs'>
+        <div className='Reference-needs'>
         <table className='table-des'>
-            <thead className='title-requir'>
+            <thead className='Title-requir'>
             <th>Skills needed</th>
             <th>Industry</th>
             <th>Imployment type</th>
@@ -49,5 +47,4 @@ const Savingjob=({data})=>{
     </div>
 )
 }
-
 export default Savingjob;
