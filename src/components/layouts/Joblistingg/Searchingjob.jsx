@@ -1,17 +1,17 @@
 function Searchingjob(){
     return(
-        <div className="Customize-part">
-            <div className="Offering">
-                <div className="Offering__Saved-jobs">
+        <div className="customize-part">
+            <div className="offering">
+                <div className="offering__Saved-jobs">
                     <h1>Saved job <span>4</span></h1>    
                 </div>       
-                <div className="Offering__application">
+                <div className="offering__application">
                     <h1>Apply Job <span>10</span></h1>    
                 </div>  
             </div>
             <div>      
             </div>
-            <div className="Chosing">
+            <div className="chosing">
             <div class="select">
             <select name='job'>
                 <option selected disabled>Location</option>
