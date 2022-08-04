@@ -34,7 +34,6 @@ const Savingjob=({data})=>{
             <th>Industry</th>
             <th>Imployment type</th>
             </tr>
-        
             </thead>
             <tbody>
             <tr className='name-requir'>
