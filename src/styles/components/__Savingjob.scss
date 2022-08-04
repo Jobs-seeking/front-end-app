@@ -9,21 +9,13 @@
     --fs-worddes:14px;
 }
 
-.saving-descrpition{
-    overflow-y: scroll;
-    z-index: 99;
+.Saving-descrpition{
     padding: 2%;
     width:90%;
     height:auto;
     border-radius:20px;
-    box-shadow: 0 2px 10px 0 rgb(243, 242, 242), 0 6px 10px 0 rgb(243, 242, 242);
+    box-shadow: 0 4px 20px 0 lightgray, 0 12px 40px 0 lightgray;
    
-}
-.saving-descrpition::-webkit-scrollbar {
-    display: none;
-  }
-.jobdescription p{
-    line-height: 1.4rem;
 }
 
 .Savingdesc{
@@ -45,35 +37,34 @@
     }
     &__save, &__apply{
         margin-top:3%;
-        cursor: pointer;
-      
      
     }
-    &__save button, &__apply button{
-        margin-left: 8%;
-        padding: 7px 21px;
+    &__save, &__apply h2{
         font-size: var(--fs-word);
         justify-content: center;
         text-align: center;
         align-items: center;
     }
-    &__save button{
-        background-color: white;
-        margin-left:37%;
+    &__save{
+        
+        margin-left:5%;
+        height:var(--height-button);
+        padding:1.5% 1%;
         text-align:center;
-        border-radius: 20px;
-        width: 80px;
+        width:var(--width-button);
+        border-radius:30px;
         color: var(--color-butoon);
-        border: 1px solid var(--color-butoon);
+        border:1px double var(--color-butoon);
     }
-    &__apply button{
-        width: 80px;
-        margin-left:55%;
-        border: 1px solid var(--color-butoon);
+    &__apply{
+        height:var(--height-button);
+        margin-left:5%;
+        padding:1.5% 1%;
         text-align:center;
+        width:var(--width-button);
+        border-radius:30px;
         color: var(--color-word);
-        border-radius: 20px;
-        background-color: #EE712F;
+        background-color: var(--color-butoon);
     }
 }
 
@@ -91,22 +82,22 @@
     font-size:var(--fs-worddes); 
 }
 
-.Title-requir th{
+th{
     color: var(--color-butoon); 
 }
 
-.Reference-needs table{
+table{
     width:100%;
 }
 
-.name-requir td{
+table td{
     padding: 1% 7%;
 }
-.name-requir td{
+td{
     width: 500px;
 }
 
-.icon-pur span{
+span{
     margin-right: 20px;
     color: var(--color-butoon); 
 }
@@ -115,12 +106,5 @@
     .Saving-descrpition{
         width: 95%;
        
-}
-}
-@media only screen and (max-width : 956px) {
-    .savingdesc__apply button,.savingdesc__save button{
-        width: 80%;
-        margin-left: 9px;
     }
-  }
-  
+}

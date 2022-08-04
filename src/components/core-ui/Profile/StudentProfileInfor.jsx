@@ -12,7 +12,7 @@ export default function StudentProfileInfor() {
           />
         </div>
         <div className="student-profile-infor__top__mid">
-          <p>Nguyen Thi Vinh Uyen</p>
+          <h4>Nguyen Thi Vinh Uyen</h4>
           <p>Second-year student</p>
           <p>
             <MdLocationOn className="icon" /> Son Tra - Da Nang
@@ -26,7 +26,7 @@ export default function StudentProfileInfor() {
         <table>
           <tbody>
             <tr>
-              <td>Current position</td>
+              <td>Position</td>
               <td>:</td>
               <td className="data-col">Second-year student</td>
             </tr>
@@ -36,7 +36,7 @@ export default function StudentProfileInfor() {
               <td className="data-col">101B Le Huu Trac - Son Tra - Da Nang</td>
             </tr>
             <tr>
-              <td>Phone Number</td>
+              <td>Phone</td>
               <td>:</td>
               <td className="data-col">0832748725</td>
             </tr>

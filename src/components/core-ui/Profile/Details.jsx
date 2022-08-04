@@ -1,8 +1,8 @@
+import Savingjob from "../../layouts/Joblistingg/Savingjob";
 export default function Details() {
     return (
-        <div className="details">
-            <span>Details</span>
-            <div className="details-abc"></div>
-        </div>
-    )
+      <div className="company-profile-job-details">
+        <Savingjob />
+      </div>
+    );
 }
