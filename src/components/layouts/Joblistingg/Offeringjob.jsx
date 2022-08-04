@@ -23,12 +23,12 @@ const Offeringjob = ({ data, onClickJob }) => {
               </p>
               <Tab location={job.location} salaryjob={job.salaryjob}></Tab>
               <p className="time-posting">{job.timepostjob}</p>
-              <p className="content-recruiment">
+              <div className="content-recruiment">
                 {job.briefjob}
                 <div className="model-form">
-                  <Form props={job} ></Form>
+                  <Form ></Form>
                 </div>
-              </p>
+              </div>
             </div>
           </div>
         );

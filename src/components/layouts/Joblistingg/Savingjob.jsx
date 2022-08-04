@@ -15,10 +15,10 @@ const Savingjob=({data})=>{
             <h3>{data === undefined ? "":data.timepostjob}</h3>
             </div>
             <div className='savingdesc__save'>
-            <h2> Save  </h2> 
+            <button> Save  </button> 
             </div>
             <div className='savingdesc__apply'>
-            <h2> Apply</h2>
+            <button> Apply</button>
             </div>
         </div>
         <hr></hr>
@@ -29,9 +29,12 @@ const Savingjob=({data})=>{
         <div className='reference-needs'>
         <table className='table-des'>
             <thead className='title-requir'>
+            <tr>
             <th>Skills needed</th>
             <th>Industry</th>
             <th>Imployment type</th>
+            </tr>
+        
             </thead>
             <tbody>
             <tr className='name-requir'>
