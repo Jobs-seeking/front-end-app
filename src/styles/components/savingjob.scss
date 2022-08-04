@@ -46,34 +46,34 @@
     &__save, &__apply{
         margin-top:3%;
         cursor: pointer;
+      
      
     }
-    &__save, &__apply h2{
+    &__save button, &__apply button{
+        margin-left: 8%;
+        padding: 7px 21px;
         font-size: var(--fs-word);
         justify-content: center;
         text-align: center;
         align-items: center;
     }
-    &__save{
-        
-        margin-left:5%;
-        height:var(--height-button);
-        padding:1.5% 1%;
+    &__save button{
+        background-color: white;
+        margin-left:37%;
         text-align:center;
-        width:var(--width-button);
-        border-radius:30px;
+        border-radius: 20px;
+        width: 80px;
         color: var(--color-butoon);
-        border:1px double var(--color-butoon);
+        border: 1px solid var(--color-butoon);
     }
-    &__apply{
-        height:var(--height-button);
-        margin-left:5%;
-        padding:1.5% 1%;
+    &__apply button{
+        width: 80px;
+        margin-left:55%;
+        border: 1px solid var(--color-butoon);
         text-align:center;
-        width:var(--width-button);
-        border-radius:30px;
         color: var(--color-word);
-        background-color: var(--color-butoon);
+        border-radius: 20px;
+        background-color: #EE712F;
     }
 }
 
@@ -117,3 +117,10 @@
        
 }
 }
+@media only screen and (max-width : 956px) {
+    .savingdesc__apply button,.savingdesc__save button{
+        width: 80%;
+        margin-left: 9px;
+    }
+  }
+  
