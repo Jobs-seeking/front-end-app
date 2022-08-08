@@ -1,7 +1,7 @@
 .edit-account,
 .select {
   font-size: var(--fz-destop-1);
-  font-family: ;
+  font-family: 'Poppins', sans-serif;
 }
 .form-edit {
   width: 70%;
@@ -81,6 +81,8 @@ textarea {
   border-radius: 10px;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
 }
 #select:hover,
 textarea:hover,
