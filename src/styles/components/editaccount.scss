@@ -1,9 +1,8 @@
 .edit-account,
 .select {
   font-size: var(--fz-destop-1);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--color-3);
-
 }
 .form-edit {
   width: 70%;
@@ -50,7 +49,7 @@
   position: relative;
   overflow: hidden;
   display: inline-block;
-    margin-left: 5px;
+  margin-left: 5px;
 }
 .upload-picture input[type="file"] {
   position: absolute;
@@ -122,5 +121,5 @@ textarea {
   }
   .upload-picture {
     margin-left: -15px;
-}
+  }
 }
