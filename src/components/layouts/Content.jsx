@@ -8,7 +8,7 @@ export default function Content(){
 
             </div>
             <div className="banner">
-            <BannerPN/>
+            {/* <BannerPN/> */}
             </div>
         </section>
     )

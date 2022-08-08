@@ -1,52 +1,46 @@
-.Information{
+
+.information{
     font-size:14px;
-    border: 1px lightgray double;
     display:flex;
     width: 50%;
     margin: 0 0 5%  0 ;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 4px 10px 0 lightgray, 0 12px 20px 0 lightgray;
+    box-shadow: 0 2px 10px 0 rgb(243, 242, 242), 0 6px 10px 0 rgb(243, 242, 242);
     &__Denform{
         margin-left:4%;
+        p{
+            cursor: pointer;
+        }
     }
 
 }
-.Information{
-    font-size:14px;
-    border: 1px lightgray double;
-    display:flex;
-    width: 50%;
-    margin: 0 0 5%  0 ;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 5px 0 lightgray, 0 12px 10px 0 lightgray;
-    &__Denform{
-        margin-left:4%;
-    }
-
-}
-.Time-posting{
+.time-posting{
     font-size: 12px;
     color: lightgray;
 }
-.Content-recruiment{
+.content-recruiment{
     padding: 3% 0;
 }
 
+.content-recruiment{
+    line-height: 1.3rem;
+
+}
+
 @media only screen and (max-width : 850px) {
-    .Saving-descrpition{
+    .saving-descrpition{
         width: 100%;
     }
 }
-.Model-form{
+.model-form{
     display: none;
 }
 @media only screen and (max-width : 780px) {
-    .Information{
+    .information{
        width: 100%;
     }
-    .Model-form{
+    .model-form{
         display: block;
     }
 }

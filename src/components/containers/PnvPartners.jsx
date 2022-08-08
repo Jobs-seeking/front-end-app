@@ -1,5 +1,5 @@
 import React from "react"
-import PartnerLogo from "../core-ui/PartnersLogo"
+import SlidePartners from "./SlidePartners"
 export default function PnvPartners() {
     return (
         <section className="content--pnv-partners">
@@ -7,12 +7,8 @@ export default function PnvPartners() {
                 <h1>PNV'S partners.</h1>
                 <span></span>
             </div>
-            <div className='pnv--partner-items' >
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
-                <PartnerLogo/>
+            <div className="list--pnv-parners">
+                <SlidePartners/>
             </div>
         </section>
     )
