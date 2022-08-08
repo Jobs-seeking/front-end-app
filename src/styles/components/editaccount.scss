@@ -98,46 +98,20 @@ textarea {
 .btn-upload {
   width: 100%;
 }
-@media (min-width: 789px) and (max-width: 1024px) {
-  .form-edit .form-edit-account {
-    grid-template-columns: 70%;
-  }
-  .buttont-save {
-    margin-left: 100px;
-  }
-  .fields input,
-#select,
-textarea {
-  width: 150%;
-
-}
-  
-  // .button-save {
-  //   display: flex;
-  //   justify-content: center;
-  // }
-}
-@media (max-width: 480px) {
-  .edit-account{
+@media only screen and (max-width: 1062px) {
+  .edit-account {
     z-index: 1;
-
-}
-  .form-edit .form-edit-account {
-    grid-template-columns: 100%;
-  }
-  .form-edit-information .edit-item {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .buttont-save{
-    margin-left: 50px;
-  }
-  .fields {
-    margin: 17px auto;
   }
   .form-edit-account .edit-avatar {
-    margin: 0;
+    margin: 60px 30px;
+  }
+  .buttont-save {
+    margin-left: 190px;
+  }
+  .form-edit-account .edit-avatar {
+    margin: 60px 30px;
   }
   .edit-avatar {
-    width: 100%;
+    width: 90%;
   }
 }
