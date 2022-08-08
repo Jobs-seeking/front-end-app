@@ -7,20 +7,20 @@ const Savingjob=({data})=>{
     return (
       <div className="saving-descrpition">
         <div className="savingdesc">
-          <div className="savingdesc__image">
+          <div className="image">
             <Avatar imagejob={data === undefined ? "" : data.image}></Avatar>
           </div>
-          <div className="savingdesc__tab">
+          <div className="tab">
             <Tab
               location={data === undefined ? "" : data.location}
               salaryjob={data === undefined ? "" : data.salaryjob}
             ></Tab>
             <h3>{data === undefined ? "" : data.timepostjob}</h3>
           </div>
-          <div className="savingdesc__save">
+          <div className="save">
             <button> Save </button>
           </div>
-          <div className="savingdesc__apply">
+          <div className="apply">
             <button> Apply</button>
           </div>
         </div>

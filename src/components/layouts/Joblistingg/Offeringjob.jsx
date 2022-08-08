@@ -10,10 +10,10 @@ const Offeringjob = ({ data, onClickJob }) => {
       {data.map((job, index) => {
         return (
           <div className="information">
-            <div className="information__Deimage">
+            <div className="detailImage">
               <Avatar imagejob={job.image}></Avatar>
             </div>
-            <div className="information__Denform">
+            <div className="detailImage">
               <p
                 onClick={() => {
                   onClickJob(index);

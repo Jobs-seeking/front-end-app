@@ -14,7 +14,7 @@ const Tab =(props)=> {
             <div className="location">
                 <div className="icon-location"><RiMoneyPoundCircleLine/></div>
                 <div>
-                <p>{props.salaryjob}$</p>
+                <p>{props.salaryjob}</p>
                 </div>
             </div>
         </div>      
