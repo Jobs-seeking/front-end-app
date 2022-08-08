@@ -3,6 +3,7 @@ import Home from './Home';
 import Header from '../layouts/Header';
 import Footer from '../layouts/Footer';
 import StudentProfile from '../../components/pages/StudentProfile';
+import CompanyProfile from '../../components/pages/CompanyProfile';
 import Joblistingjobs from '../pages/Joblistingjobs'
 import FormApply from '../core-ui/FormApply'
 import EditStudentAccount from '../pages/EditStudentAccount'
@@ -13,6 +14,12 @@ export default function _BasePage() {
       <div>
         <Header/>
         <Outlet/>
+        {/*  <StudentProfile/>*/}
+        {/*  <Joblistingjobs/>*/}
+        {/*  <FormApply/>*/}
+        {/*  <EditStudentAccount/>*/}
+        {/*  <Account/>*/}
+        {/*  <CompanyProfile/>*/}
         <Footer/>
       </div>
   )
