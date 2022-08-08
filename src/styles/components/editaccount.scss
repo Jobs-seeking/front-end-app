@@ -2,6 +2,8 @@
 .select {
   font-size: var(--fz-destop-1);
   font-family: 'Poppins', sans-serif;
+  color: var(--color-3);
+
 }
 .form-edit {
   width: 70%;
@@ -26,7 +28,7 @@
   box-shadow: rgb(0 0 0 / 20%) 0px 18px 50px -10px;
   width: 70%;
   text-align: center;
-  padding: 37px;
+  padding: 30px;
 }
 .edit-avatar .user-name {
   margin: 25px;
@@ -48,6 +50,7 @@
   position: relative;
   overflow: hidden;
   display: inline-block;
+    margin-left: 5px;
 }
 .upload-picture input[type="file"] {
   position: absolute;
@@ -77,17 +80,17 @@ textarea {
   padding: 12px;
   margin-top: 10px;
   width: 100%;
-  outline: 0;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-
+  border: none;
+  border-bottom: var(--color-3) solid 1px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  color: var(--color-3);
 }
+
 #select:hover,
 textarea:hover,
 .fields input:hover {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  // box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   transition: box-shadow 0.3s;
 }
 textarea {
@@ -117,4 +120,7 @@ textarea {
   .edit-avatar {
     width: 90%;
   }
+  .upload-picture {
+    margin-left: -15px;
+}
 }
