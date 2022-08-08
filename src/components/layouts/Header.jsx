@@ -38,7 +38,8 @@ export default function Header() {
                             <Link className="dcm" onClick={DCM} to="/jobs">JOBS</Link>
                         </li>
                         <li>
-                            <a className="dcm" onClick={DCM} href="#!">APPLY CV</a>
+                            <Link className="dcm" onClick={DCM} to="formapply">APPLY CV</Link>
+                            {/* <a className="dcm" onClick={DCM} href="#!">APPLY CV</a> */}
                         </li>
                     </ul>
                     <div onClick={OpentNavMobile} className="nav-mobile" id="nav-mobile"><span></span><span></span><span></span></div>
