@@ -9,7 +9,7 @@ export default function EditStudentAccount() {
     name: "",
     gender: "",
     email: "",
-    bod: "",
+    level: "",
     phone: "",
     address: "",
     isLoading: false,
@@ -64,14 +64,12 @@ export default function EditStudentAccount() {
               <Button buttonStyle="btn-item">
                 Upload a picture
               </Button>
-                
               <input type="file" buttonStyle="btn-item" id="myfile" name="myfile"  onChange={onChangeImage} /> 
             </div>
           </div>
           <div className="form-edit-information">
             <div className="main_title">EDIT YOUR ACCOUNT</div>
             <div>
-              {console.log(";;;;;;;;", userEdit)}
               <form action="" onSubmit={handleUserUpdate}>
                 <div className="edit-item">
                   <div className="edit item-left ">
@@ -111,14 +109,17 @@ export default function EditStudentAccount() {
                   </div>
                   <div className="edit item-right">
                     <div className="field_item fields">
-                      <label>Birth of day</label>
-                      <Input
-                        name="bod"
-                        type="date"
-                        inputStyle="field_item "
-                        value={userEdit.dateOfBirth}
+                      <label>Level</label>
+                      <select
+                        id="select"
+                        name="level"
+                        value={"male"}
                         onChange={(e) => handleEdit(e)}
-                      ></Input>
+                      >
+                        <option value="">Select an option&hellip;</option>
+                        <option value="male">Second-year student</option>
+                        <option value="female">Third-year student</option>
+                      </select>
                     </div>
                     <div className="field_item fields">
                       <label>Phone</label>
@@ -142,11 +143,9 @@ export default function EditStudentAccount() {
                 </div>
                 <div className="buttont-save">
                   <Button> SAVE</Button>
-                  {/* <button type="submit">save</button> */}
                 </div>
               </form>
             </div>
-           
           </div>
         </div>
       </div>

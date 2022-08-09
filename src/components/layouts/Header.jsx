@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../core-ui/Button";
 import { Link } from "react-router-dom";
-import { ReactComponent as LogoPNV } from '../../assets/images/LogoPNV.svg';
+import { ReactComponent as LogoPNV } from '../../assets/images/pnvlog.svg';
 export default function Header() {
     const OpentNavMobile = () => {
         var x = document.getElementById("nav-list");
@@ -11,7 +11,6 @@ export default function Header() {
             x.className = "nav-list";
         }
     }
-    
     const DCM =(evt) =>{
         var i;
         var x =document.getElementsByClassName("dcm");
@@ -29,7 +28,7 @@ export default function Header() {
                 <nav>
                     <ul className="nav-list" id="nav-list">
                         <li>
-                            <a  className="dcm" onClick={DCM} href="#!">RECRULTERS</a>
+                            <a  className="dcm" onClick={DCM} href="#!">RECRUITERS</a>
                         </li>
                         <li>
                             <Link  className="dcm"  onClick={DCM} to="/">HOME</Link>
@@ -44,8 +43,8 @@ export default function Header() {
                     </ul>
                     <div onClick={OpentNavMobile} className="nav-mobile" id="nav-mobile"><span></span><span></span><span></span></div>
                     <div className="nav-button">
-                        <Link to="/login"><Button buttonStyle="btn--outline">LOGIN</Button></Link>
-                        <Button >SIGN UP</Button>
+                        <Link to="/SISU"><Button buttonStyle="btn--outline">LOGIN</Button></Link>
+                        <Link to="/SISU/Register"><Button >SIGN UP</Button></Link>
                     </div>
                 </nav>
             </div>

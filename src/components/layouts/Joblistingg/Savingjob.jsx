@@ -1,50 +1,83 @@
-    // import Tab from './/../../core-ui/Joblisting/Tab'
-    // import Avatar from './/../../core-ui/Joblisting/Avatar'
-    // import { TiMediaRecord } from "react-icons/ti";
-    // function Savingjob(){
-    //     return(
-    //     <div className='Saving-descrpition'>
-    //         <div className='Savingdesc'>
-    //             <div className='Savingdesc__image'>
-    //                 <Avatar></Avatar>
-    //             </div>
-    //             <div className='Savingdesc__tab'>
-    //                 <Tab></Tab>
-    //             <h3>1 day ago</h3>
-    //             </div>
-    //             <div className='Savingdesc__save'>
-    //             <h2> Save</h2>
-    //             </div>
-    //             <div className='Savingdesc__apply'>
-    //             <h2> Apply</h2>
-    //             </div>
-    //         </div>
-    //         <hr></hr>
-    //         <div className='Jobdescription'>
-    //             <h1>Job description</h1>
-    //             <p>{data === undefined ? "":data.detailjob}</p>
-    //         </div>
-    //         <div className='Reference-needs'>
-    //         <table className='table-des'>
-    //             <thead className='Title-requir'>
-    //             <th>Skills needed</th>
-    //             <th>Industry</th>
-    //             <th>Imployment type</th>
-    //             </thead>
-    //             <tbody>
-    //             <tr className='name-requir'>
-    //             <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>HTML</td>
-    //             <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Infor</td>
-    //             <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Full</td>
-    //             </tr>
-    //             <tr className='name-requir'>
-    //             <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>HTML</td>
-    //             <td className='icon-pur'><span><TiMediaRecord></TiMediaRecord></span>Full</td>
-    //             </tr>
-    //             </tbody>
-    //             </table>
-    //         </div>
-    //     </div>
-    // )
-    // }
-    // export default Savingjob;
+import Tab from './/../../core-ui/Joblisting/Tab'
+import Avatar from './/../../core-ui/Joblisting/Avatar'
+import { TiMediaRecord } from "react-icons/ti";
+import { render } from '@testing-library/react';
+const Savingjob=({data})=>{
+    console.log(data);
+    return (
+      <div className="saving-descrpition">
+        <div className="savingdesc">
+          <div className="image">
+            <Avatar imagejob={data === undefined ? "" : data.image}></Avatar>
+          </div>
+          <div className="tab">
+            <Tab
+              location={data === undefined ? "" : data.location}
+              salaryjob={data === undefined ? "" : data.salaryjob}
+            ></Tab>
+            <h3>{data === undefined ? "" : data.timepostjob}</h3>
+          </div>
+          <div className="save">
+            <button> Save </button>
+          </div>
+          <div className="apply">
+            <button> Apply</button>
+          </div>
+        </div>
+        <hr></hr>
+        <div className="jobdescription">
+          <h1>Job description</h1>
+          <p>{data === undefined ? "" : data.detailjob}</p>
+        </div>
+        <div className="reference-needs">
+          <table className="table-des">
+            <thead className="title-requir">
+              <tr>
+                <th>Skills needed</th>
+                <th>Industry</th>
+                <th>Imployment type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="name-requir">
+                <td className="icon-pur">
+                  <span>
+                    <TiMediaRecord></TiMediaRecord>
+                  </span>
+                  HTML
+                </td>
+                <td className="icon-pur">
+                  <span>
+                    <TiMediaRecord></TiMediaRecord>
+                  </span>
+                  Infor
+                </td>
+                <td className="icon-pur">
+                  <span>
+                    <TiMediaRecord></TiMediaRecord>
+                  </span>
+                  Full
+                </td>
+              </tr>
+              <tr className="name-requir">
+                <td className="icon-pur">
+                  <span>
+                    <TiMediaRecord></TiMediaRecord>
+                  </span>
+                  HTML
+                </td>
+                <td className="icon-pur">
+                  <span>
+                    <TiMediaRecord></TiMediaRecord>
+                  </span>
+                  Full
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+}
+
+export default Savingjob;
