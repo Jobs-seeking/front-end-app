@@ -13,13 +13,7 @@ export default function _BasePage() {
   return(
       <div>
         <Header/>
-        <Outlet/>
-        {/*  <StudentProfile/>*/}
-        {/*  <Joblistingjobs/>*/}
-        {/*  <FormApply/>*/}
-        {/*  <EditStudentAccount/>*/}
-        {/*  <Account/>*/}
-        {/*  <CompanyProfile/>*/}
+            <Outlet/>
         <Footer/>
       </div>
   )
