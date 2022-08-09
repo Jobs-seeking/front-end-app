@@ -62,11 +62,14 @@ const FormApply = () => {
                 </div>
                 <div className="input-field">
                     <label htmlFor="email"></label>
-                    <Input id= "inputTag" type="file" name="email" placeholder="Email address" />
+                    <Input id= "inputTag" type="file" name="email" />
+                </div>
+                <div className="input-field">
+                    <label htmlFor="email"></label>
+                    <textarea type="text" name="" placeholder="Enter your cover letter" />
                 </div>
 
                 <Button buttonStyle="btn--solid">Apply</Button>
-               
             </form >
         </div >
     )
