@@ -34,7 +34,7 @@ export default function Header() {
                             <Link  className="dcm"  onClick={DCM} to="/">HOME</Link>
                         </li>
                         <li>
-                            <Link className="dcm" onClick={DCM} to="/jobs">JOBS</Link>
+                            <Link className="dcm" onClick={DCM} to="/job">JOBS</Link>
                         </li>
                         <li>
                             <Link className="dcm" onClick={DCM} to="formapply">APPLY CV</Link>

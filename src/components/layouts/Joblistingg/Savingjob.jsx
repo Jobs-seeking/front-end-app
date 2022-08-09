@@ -2,6 +2,7 @@ import Tab from './/../../core-ui/Joblisting/Tab'
 import Avatar from './/../../core-ui/Joblisting/Avatar'
 import { TiMediaRecord } from "react-icons/ti";
 import { render } from '@testing-library/react';
+import Button from "../../core-ui/Button";
 const Savingjob=({data})=>{
     console.log(data);
     return (
@@ -17,11 +18,11 @@ const Savingjob=({data})=>{
             ></Tab>
             <h3>{data === undefined ? "" : data.timepostjob}</h3>
           </div>
-          <div className="save">
-            <button> Save </button>
+          <div className="">
+            <Button> Save </Button>
           </div>
           <div className="apply">
-            <button> Apply</button>
+            <Button> Apply</Button>
           </div>
         </div>
         <hr></hr>
