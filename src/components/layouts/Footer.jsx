@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as LogoPNV } from '../../assets/images/LogoPNV.svg';
+import { ReactComponent as LogoPNV } from '../../assets/images/pnvlog.svg';
 import { FaFacebookF,FaLinkedinIn,FaYoutube } from "react-icons/fa";
 export default function Footer() {
     return (

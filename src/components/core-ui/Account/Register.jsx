@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {BASE_URL, API_URL} from '../../utils/constants'
-import Input from './Input';
-import Button from './Button';
+import {BASE_URL, API_URL} from '../../../utils/constants'
+import Input from '../Input';
+import Button from '../Button';
 
 export default function Register() {
     // const [submit,setSubmit] = useState(false)
@@ -57,7 +57,7 @@ export default function Register() {
 
     return(
       <div className="form__signup">
-          <form action="">
+          <form action="src/components/core-ui/Account/Register">
               <div className="input-field">
                   <label htmlFor="first-name"></label>
                   <Input type="text" name="firstname" placeholder="Firstname"
@@ -93,7 +93,7 @@ export default function Register() {
                       setDataForm({...dataForm, 'confirm_password': e.target.value})
                   }} value={dataForm.confirm_password}/>
               </div>
-              <Button buttonStyle="btn--register__submit" onClick={() => onRegister()}>Sign up</Button>
+              <Button buttonStyle="btn--register__submit btn-solid" onClick={() => onRegister()}>Sign up</Button>
           </form>
       </div>
   )
