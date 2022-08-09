@@ -74,7 +74,7 @@
 }
 .fields input,
 #selected,
-textarea {
+.field_address {
   position: relative;
   padding: 12px;
   margin-top: 10px;
@@ -85,14 +85,7 @@ textarea {
   outline: none;
   color: var(--color-3);
 }
-
-#selected:hover,
-textarea:hover,
-.fields input:hover {
-  // box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-  transition: box-shadow 0.3s;
-}
-textarea {
+.field_address {
   height: 80px;
 }
 .buttont-save {
