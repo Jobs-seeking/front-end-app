@@ -4,57 +4,55 @@
     padding: 0;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
+  $bg-component:#EE712F;
+  $bg-color:#FFFFFF;
+  $fs-content:13px;
+  $martop-title:1%;
+  $wofferbu-Fircom:10%;
+  $wofferbu-Fircom2:10%;
+  $heigt-Fircom:40px;
+  $magl-fircom:5%;
+  $word-color:white;
+  $pd-buton:10px;
+  $boder-radi:10px;
+  $width-option:100%;
+  $fx-option:14px;
 
-:root {
-    --bg-component:#EE712F;
-    --bg-color:#FFFFFF;
-    --fs-content:13px;
-    --martop-title:1%;
-    --wofferbu-Fircom:10%;
-    --wofferbu-Fircom2:10%;
-    --heigt-Fircom:40px;
-    --magl-fircom:5%;
-    --word-color:white;
-    --pd-buton:10px;
-    --boder-radi:10px;
-    --width-option:100%;
-    --fx-option:14px;
-}
 .customize-part{
   z-index:9999;
 
 }
 .offering{
-    margin-top:var(--martop-title);
+    margin-top:$martop-title;
     display:flex;
-    &__Saved-jobs  {    
-        font-size: var(--fs-content); 
+    &-Saved  {    
+        font-size: $fs-content; 
         text-align:center;
-        width: var(--wofferbu-Fircom2);
+        width: $wofferbu-Fircom2;
         h1{
           width: 124px;
-            border-radius:var(--boder-radi);
+            border-radius:$boder-radi;
             border:1px double lightgray; 
-            padding:var(--pd-buton);
+            padding:$pd-buton;
         }
         span{
-            color: var(--bg-component)
+            color: $bg-component;
         } 
     }
-    &__application {    
-        font-size: var(--fs-content); 
+    &-application {    
+        font-size: $fs-content; 
         text-align:center;
         color: black;
-        margin-left: var(--magl-fircom);
-        width: var(--wofferbu-Fircom);
+        margin-left: $magl-fircom;
+        width: $wofferbu-Fircom;
         h1{
             width: 124px;
-            border-radius:var(--boder-radi);
-            padding:var(--pd-buton);
+            border-radius:$boder-radi;
+            padding:$pd-buton;
             border:1px double lightgray; 
         } 
         span{
-          color: var(--bg-component);
+          color: $bg-component;
         }
     }
 }
@@ -120,7 +118,7 @@
   width:20%;
 }
 
-.offering__Saved-jobs h1{
+.offering-Saved h1{
   width:129px;
   margin-right: 0%;
 }
@@ -140,12 +138,12 @@
   .select select{
     font-size: 11px;
   }
-  .offering__application h1{
+  .offering-application h1{
     font-size: 12px;
     border:none; 
   }
 
-  .offering__Saved-jobs h1 {
+  .offering-Saved h1 {
     font-size: 12px;
     width: 90%;
     border:none; 
@@ -162,7 +160,7 @@
     }
 }
 @media only screen and (max-width : 1120px) {
-  .offering__Saved-jobs{
+  .offering-Saved{
     width:14%;
   }
   .select{
@@ -171,17 +169,17 @@
 }
 
 @media only screen and (max-width : 900px) {
-  .offering__Saved-jobs{
+  .offering-Saved{
     width:14%;
     margin-right: 4%;
   }
 }
 
 @media only screen and (max-width : 592px) {
-  .offering__Saved-jobs h1 {
+  .offering-Saved h1 {
     width:120px;
   }
-  .offering__application h1{
+  .offering-application h1{
     margin-left: 20px;
   }
 }
@@ -196,10 +194,10 @@
   .offering{
     margin: 2% 2%;
   }
-  .offering__application h1{
+  .offering-application h1{
     font-size: 13px;
   }
-  .offering__Saved-jobs h1 {
+  .offering-Saved-jobs h1 {
     font-size: 13px;
   }
 }

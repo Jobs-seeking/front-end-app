@@ -2,10 +2,10 @@ function Searchingjob(){
     return(
         <div className="customize-part">
             <div className="offering">
-                <div className="offering__Saved-jobs">
+                <div className="offering-Saved">
                     <h1>Saved job <span>4</span></h1>    
                 </div>       
-                <div className="offering__application">
+                <div className="offering-application">
                     <h1>Apply Job <span>10</span></h1>    
                 </div>  
             </div>
