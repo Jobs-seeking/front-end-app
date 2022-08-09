@@ -9,11 +9,12 @@ import FormApply from '../core-ui/FormApply'
 import EditStudentAccount from '../pages/EditStudentAccount'
 import Account from '../pages/Account'
 import {Outlet} from 'react-router-dom';
+import Recruiter from "./Recruiter";
 export default function _BasePage() {
   return(
       <div>
         <Header/>
-            <Outlet/>
+        <Recruiter/>
         <Footer/>
       </div>
   )
