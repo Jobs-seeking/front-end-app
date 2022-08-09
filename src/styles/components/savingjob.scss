@@ -1,13 +1,11 @@
 
-:root{
-    --color-butoon: #EE712F;
-    --width-button: 16%;
-    --color-word: white;
-    --height-button:30px;
-    --fs-word:13px;
-    --fs-wordjd:19px;
-    --fs-worddes:14px;
-}
+    $color-butoon: #EE712F;
+    $width-button: 16%;
+    $color-word: white;
+    $height-button:30px;
+    $fs-word:13px;
+    $fs-wordjd:19px;
+    $fs-worddes:14px;
 
 .saving-descrpition{
     overflow-y: scroll;
@@ -26,76 +24,72 @@
     line-height: 1.4rem;
 }
 
-.Savingdesc{
+.savingdesc{
     display:flex;
     margin-bottom: 2%;
     
-    &__tab{
+    & .tab{
         margin-left: 2%;
         margin-top:3.6%;
-        font-size: var(--fs-word);
+        font-size: $fs-word;
         h3{
             color:lightgray;
             padding: 0 8%;
         }
-    &__image{
+    & .image{
         background-color: red;
         margin-top: 40px;
     }
     }
-    &__save, &__apply{
+
+    & .save, & .apply{
         margin-top:3%;
         cursor: pointer;
-      
-     
-    }
-    &__save button, &__apply button{
-        margin-left: 8%;
+        line-height: 24px;
         padding: 7px 21px;
-        font-size: var(--fs-word);
+        font-size: $fs-word;
         justify-content: center;
         text-align: center;
         align-items: center;
     }
-    &__save button{
+    & .save button{
         background-color: white;
-        margin-left:37%;
+       
         text-align:center;
         border-radius: 20px;
         width: 80px;
-        color: var(--color-butoon);
-        border: 1px solid var(--color-butoon);
+        color: $color-butoon;
+        border: 1px solid $color-butoon;
     }
-    &__apply button{
+    & .apply button{
         width: 80px;
-        margin-left:55%;
-        border: 1px solid var(--color-butoon);
+        border: 1px solid $color-butoon;
         text-align:center;
-        color: var(--color-word);
+        color: $color-word;
         border-radius: 20px;
         background-color: #EE712F;
     }
 }
 
-.Jobdescription h1{
+.jobdescription h1{
     margin: 2% 0;
-    font-size:var(--fs-wordjd);
+    font-size:$fs-wordjd;
 }
 
-.Jobdescription {
+.jobdescription {
    margin:4% 0;
-   font-size:var(--fs-worddes);
+   font-size:$fs-worddes;
 }
 
-.Reference-needs{
-    font-size:var(--fs-worddes); 
+.reference-needs{
+    font-size:$fs-worddes; 
 }
 
-.Title-requir th{
-    color: var(--color-butoon); 
+.title-requir th{
+    color: $color-butoon; 
 }
 
-.Reference-needs table{
+.reference-needs table{
     width:100%;
 }
 
@@ -108,19 +102,29 @@
 
 .icon-pur span{
     margin-right: 20px;
-    color: var(--color-butoon); 
+    color: $color-butoon; 
 }
 
 @media only screen and (max-width : 850px) {
-    .Saving-descrpition{
+    .saving-descrpition{
         width: 95%;
        
 }
 }
-@media only screen and (max-width : 956px) {
-    .savingdesc__apply button,.savingdesc__save button{
+@media only screen and (max-width : 900px) {
+    .savingdesc-apply button,.savingdesc-save button{
         width: 80%;
-        margin-left: 9px;
+        margin-left: -10px ;
     }
   }
-  
+  @media only screen and (max-width : 1024px) {
+    .savingdesc{
+    & .save button{
+        margin-left: -17px;
+    }
+    & .apply button{
+        margin-left: -35px;
+    }
+}
+
+}
