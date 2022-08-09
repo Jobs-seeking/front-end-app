@@ -93,8 +93,8 @@ html {
 
 .student-profile {
   display: grid;
-  grid-template-columns: 50% 20%;
-  gap: 5%;
+  grid-template-columns: 50% 30%;
+  gap: 3%;
   justify-content: center;
   margin: 10% 0;
 
@@ -150,10 +150,9 @@ html {
 
 .applied {
   &-job {
-    display: flex;
     gap: 5%;
     line-height: 25px;
-    padding: 4% 10%;
+    padding: 0 3%;
     border-radius: 10px;
 
     &__right {
@@ -162,28 +161,33 @@ html {
       color: var(--color-4);
       margin: auto;
     }
+    h4{
+      margin-bottom: 5%;
+    }
   }
 }
 .job {
+  margin: 5% 0;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 20% 75%;
+  gap: 5%;
   padding: 3%;
   justify-content: center;
-  height: 70px;
   line-height: 25px;
-  border: 1px solid white;
-  box-shadow: 1px 1px 3px orange;
-  // box-shadow: rgba(251, 14, 14, 0.1) 0 10px 40px 0px;
+  border: 1px solid var(--color-3);
+  box-shadow: 1px 1px 3px var(--color-3);
   border-radius: 1rem;
 
   &:hover {
-    background-color: lightblue;
-    box-shadow: 1px 1px 3px blue;
+  border: 1px solid var(--color-4);
+  box-shadow: 1px 1px 3px var(--color-4);
   }
 
   &-avt {
-    width: 30%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     & img {
       width: 70px;
@@ -195,12 +199,17 @@ html {
   }
 
   &-infor {
-    width: 70%;
+    width: 100%;
     margin: auto 0;
 
     &__bot {
       display: flex;
-      gap: 5%;
+      gap: 1rem;
+      width: 100%;
+      & div {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 

@@ -15,11 +15,12 @@ export default function AppliedJobs() {
       <div className="applied">
         <div className="applied-job">
           <div className="applied-job__left">
-            <p>Applied Jobs</p>
-            {!!checkShow && <Applied/>}
-          <button className="btn" onClick={check}>{checkShow ? "See less" : "See more"}</button>
+            <h4 style={{display:"flex"}}>Applied Jobs <span className="applied-job__right">30</span> </h4>
+            {!!checkShow && <Applied />}
+            <button className="btn--solid" onClick={check}>
+              {checkShow ? "See less" : "See more"}
+            </button>
           </div>
-          <p className="applied-job__right">30</p>
         </div>
       </div>
     );

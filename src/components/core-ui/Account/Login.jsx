@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {BASE_URL} from '../../utils/constants';
-import Input from './Input';
-import Button from './Button'
+import {BASE_URL} from '../../../utils/constants';
+import Input from '../Input';
+import Button from '../Button'
+import {Link} from "react-router-dom";
 
 
 export default function Login() {
@@ -21,9 +22,10 @@ export default function Login() {
             // const res = axios.post(BASE_URL, data);
         }
     }
+
   return(
       <div className="form__login">
-        <form action="">
+        <form action="src/components/core-ui/Account/Login">
           <div className="input-field">
             <label htmlFor="email"></label>
             {/*<input type="email" name="email" placeholder="Email address"*/}
@@ -36,10 +38,13 @@ export default function Login() {
             <Input type="password" name="password" placeholder="Password"
             onChange={(e) => setDataForm({...dataForm, "password":e.target.value})}/>
           </div>
-            <Button buttonStyle="btn--login__submit" onClick={()=>onLogin()}>Login</Button>
+            <div className="form__bottom">
+                <Button buttonStyle="btn--solid btn--register__submit" onClick={()=>onLogin()}>Login</Button>
+                <Link to="/SISU/Register"><div className="tauCoTaiKhoanRoi">Create a account</div></Link>
+            </div>
         </form>
           <div className="forgot__password">
-              <a href="">Forget password?</a>
+              <a href="src/components/core-ui/Account/Login">Forget password?</a>
           </div>
       </div>
   )

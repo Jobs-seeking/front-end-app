@@ -6,13 +6,13 @@ import Form from "../../core-ui/Joblisting/Formmodel";
 const Offeringjob = ({ data, onClickJob }) => {
   return (
     <div>
-      {new Array(10).fill("minh ngu").map((job, index) => {
+      {data.map((job, index) => {
         return (
-          <div key={index} className="information">
-            <div className="information__Deimage">
+          <div className="information">
+            <div className="detailImage">
               <Avatar imagejob={job.image}></Avatar>
             </div>
-            <div className="information__Denform">
+            <div className="detailImage">
               <p
                 onClick={() => {
                   onClickJob(index);
@@ -25,7 +25,7 @@ const Offeringjob = ({ data, onClickJob }) => {
               <div className="content-recruiment">
                 {job.briefjob}
                 <div className="model-form">
-                  <Form props={job}></Form>
+                  <Form></Form>
                 </div>
               </div>
             </div>

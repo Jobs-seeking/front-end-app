@@ -14,12 +14,14 @@ export default function Applied() {
       <div className="job-infor">
         <h4 className="job-infor__top">Web Designer</h4>
         <div className="job-infor__bot">
-          <p>
-            <MdLocationOn /> Da Nang
-          </p>
-          <p>
-            <GoClock /> 3 months ago
-          </p>
+          <div>
+            <MdLocationOn />
+            <span> Da Nang</span>
+          </div>
+          <div>
+            <GoClock />
+            <span>  3 months ago</span>
+          </div>
         </div>
       </div>
     </div>
