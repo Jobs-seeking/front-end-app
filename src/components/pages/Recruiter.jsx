@@ -1,7 +1,9 @@
 import React from 'react';
 import Input from "../core-ui/Input";
+import Button from "../core-ui/Button";
 
 export default function Recruiter() {
+
     return (
       <div className="recruiter">
 
@@ -16,11 +18,11 @@ export default function Recruiter() {
 
           <div className="input-field">
             <label htmlFor="job-title"></label>
-            <Input type="text" name="job-title" placeholder="Job title 1"/>
+            <Input type="text" name="job-title" placeholder="Job title"/>
           </div>
 
           <select className='input-field'>
-              <option value="0">---Choose---</option>
+              <option value="0">Position</option>
               <option value="1">Mobile</option>
               <option value="2">Testing</option>
               <option value="3">Front end</option>
@@ -31,38 +33,29 @@ export default function Recruiter() {
 
           <div className="input-field" id={"input-field-3"}>
             <label htmlFor=""></label>
-            <textarea name="job-title" placeholder="hahahah"/>
+            <textarea name="job-title" placeholder="Description"/>
           </div>
 
           <div className="input-field">
-            <label htmlFor="job-title"></label>
-            <Input type="text" name="job-title" placeholder="JOB TITLE"/>
+            <label htmlFor="salary"></label>
+            <Input type="text" name="salary" placeholder="Salary"/>
           </div>
 
           <div className="input-field">
-            <label htmlFor="job-title"></label>
-            <Input type="text" name="job-title" placeholder="JOB TITLE"/>
+            <label htmlFor="required"></label>
+            <Input type="text" name="required" placeholder="Required"/>
           </div>
 
-          <select className='input-field'>
-            <option value="0">---Choose---</option>
-            <option value="1">Mobile</option>
-            <option value="2">Testing</option>
-            <option value="3">Front end</option>
-            <option value="4">Back end</option>
-            <option value="5">Full Stack </option>
-            <option value="6">BA</option>
-          </select>
+          <div className="input-field">
+            <label htmlFor="technicals"></label>
+            <Input type="text" name="technicals" placeholder="Technicals"/>
+          </div>
 
-          <select className='input-field'>
-            <option value="0">---Choose---</option>
-            <option value="1">Mobile</option>
-            <option value="2">Testing</option>
-            <option value="3">Front end</option>
-            <option value="4">Back end</option>
-            <option value="5">Full Stack </option>
-            <option value="6">BA</option>
-          </select>
+          <div className="input-field">
+            <label htmlFor="date-expired"></label>
+            <Input type="date" name="date-expired" placeholder="Date Expired"/>
+          </div>
+          <Button className = "btn__post"> Post </Button>
         </form>
 
       </div>
