@@ -4,7 +4,6 @@ import Tab from ".//../../core-ui/Joblisting/Tab";
 import Form from "../../core-ui/Joblisting/Formmodel";
 
 const Offeringjob = ({ data, onClickJob }) => {
-
   return (
     <div>
       {data.map((job, index) => {
@@ -26,7 +25,7 @@ const Offeringjob = ({ data, onClickJob }) => {
               <div className="content-recruiment">
                 {job.briefjob}
                 <div className="model-form">
-                  <Form ></Form>
+                  <Form></Form>
                 </div>
               </div>
             </div>
