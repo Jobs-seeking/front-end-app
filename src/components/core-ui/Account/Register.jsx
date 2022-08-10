@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import { useNavigate} from "react-router-dom";
 import {BASE_URL, API_URL} from '../../../utils/constants'
 import Input from '../Input';
 import Button from '../Button';
 
 export default function Register() {
     // const [submit,setSubmit] = useState(false)
+    let navigate = useNavigate();
     const [dataForm, setDataForm] = useState({
         "email": "",
         "firstname": "",
@@ -47,6 +49,7 @@ export default function Register() {
             console.log(dataForm)
 
             axios.post(BASE_URL, API_URL, data)
+            navigate("/SISU")
         }
 
 

@@ -3,11 +3,11 @@ import axios from 'axios';
 import {BASE_URL} from '../../../utils/constants';
 import Input from '../Input';
 import Button from '../Button'
-import {Link, Outlet} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 
 export default function Login() {
-
+   let navigate = useNavigate();
     const [dataForm, setDataForm] = useState({
         "email": "",
         "password": "null",
@@ -19,6 +19,7 @@ export default function Login() {
             data.append("email", dataForm.email)
             data.append("password", dataForm.password)
             console.log(dataForm)
+          navigate('/')
             // const res = axios.post(BASE_URL, data);
         }
     }

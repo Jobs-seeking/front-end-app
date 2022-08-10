@@ -14,7 +14,7 @@ export default function _BasePage() {
   return(
       <div>
         <Header/>
-        <Recruiter/>
+          <Outlet/>
         <Footer/>
       </div>
   )
