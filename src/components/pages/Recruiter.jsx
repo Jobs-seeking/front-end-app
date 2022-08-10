@@ -55,7 +55,8 @@ export default function Recruiter() {
             <label htmlFor="date-expired"></label>
             <Input type="date" name="date-expired" placeholder="Date Expired"/>
           </div>
-          <Button className = "btn__post"> Post </Button>
+          <div className="btn__post"><Button> Post </Button>
+          </div>
         </form>
 
       </div>

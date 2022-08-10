@@ -72,12 +72,10 @@
   }
 }
 .btn__post {
-
+  //display: flex;
+  //justify-content: right;
 }
 
-//input[type="date"] {
-//
-//}
 input[type="date"] {
   background: transparent;
   color: var(--color-3);
