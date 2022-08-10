@@ -57,6 +57,11 @@ export default function Register() {
 
     return(
       <div className="form__signup">
+          <div className="account__form__login">
+              <div className="account__form__login--text">
+                  <span>SIGNUP</span>
+              </div>
+          </div>
           <form action="src/components/core-ui/Account/Register">
               <div className="input-field">
                   <label htmlFor="first-name"></label>
