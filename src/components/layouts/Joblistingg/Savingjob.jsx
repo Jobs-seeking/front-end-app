@@ -1,5 +1,5 @@
-import Tab from './/../../core-ui/Joblisting/Tab'
-import Avatar from './/../../core-ui/Joblisting/Avatar'
+import Tab from './../../core-ui/Joblisting/Tab'
+import Avatar from './../../core-ui/Joblisting/Avatar'
 import { TiMediaRecord } from "react-icons/ti";
 import { render } from '@testing-library/react';
 const Savingjob=({data})=>{
