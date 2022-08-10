@@ -33,20 +33,16 @@ const FormApply = () => {
                 </div>
                 <div className="input-field">
                     <label htmlFor="email"></label>
-                    <Input type="email" name="email" placeholder="Email address" />
+                    <Input type="email" name="email" placeholder="Enter your email" />
                 </div>
                 <div className="input-field">
                     <label htmlFor="email"></label>
-                    <Input type="email" name="email" placeholder="Email address" />
-                </div>
-                <div className="input-field">
-                    <label htmlFor="email"></label>
-                    <Input type="email" name="email" placeholder="Email address" />
+                    <Input type="email" name="email" placeholder="Email your address" />
                 </div>
 
                 <div className="input-field">
                     <select className='select' onChange={(e) => onChangeHandle('position', e.target.value)}>
-                        <option value="0">---Choose---</option>
+                        <option value="0">---Position applying for---</option>
                         <option value="1">Mobile</option>
                         <option value="2">Testing</option>
                         <option value="3">Front end</option>
@@ -56,7 +52,7 @@ const FormApply = () => {
                     </select>
                 </div>
                 <div className="input-field">
-                    <select className='select'  onChange={(e) => onChangeHandle('year_experience', e.target.value)}>
+                    <select className='select' onChange={(e) => onChangeHandle('year_experience', e.target.value)}>
                         <option value="0">---Year Experience---</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -66,69 +62,14 @@ const FormApply = () => {
                 </div>
                 <div className="input-field">
                     <label htmlFor="email"></label>
-                    <Input type="file" name="email" placeholder="Email address" />
+                    <Input id= "inputTag" type="file" name="email" />
                 </div>
-                <Button buttonStyle="btn--solid">Apply</Button>
-                {/* <div className="input-field">
+                <div className="input-field">
                     <label htmlFor="email"></label>
-                    <Input type="email" name="email" placeholder="Email address"/>
-                </div> */}
+                    <textarea type="text" name="" placeholder="Enter your cover letter" />
+                </div>
 
-                {/* <div className="row">
-                    <div className="col-left">
-                        <label> Name</label>
-                        <input type="text" className="form-input" placeholder="Enter your name" onChange = {(e) => onChangeHandle('name', e.target.value)} />
-                    </div>
-                    <div className="col-right">
-                        <label>Phone</label>
-                        <input type="text" className="form-input" placeholder="Enter your name" onChange = {(e) => onChangeHandle('phone', e.target.value)} />
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-left">
-                        <label>Your email</label>
-                        <input type="email" id="email" placeholder="Enter your email" onChange = {(e) => onChangeHandle('email', e.target.value)}/>
-                    </div>
-                    <div className="col-right">
-                        <label>Your address</label>
-                        <input type="text" id="text" placeholder="Enter your address" onChange = {(e) => onChangeHandle('address', e.target.value)}/>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-left">
-                        <label >Position Applying for</label>
-                        <select onChange = {(e) => onChangeHandle('position', e.target.value)}>
-                            <option value="0">---Choose---</option>
-                            <option value="1">Mobile</option>
-                            <option value="2">Testing</option>
-                            <option value="3">Front end</option>
-                            <option value="4">Back end</option>
-                            <option value="4">Full Stack </option>
-                            <option value="4">BA</option>
-                        </select>
-                    </div>
-                    <div className="col-right">
-                        <label >Year Experience</label>
-                        <select onChange = {(e) => onChangeHandle('year_experience', e.target.value)}>
-                            <option value="0">---Year Experience---</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3 </option>
-                            <option value="3">4</option>
-                        </select>
-                    </div>
-                </div>
-                <div className="row">
-                    <label >Upload Your Cover Letter</label>
-                    <input type="file" id="" placeholder="Ex:eamail@gmail.com" onChange = {(e) => onChangeHandle('cover_letter', e.target.files[0].name)}/>
-                </div>
-                <div className="row">
-                    <label >Upload your CV</label>
-                    <input type="file" id="upload-photo" placeholder="Ex:eamail@gmail.com" onChange = {(e) => onChangeHandle('cv', e.target.files[0].name)}/>
-                </div>
-                <div>
-                    <Button>Submit</Button>
-                </div> */}
+                <Button buttonStyle="btn--solid">Apply</Button>
             </form >
         </div >
     )

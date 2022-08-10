@@ -37,7 +37,7 @@ export default function Header() {
                             <Link className="dcm" onClick={DCM} to="/jobs">JOBS</Link>
                         </li>
                         <li>
-                            <Link className="dcm" onClick={DCM} to="formapply">APPLY CV</Link>
+                            <Link className="dcm" onClick={DCM} to="apply">APPLY CV</Link>
                             {/* <a className="dcm" onClick={DCM} href="#!">APPLY CV</a> */}
                         </li>
                     </ul>
