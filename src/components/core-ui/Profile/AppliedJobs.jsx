@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../Button";
 import Applied from "./Applied";
 
 
@@ -17,9 +18,9 @@ export default function AppliedJobs() {
           <div className="applied-job__left">
             <h4 style={{display:"flex"}}>Applied Jobs <span className="applied-job__right">30</span> </h4>
             {!!checkShow && <Applied />}
-            <button className="btn--solid" onClick={check}>
+            <Button buttonStyle= "btn--solid" onClick={check}>
               {checkShow ? "See less" : "See more"}
-            </button>
+            </Button>
           </div>
         </div>
       </div>
