@@ -11,7 +11,7 @@ import Account from '../pages/Account'
 import {Outlet} from 'react-router-dom';
 export default function _BasePage() {
   return(
-      <div>
+      <div className='wrapper'>
         <Header/>
             <Outlet/>
         <Footer/>

@@ -1,6 +1,7 @@
 .content{
-    width: 88vw;
-    margin: 20vh auto;
+    max-width: 1200px;
+    width: calc((1200px *100%)/1440px) ;
+    margin: var(--content-magintop) auto;
     display: flex;
     flex-direction: column;
     gap: var(--gap);
@@ -10,6 +11,7 @@
         align-items: center;
         justify-content: center;
         margin: 0 auto;
+        max-width: 1200px;
         width: 100%;
         color: var(--color-3);
         font-size: var(--fz-destop-5);

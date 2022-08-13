@@ -51,9 +51,7 @@ export default function Register() {
 
 
     }
-    // useEffect(() => {
-    //     getToken()
-    // },[])
+
 
     return(
       <div className="form__signup">

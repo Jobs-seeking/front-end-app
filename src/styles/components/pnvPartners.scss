@@ -1,13 +1,13 @@
 .content--pnv-partners{
-    height: auto;
+    // height: auto;
     & .list--pnv-parners{
-        padding: 30px 0;
+        margin: 30px 0;
     }
 }
 
 .title--pnv-partners{
     padding: 20px;
-    width: 20vw;
+    max-width: 300px;
     font-weight: var(--fw-5);
     & h1{
         font-size: var(--fz-destop-3);
@@ -27,28 +27,45 @@
     color:var(--color-4);
 }
 .pnv--partner-item{
-   width: 100%;
+//    width: 100%;
    max-width: 200px;
    height: auto;
+
     & a{
         width: 100%;
         & img{
             width: 100%;
-
         }
     }
 }
 
 @media only screen and (max-width: 1060px) {
-    
+    .title--pnv-partners{
+        width: 35vw;
+    }  
+    .pnv--partner-item{
+        max-width: 20vw;
+
+} 
 }
 @media screen and (max-width: 700px) {
     .slick-prev , .slick-next{
         display: none !important;
     }
+    .pnv--partner-item{
+        max-width: 30vw;
+
+}
+
+
 }
 @media screen and (max-width: 480px) {
     .pnv--partner-item{
         max-width: 150px;
      }
+     .pnv--partner-item{
+        max-width: 30vw;
+
+}
+
 }
