@@ -47,7 +47,6 @@ export default function EditStudentAccount() {
       const src = URL.createObjectURL(e.target.files[0]);
       image.src = src;
   }
-    
   };
   return (
     <div className="edit-account">
@@ -85,7 +84,7 @@ export default function EditStudentAccount() {
                     <div className="field_select fields">
                       <label>Gender</label>
                       <select
-                        id="select"
+                        id="selected"
                         name="gender"
                         value={"male"}
                         onChange={(e) => handleEdit(e)}
@@ -111,7 +110,7 @@ export default function EditStudentAccount() {
                     <div className="field_item fields">
                       <label>Level</label>
                       <select
-                        id="select"
+                        id="selected"
                         name="level"
                         value={"male"}
                         onChange={(e) => handleEdit(e)}
