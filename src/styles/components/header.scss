@@ -21,14 +21,13 @@
 .scrollNavbar{
   box-shadow: 0px 3px 5px rgba(95, 95, 95, 0.25);
 }
-
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc((1200px *100%)/1440px) ;
+  width: calc((1300px *100%)/1440px) ;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1300px;
   line-height: var(--nav-height);
 }
 
@@ -44,7 +43,8 @@
 }
 
 nav {
-  display: block;
+  display: flex;
+  align-items: center;
   float: right;
   & #nav-list {
     float: left;
@@ -74,10 +74,84 @@ nav {
       margin: 0 calc(25px / 2);
     }
   }
+  & .nav-account{
+    position: relative;
+    padding-left: 20px ;
+    & .nav-account__drop{
+      position: absolute;
+    }
+    &__img{
+      // width: 70px;
+      // height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 100%;
+        box-shadow: 0px 3px 5px rgba(95, 95, 95, 0.25);
+      }
+      & .nav-account__icon{
+        margin-left: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        
+      }
+     
+    }
+    & .show{
+      display: block !important;
+    }
+    & .nav-account__drop{
+      display: none;
+      top: 65px;
+      right: 0;
+      // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 5px;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+      
+      & .nav__drop{
+        position: relative;
+        display: flex;
+        flex-direction: column !important;
+        & .traingle{
+          top: -7px;
+          right: 30px;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 7px 7px 7px;
+          border-color: transparent transparent rgb(255, 255, 255) transparent;
+        }
+        & li{
+          padding: 20px 20px;
+          text-align: right;
+          border-radius: 5px;
+          line-height: 0 !important;
+          & a{
+            font-size: var(--fz-destop-1);
+            font-weight: var(--fw-3);
+            color:var(--color-3);
+            text-decoration: none;
+          }
+          & a:hover{
+            border-bottom: 2px solid var(--color-2);
+          }
+        }
+      }
+    }
+  }
 }
+
+
 .nav-list-navmobile{
   display: none;
 }
+
 
 @media only screen and (max-width: 1060px) {
   .nav-list-navmobile {

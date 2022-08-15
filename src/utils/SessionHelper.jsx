@@ -10,4 +10,7 @@ export default class SessionHelper {
     static isUserLogedIn = () => {
         return !!(this.getUserInfo())
     }
+    static removeUser=()=>{
+        sessionStorage.removeItem(USER_SESSION_KEY)
+    }
 }

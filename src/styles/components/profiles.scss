@@ -93,20 +93,21 @@ html {
 
 .student-profile {
   display: grid;
-  grid-template-columns: 50% 20%;
-  gap: 5%;
+  grid-template-columns: 50% 30%;
+  gap: 3%;
   justify-content: center;
   margin: 10% 0;
 
   &-infor {
+    border: 1px solid var(--color-3);
+    border-radius: 30px;
     &__top {
       padding: 5% 5%;
-      border-bottom: 1px solid gray;
+      border-bottom: 1px solid var(--color-3);
       display: grid;
       grid-template-columns: 30% 60% 10%;
       justify-content: center;
       margin: 0 auto;
-      background-color: lightgray;
       border-radius: 10px 10px 0 0;
 
       &__left {
@@ -134,7 +135,6 @@ html {
       line-height: 50px;
       padding: 5%;
       margin: 0 auto;
-      background-color: lightgray;
       border-radius: 0 0 10px 10px;
 
       table {
@@ -150,11 +150,9 @@ html {
 
 .applied {
   &-job {
-    background-color: lightgray;
-    display: flex;
     gap: 5%;
     line-height: 25px;
-    padding: 4% 10%;
+    padding: 0 3%;
     border-radius: 10px;
 
     &__right {
@@ -163,7 +161,58 @@ html {
       color: var(--color-4);
       margin: auto;
     }
+    h4{
+      margin-bottom: 5%;
+    }
   }
+}
+.job {
+  margin: 5% 0;
+  display: grid;
+  grid-template-columns: 20% 75%;
+  gap: 5%;
+  padding: 3%;
+  justify-content: center;
+  line-height: 25px;
+  border: 1px solid var(--color-3);
+  box-shadow: 1px 1px 3px var(--color-3);
+  border-radius: 1rem;
+
+  &:hover {
+  border: 1px solid var(--color-4);
+  box-shadow: 1px 1px 3px var(--color-4);
+  }
+
+  &-avt {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      border-radius: 50%;
+    }
+  }
+
+  &-infor {
+    width: 100%;
+    margin: auto 0;
+
+    &__bot {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      & div {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -204,9 +253,9 @@ html {
     padding: 0 0.5%;
     padding-top: 11%;
     &-infor {
+      margin: 0 5px;
       &__top {
         padding: 5%;
-        border-bottom: 1px solid gray;
         display: grid;
         grid-template-columns: 35% 55% 10%;
         &__left {

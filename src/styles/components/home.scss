@@ -31,6 +31,40 @@
         display: none;
     }
 }
+.nav-search{
+    max-width: 300px;
+    width: 300px;
+    line-height: 0;
+    & .nav-search__form{
+        height: 35px;
+        background-color: #ffefe7;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        & input{
+            width: 80%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 15px;
+        }
+        & .nav-search__icon{
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color:var(--color-4);
+            font-size: 17px;
+            color: var(--color-5);
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+    }
+}
 
 @media only screen and (max-width: 1060px) {
     .content {
