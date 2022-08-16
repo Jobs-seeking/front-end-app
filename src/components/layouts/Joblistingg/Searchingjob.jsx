@@ -1,29 +1,7 @@
 import { AiOutlineSearch } from "react-icons/ai";
-// import React, { Component } from 'react';
-// import  { useState } from 'react';
-// import axios  from "axios";
-// import { sassNull } from "sass";
+
 function Searchingjob({data}){
 
-    // const [name, setName] = useState('');
-
-    // const [foundJob, setFoundJob] = useState();
-
-    // const filter = (e) => {
-    //     const keyword = e.target.value;
-
-    //     if (keyword !== '') {
-    //         const results = data.filter((job) => {
-    //             return job.name.toLowerCase().startsWith(keyword.toLowerCase());
-               
-    //         });
-    //         setFoundJob(results);
-    //     } else {
-    //         setFoundJob(data);
-    //     }
-
-    //     setName(keyword);
-    // };
 
   
   return (
