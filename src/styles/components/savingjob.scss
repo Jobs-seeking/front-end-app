@@ -46,7 +46,7 @@
         margin-top:3%;
         cursor: pointer;
         line-height: 24px;
-        padding: 7px 21px;
+        padding: 0px 21px;
         font-size: $fs-word;
         justify-content: center;
         text-align: center;
@@ -54,6 +54,7 @@
     }
     & .save button{
         background-color: white;
+        height: 37px;
        
         text-align:center;
         border-radius: 20px;
@@ -63,6 +64,8 @@
     }
     & .apply button{
         width: 80px;
+        height: 38px;
+
         border: 1px solid $color-butoon;
         text-align:center;
         color: $color-word;
@@ -128,3 +131,27 @@
 }
 
 }
+@media only screen and (max-width : 400px) {
+  .savingdesc{
+    
+    & .save, & .apply{
+        margin-top:3%;
+        line-height: 24px;
+        padding: 0px 21px;
+    }
+    & .save button{
+        height: 30px;
+       
+        width: 55px;
+    }
+    & .apply button{
+        width: 55px;
+        height: 30px;
+
+    }
+  }
+  }
+
+
+
+

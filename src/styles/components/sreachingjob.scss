@@ -20,7 +20,9 @@
 
 .customize-part{
   z-index:9999;
-
+}
+.input-searching input{
+  left: -26%;
 }
 .offering{
     margin-top:$martop-title;
@@ -90,7 +92,24 @@
   margin: 0px 5.5%;
 
 }
-
+.input-searching{
+  font-size: 14px;
+  width: 18%;
+  border-radius: 20px;
+  border: 1px solid #EE712F ;
+  margin-left: 6%;
+  z-index: 99;
+  // height: 7%;
+  padding: 0 1%;
+  & input{
+    outline: none;
+    padding: 0 2%;
+    border:white;
+  }
+  & span{
+    margin-top: 2%;
+  }
+}
 .select{
   margin: 10px 0.4%;
 }

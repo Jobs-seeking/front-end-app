@@ -1,9 +1,18 @@
-import Tab from './/../../core-ui/Joblisting/Tab'
+ import Tab from './/../../core-ui/Joblisting/Tab'
 import Avatar from './/../../core-ui/Joblisting/Avatar'
 import { TiMediaRecord } from "react-icons/ti";
 import { render } from '@testing-library/react';
+import { useEffect, useState } from 'react';
+import axios from "axios"
+
 const Savingjob=({data})=>{
-    console.log(data);
+    // const [data, setData] = useState({})
+    // useEffect(() => {
+    //   axios.get("https://629191d6cd0c91932b64d9c6.mockapi.io/job/" + jobId )
+    //   .then(res => {
+    //     setData(res.data)
+    //   })
+    // }, [])
     return (
       <div className="saving-descrpition">
         <div className="savingdesc">
@@ -18,16 +27,16 @@ const Savingjob=({data})=>{
             <h3>{data === undefined ? "" : data.timepostjob}</h3>
           </div>
           <div className="save">
-            <button> Save </button>
+            <button className='btn'> Save </button>
           </div>
           <div className="apply">
-            <button> Apply</button>
+            <button className='btn'> Apply</button>
           </div>
         </div>
         <hr></hr>
         <div className="jobdescription">
           <h1>Job description</h1>
-          <p>{data === undefined ? "" : data.detailjob}</p>
+          <p>{!data ? "" : data.detailjob}</p>
         </div>
         <div className="reference-needs">
           <table className="table-des">
@@ -60,18 +69,8 @@ const Savingjob=({data})=>{
                 </td>
               </tr>
               <tr className="name-requir">
-                <td className="icon-pur">
-                  <span>
-                    <TiMediaRecord></TiMediaRecord>
-                  </span>
-                  HTML
-                </td>
-                <td className="icon-pur">
-                  <span>
-                    <TiMediaRecord></TiMediaRecord>
-                  </span>
-                  Full
-                </td>
+            
+          
               </tr>
             </tbody>
           </table>

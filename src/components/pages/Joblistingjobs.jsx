@@ -5,7 +5,7 @@ import OfferingJobContainer from '../containers/OfferingJobContainer';
 function Joblistingjobs(){
     return(
         <div className='overll-component'>
-          <Searchingjob/>
+          <Searchingjob />
           <OfferingJobContainer/>
   
         </div>

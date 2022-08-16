@@ -1,6 +1,6 @@
 .container-model .btn {
 color: black;
-width: 34%;
+width: 155px;
 margin-top: 1%;
 height: 30%;
 background-color: none;
@@ -25,13 +25,13 @@ font-family: 'Courier New', Courier, monospace;
 }
 @media only screen and (max-width : 617px) {
     .container-model .btn{
-        width: 44%;
+        width: 155px;
         font-size: 12px;
     }
   }
 @media only screen and (max-width : 515px) {
     .container-model .btn{
-        width: 54%;
+        width: 155px;
         font-size: 10px;
         height: 25%;
     }
