@@ -22,11 +22,12 @@ export default function NavAccount(props) {
     return (
         <div className="nav-account">
             <div className="nav-account__img" onClick={dropMenu} >
-                <img src={props.img} alt="" /><IoMdArrowDropdown className="nav-account__icon" />
+                <img src={props.img} /><IoMdArrowDropdown className="nav-account__icon" />
             </div>
             <div className="nav-account__drop" id="nav-account__drop">
                 <ul className="nav__drop">
-                    <li><Link to="/Profile">Account</Link></li>
+                    <li><Link to="/Profile">Your profile</Link></li>
+                    <li><Link to="/edit-account">Edit account</Link></li>
                     <li><a href="" onClick={Logout}>Log Out</a></li>
                     <div className="traingle"></div>
                 </ul>

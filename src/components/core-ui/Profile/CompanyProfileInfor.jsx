@@ -6,7 +6,7 @@ export default function CompanyProfileInfor( {data} ) {
     <div className="company-profile-infor">
       <div className="company-profile-infor__left">
         <img
-          src={data.img}
+          src={data.image}
           alt=""
         />
       </div>

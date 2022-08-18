@@ -10,10 +10,10 @@ export default function Register() {
     // const [submit,setSubmit] = useState(false)
     const [dataForm, setDataForm] = useState({
         "email": "",
-        // "firstname": "",
         "name": "",
         "password": "",
-        // "confirm_password": ""
+        "role":" ",
+
     });
 
     // const validateEmail = (email) => {
@@ -39,6 +39,8 @@ export default function Register() {
         axios.post(USERS_API_URL, dataForm)
         .then(res => {
             console.log(res.data);
+            alert("Success!")
+            navigate("/SISU");
         })
         .catch(function (error) {
             console.log(error);
@@ -65,8 +67,8 @@ export default function Register() {
           </div>
           <form >
               <div className="input-field">
-                  <label htmlFor="first-name"></label>
-                  <Input type="text" name="name" placeholder="name"
+                  <label htmlFor="first-name">YOUR NAME</label>
+                  <Input type="text" name="name" placeholder="Enter your name"
                   onChange={(e) => {
                       setDataForm({...dataForm , 'name': e.target.value})
                   }} value = {dataForm.name}/>
@@ -79,15 +81,15 @@ export default function Register() {
                   }} value = {dataForm.lastname}/>
               </div> */}
               <div className="input-field">
-                  <label htmlFor="email"></label>
-                  <Input type="email" name="email" placeholder="Email address"
+                  <label htmlFor="email">EMAIL</label>
+                  <Input type="email" name="email" placeholder="Enter email"
                   onChange={(e) => {
                       setDataForm({...dataForm, 'email': e.target.value})
                   }} value = {dataForm.email}/>
               </div>
               <div className="input-field">
-                  <label htmlFor="password"></label>
-                  <Input type="password" name="password" placeholder="Password"
+                  <label htmlFor="password">PASSWORD</label>
+                  <Input type="password" name="password" placeholder="Enter your password"
                   onChange={(e) => {
                       setDataForm({...dataForm, 'password': e.target.value})
                   }} value={dataForm.password}/>
@@ -99,7 +101,19 @@ export default function Register() {
                       setDataForm({...dataForm, 'confirm_password': e.target.value})
                   }} value={dataForm.confirm_password}/>
               </div> */}
-              <Button buttonStyle="btn--register__submit btn-solid" onClick={onRegister}>Sign up</Button>
+              <div className='check__box' onChange={(e) => {
+                      setDataForm({...dataForm, 'role': e.target.value})
+                  }} value = {dataForm.role}>
+                <div className='check__box--item'>
+                <input type="radio" name="role" value="company"/>
+                <label for="Company">Company</label>
+                </div>
+                <div className='check__box--item'>
+                <input type="radio" name="role" value="student"/>
+                <label for="Student">Student</label>
+                </div>
+              </div>
+              <Button buttonStyle="btn--register__submit" onClick={onRegister}>SIGN UP</Button>
           </form>
       </div>
   )

@@ -3,6 +3,8 @@ import Button from "../core-ui/Button";
 import Input from "../core-ui/Input";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import SessionHelper from "../../utils/SessionHelper";
+import { USERS_API_URL } from "../../utils/constants";
 
 export default function EditStudentAccount() {
   const [userEdit, setUserEdit] = useState({
@@ -31,14 +33,15 @@ export default function EditStudentAccount() {
   };
   const getData = () => {
     axios
-      .get("http://127.0.0.1:8000/api/users/1")
+      .get(USERS_API_URL + (SessionHelper.getUserInfo().id))
 
       .then((res) => {
-        setUserEdit(res.data.data);
+        setUserEdit(res.data);
       });
   };
   useEffect(() => {
     getData();
+    console.log()
   }, []);
 
   const onChangeImage=(e)=>{
@@ -52,13 +55,14 @@ export default function EditStudentAccount() {
     <div className="edit-account">
       <div className="form-edit">
         <div className="form-edit-account">
-          <div class="edit-avatar">
+          <div className="edit-avatar">
             <img id="img"
-              class="round"
-              src={userEdit.image?"http://localhost:8000/image/"+setUserEdit.image:'#'}
+              className="round"
+              src={userEdit.image}
+              // src={userEdit.image?"http://localhost:8000/image/"+setUserEdit.image:'#'}
               alt="user"
             />
-            <div className="user-name" value={userEdit.name}></div>
+            <div className="user-name" ><h3>{userEdit.name}</h3></div>
             <div className="upload-picture">
               <Button buttonStyle="btn-item">
                 Upload a picture
@@ -141,7 +145,7 @@ export default function EditStudentAccount() {
                   </div>
                 </div>
                 <div className="buttont-save">
-                  <Button> SAVE</Button>
+                  <Button buttonStyle="btn--register__submit"> SAVE</Button>
                 </div>
               </form>
             </div>

@@ -18,7 +18,7 @@ export default function Login() {
       if (res.data) {
         SessionHelper.setUserInfo(res.data)
         navigate("/")
-        window.location.reload()
+        window.location.reload();
       }
     }
   return(
@@ -30,22 +30,23 @@ export default function Login() {
               </div>
           </div>
           <div className="input-field">
-            <label htmlFor="email"></label>
-            <Input type="email" name="email" placeholder="Email address"
+            <label htmlFor="email">EMAIL</label>
+            <Input  className="input__item" type="email" name="email" placeholder="Enter email"
                    onChange={(e) => setDataForm({...dataForm, "email":e.target.value})}/>
           </div>
           <div className="input-field">
-            <label htmlFor="password"></label>
-            <Input type="password" name="password" placeholder="Password"
+            <label htmlFor="password">PASSWORD</label>
+            <Input className="input__item" type="password" name="password" placeholder="Enter your password"
             onChange={(e) => setDataForm({...dataForm, "password":e.target.value})}/>
           </div>
             <div className="form__bottom">
-                <Button onClick={onLogin} buttonStyle="btn--solid btn--register__submit">Login</Button>
-                <Link to="/SISU/Register"><div className="tauCoTaiKhoanRoi">Create a account</div></Link>
+                <Button onClick={onLogin} buttonStyle="btn--register__submit">LOGIN</Button>
+                
             </div>
         </form>
+        <Link className='link'  to="/SISU/Register"><div className="tauCoTaiKhoanRoi">You don't have an account</div></Link>
           <div className="forgot__password">
-              <a href="src/components/core-ui/Account/Login">Forget password?</a>
+              {/* <a href="src/components/core-ui/Account/Login">Forget password?</a> */}
           </div>
       </div>
 

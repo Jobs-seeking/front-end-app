@@ -14,7 +14,7 @@ export default function MenuCompany() {
     return (
         <ul className="nav-list" id="nav-list">
             <li>
-                <Link className="nav__item--link" onClick={active} to="/job">
+                <Link className="nav__item--link" onClick={active} to="/recruter">
                     <Button>
                         Create Job
                     </Button>

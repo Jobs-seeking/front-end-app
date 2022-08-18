@@ -8,8 +8,9 @@ import Menu from "../containers/menu/menu";
 import MenuCompany from "../containers/menu/menuCompany";
 import MenuStudent from "../containers/menu/menuStudent";
 import NavAccount from "../containers/NavAccount";
+import AVT from "../../assets/images/avtb.png";
 export default function Header() {
-
+    
     window.onscroll = function () { ScrollNav() };
     const ScrollNav = () => {
         var x = document.getElementById('navigation');
@@ -27,8 +28,7 @@ export default function Header() {
         } else {
             x.className = "nav-list";
         }
-    }
-    
+    } 
     const dataUser = SessionHelper.getUserInfo();
     return (
         <section className="navigation" id="navigation">
@@ -48,12 +48,13 @@ export default function Header() {
                         </div>
 
                     </> : null}
-                
+    
                 <nav>
                     {SessionHelper.isUserLogedIn() ? (dataUser.role === "company" ? <MenuCompany></MenuCompany> : <MenuStudent />) : <Menu></Menu>}
                     <div onClick={OpentNavMobile} className="nav-mobile" id="nav-mobile"><span></span><span></span><span></span></div>
                     <div className="nav-button">
-                        {SessionHelper.isUserLogedIn() ? <NavAccount img={dataUser.image}/> :
+                        {SessionHelper.isUserLogedIn() ? ( !dataUser.image ? <NavAccount img={AVT}/>
+                        : <NavAccount img={dataUser.image}/>):
                             (
                                 <>
                                     <Link to="/SISU"><Button buttonStyle="btn--outline">LOGIN</Button></Link>

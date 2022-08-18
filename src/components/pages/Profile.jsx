@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { COMPANIES_API } from "../../utils/constants";
+import { COMPANIES_API, STUDENT_API } from "../../utils/constants";
 import SessionHelper from "../../utils/SessionHelper";
 import CompanyProfile from "./CompanyProfile";
 import StudentProfile from './StudentProfile';
@@ -12,6 +12,7 @@ const Profile = ()=>{
     const navigate = useNavigate()
     useEffect(() => {
         const getUserInfo = async () => {
+            setUserInfo((await axios.get(STUDENT_API,{student: id})).data.data)
             setUserInfo((await axios.get(COMPANIES_API, {companyId: id})).data.data)
         }
         if (!id) {
@@ -26,7 +27,7 @@ const Profile = ()=>{
     }, [])
     return(
         <>
-        {userInfo.role==="company"? <CompanyProfile companyProfile={userInfo}/>: <StudentProfile/>}
+        {userInfo.role==="company"? <CompanyProfile companyProfile={userInfo}/>: <StudentProfile studentProfile={userInfo}/>}
         </>
     )
 }

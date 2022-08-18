@@ -5,21 +5,10 @@ import axios from "axios";
 import { STUDENT_API } from "../../utils/constants";
 import SessionHelper from "../../utils/SessionHelper";
 
-export default function StudentProfile() {
-  const userInfo = SessionHelper.getUserInfo()
-
-  const [data, setData] = useState({});
-  const getData = async () => {
-    axios.get(STUDENT_API + userInfo.id).then((res) => {
-      setData(res.data);
-    });
-  };
-  useEffect(() => {
-    getData();
-  }, []);
+export default function StudentProfile({studentProfile}) {
   return (
     <div className="student-profile">
-      <StudentProfileInfor data={data} />
+      <StudentProfileInfor data={studentProfile}/>
       <AppliedJobs />
     </div>
   );

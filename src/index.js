@@ -13,6 +13,7 @@ import FormApply from './components/core-ui/FormApply';
 import StudentProfile from './components/pages/StudentProfile';
 import EditStudentAccount from './components/pages/EditStudentAccount';
 import Profile from './components/pages/Profile';
+import Recruiter from './components/pages/Recruiter';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -26,8 +27,9 @@ root.render(
                 <Route path='' element={<Login/>}></Route>
                 <Route path='register' element={<Register/>}></Route>
             </Route>
+            <Route path="/recruter" element={<Recruiter/>}></Route>
             <Route path='/Profile' element={<Profile/>}></Route>
-            <Route path='/edit-profile' element={<EditStudentAccount/>}></Route>
+            <Route path='/edit-account' element={<EditStudentAccount/>}></Route>
         </Route>
        </Routes>
     </BrowserRouter>
