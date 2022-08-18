@@ -1,0 +1,88 @@
+.jobDetail__page{
+    height: 100vh;
+    max-width: 80%;
+    margin: 100px auto;
+    font-size: var(--fz-destop-1);
+    & .jobDetail__page--container{
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        & .jobDetail__page--top{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom:10px ;
+            border-bottom: 1px solid var(--color-1);
+            background-color: var(--color-5);
+            & .jobDetail__name{
+                & h3{
+                    font-size: var(--fz-destop-3);
+                    font-weight: var(--fw-3);
+                }
+
+            }  
+        }
+        & .jobDetail__page--center{
+            padding: 20px 0;
+            border-bottom: 1px solid var(--color-1);
+            & .jobDetail__detail{
+                & .icon{
+                    color: var(--color-4);
+                    font-size: 25px !important;
+                }
+                & .jobDetail__technical{
+                    display: flex;
+                    gap: 10px;
+                    padding: 10px 0;
+                    & p{
+                        padding:2px 5px;
+                        border: 1px solid var(--color-4);
+                    }
+                }
+                & .jobDetail__address{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    gap: 10px;
+                    padding: 10px 0;
+                    & p{
+                        font-size: var(--fz-destop-1);
+                    }
+                }
+                & .jobDetail__datePost{
+                    display: flex;
+                    gap: 10px;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 10px 0;
+                }
+            }
+            
+        }
+        & .jobDetail--bottom--description{
+            & h3{
+                font-size: var(--fz-destop-2);
+                font-weight: var(--fw-3);
+                padding: 20px 0 10px 0;
+            }
+            & p{
+                line-height: 1.2;
+            }
+        }
+        & .jobDetail--bottom--required{
+            & h3{
+                font-size: var(--fz-destop-2);
+                font-weight: var(--fw-3);
+                padding: 20px 0 10px 0;
+            }
+            & ul{
+                padding: 0 30px;
+                list-style:square;
+                line-height: 1.2;
+            }
+        }
+    }
+}
