@@ -6,13 +6,7 @@ import { useEffect, useState } from 'react';
 import axios from "axios"
 
 const Savingjob=({data})=>{
-    // const [data, setData] = useState({})
-    // useEffect(() => {
-    //   axios.get("https://629191d6cd0c91932b64d9c6.mockapi.io/job/" + jobId )
-    //   .then(res => {
-    //     setData(res.data)
-    //   })
-    // }, [])
+  
     return (
       <div className="saving-descrpition">
         <div className="savingdesc">

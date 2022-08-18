@@ -1,5 +1,6 @@
 
 .information{
+    cursor: pointer;
     font-size:14px;
     display:flex;
     width: 50%;
@@ -48,5 +49,6 @@
         width: 128px;
         color: black;
         border-radius: 20px;
+        border: none;
     }
 }

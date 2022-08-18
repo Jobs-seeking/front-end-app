@@ -1,46 +1,59 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { COMPANIES_API } from "../../../utils/constants";
 import Avatar from ".//../../core-ui/Joblisting/Avatar";
-import Tab from ".//../../core-ui/Joblisting/Tab";  
+import Tab from ".//../../core-ui/Joblisting/Tab";
 
 const Offeringjob = ({ data, onClickJob }) => {
+  const [companies, setCompanies] = useState([]);
+  useEffect(() => {
+    axios.get(COMPANIES_API).then((res) => {
+      setCompanies(res.data);
+    });
+  }, []);
+  // console.log(data);
   return (
     <div>
       {data.map((job, index) => {
         return (
-          <div className="information" key={index}>
+          <div
+            className="information"
+            key={index}
+            onClick={() => {
+              onClickJob(job.id);
+            }}
+          >
             <div className="detailImage">
-              <Avatar imagejob={job.image}></Avatar>
+              <Avatar
+                imagejob={companies
+                  .filter((cpn) => cpn.id === job.companyId)
+                  .map((filted) => {
+                    return filted.image;
+                  })}
+              ></Avatar>
             </div>
             <div className="detailImage">
-              <p
-                className="name-title"
-                onClick={() => {
-                  onClickJob(index);
-                }}
-              >
-                {job.namejob}
-              </p>
-              <Tab location={job.location} salaryjob={job.salaryjob}></Tab>
-              <p className="time-posting">{job.timepostjob}</p>
+              <p className="name-title">{job.title}</p>
+              <Tab location={job.address} salaryjob={job.salary}></Tab>
+              <p className="time-posting">{job.deadline}</p>
               <div className="content-recruiment">
                 {job.briefjob}
-                <div
+                <button
                   type="button"
                   className="btn-des btn-info "
                   data-toggle="modal"
                   data-target="#myModal"
                   onClick={() => {
-                    onClickJob(index);
+                    onClickJob(job.id);
                   }}
                 >
                   See description
-                </div>
+                </button>
               </div>
             </div>
           </div>
         );
       })}
-      
     </div>
   );
 };

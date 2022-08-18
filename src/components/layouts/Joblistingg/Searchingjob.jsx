@@ -1,9 +1,20 @@
+import { useEffect, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 
-function Searchingjob({data}){
+const Searchingjob = (props) => {
+  const [searchFields, setSearchFields] = useState({});
+    
+  const onChangeHandle =(e) => {
+    setSearchFields((prevState) => ({
+        ...prevState,
+        [e.target.name]: e.target.value,
+      }));
+  };
 
+  useEffect(() => {
+    props.searchHandle(searchFields);
+  }, [searchFields])
 
-  
   return (
     <div className="customize-part">
       <div className="">
@@ -20,50 +31,44 @@ function Searchingjob({data}){
           </div>
         </div>
         <div className="chosing">
-          <div class="select">
-            <select name="job">
-              <option selected disabled>
-                Location
-              </option>
-              <option value="1">Hà Nội</option>
-              <option value="2">Đà Nẵng</option>
-              <option value="3">Hồ Chí Minh</option>
+          <div className="select">
+            <input
+              name="technical"
+              className="search__technical"
+              type="text"
+              placeholder="Technical..."
+              onChange={onChangeHandle}
+            />
+          </div>
+          <div className="select">
+            <select name="location" defaultValue="" onChange={onChangeHandle}>
+              <option value="">Location</option>
+              <option value="Hà Nội">Hà Nội</option>
+              <option value="Đà Nẵng">Đà Nẵng</option>
+              <option value="Hồ Chí Minh">Hồ Chí Minh</option>
             </select>
           </div>
-          <div class="select">
-            <select name="job">
-              <option selected disabled>
-                Distance
-              </option>
-              <option value="1">Far</option>
-              <option value="2">Near</option>
-              <option value="3">Over 50 km</option>
+
+          <div className="select">
+            <select name="salary" defaultValue="" onChange={onChangeHandle}>
+              <option value="">Salary</option>
+              <option value="10 milion">10 milion</option>
+              <option value="20 milion">20 milion</option>
+              <option value="Over 25 milion">Over 25 milion</option>
             </select>
           </div>
-          <div class="select">
-            <select name="job">
-              <option selected disabled>
-                Salary
-              </option>
-              <option value="1">10 milion</option>
-              <option value="2">20 milion</option>
-              <option value="3">Over 25 milion</option>
-            </select>
-          </div>
-          <div class="select">
-            <select name="job">
-              <option selected disabled>
-                Jobs kind
-              </option>
-              <option value="1">Full-time</option>
-              <option value="2">Part-time</option>
-              <option value="3">All</option>
+          <div className="select">
+            <select name="type" defaultValue="" onChange={onChangeHandle}>
+              <option value="">Jobs kind</option>
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="All">All</option>
             </select>
           </div>
         </div>
-{/* onChange={e=>{filter(e)}} */}
+        {/* onChange={e=>{filter(e)}} */}
 
-{/* Đây là input tìm kiếm job */}
+        {/* Đây là input tìm kiếm job */}
 
         {/* <div className="input-searching">
           <input type="text"  placeholder="Enter your jobs..." />
@@ -75,14 +80,11 @@ function Searchingjob({data}){
       </div>
     </div>
   );
-}
-
+};
 
 export default Searchingjob;
 
-
 // Đây là ví dụ consolog ra API laravel
-
 
 // import React, { Component } from 'react'
 // import axios from 'axios';
