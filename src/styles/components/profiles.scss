@@ -22,12 +22,11 @@ html {
 
   &-title {
     color: white;
-    display: grid;
-    grid-template-columns: 30% 30%;
     justify-content: center;
-
     z-index: 1;
-    padding-top: 12rem;
+    padding-top: 10rem;
+    max-width: 70%;
+    margin: 0 auto;
   }
 
   &-infor {
@@ -48,6 +47,7 @@ html {
       line-height: 25px;
       h4 {
         font-weight: bold;
+        font-size: var(  --fz-destop-2);
       }
     }
   }
@@ -309,6 +309,7 @@ html {
       }
       & .company__about--detail{
         margin-top: 10px;
+        min-height: 100px;
         height: auto;
         border-radius: 12px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -334,21 +335,28 @@ html {
 .job__item{
   border-radius: 12px;
   margin-top: 20px ;
+  padding: 10px 20px;
   width: 100%;
   height: 100px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   & .jobItem__left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
     & .jobItem__left--img{
       width: 50px;
       height: 50px;
       border-radius: 99px;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
       & img{
         width: 100%;
         height: 100%;
+        object-fit: cover;
       border-radius: 99px;
 
       }

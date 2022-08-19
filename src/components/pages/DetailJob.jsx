@@ -29,7 +29,7 @@ const JobDetail = () => {
                     <h3>{detailJob.jobDetail.title}</h3>
                 </div>
                 <div className="jobDetail__btn">
-                    <Button>Apply</Button>
+                    <Button >Apply</Button>
                 </div>
             </div>
             <div className="jobDetail__page--center">

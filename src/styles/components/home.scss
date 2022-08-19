@@ -76,3 +76,36 @@
         }
     }
 }
+//  animation
+
+.title-word {
+    animation: color-animation 10s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #FF8643;
+    --color-2: #000000;
+    --color-3: #22BBEA;
+  }
+  
+  .title-word-2 {
+    --color-1: #22BBEA;
+    --color-2: #FF8643;
+    --color-3: #000000;
+  }
+  
+  .title-word-3 {
+    --color-1: #000000;
+    --color-2: #22BBEA;
+    --color-3: #FF8643;
+  }
+
+  @keyframes color-animation {
+    0%    {fill: var(--color-1)}
+    32%   {fill: var(--color-1)}
+    33%   {fill: var(--color-2)}
+    65%   {fill: var(--color-2)}
+    66%   {fill: var(--color-3)}
+    99%   {fill: var(--color-3)}
+    100%  {fill: var(--color-1)}
+  }
