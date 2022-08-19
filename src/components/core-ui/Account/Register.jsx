@@ -106,11 +106,11 @@ export default function Register() {
                   }} value = {dataForm.role}>
                 <div className='check__box--item'>
                 <input type="radio" name="role" value="company"/>
-                <label for="Company">Company</label>
+                <label htmlFor="Company">Company</label>
                 </div>
                 <div className='check__box--item'>
                 <input type="radio" name="role" value="student"/>
-                <label for="Student">Student</label>
+                <label htmlFor="Student">Student</label>
                 </div>
               </div>
               <Button buttonStyle="btn--register__submit" onClick={onRegister}>SIGN UP</Button>

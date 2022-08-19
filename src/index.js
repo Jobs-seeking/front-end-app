@@ -14,15 +14,17 @@ import StudentProfile from './components/pages/StudentProfile';
 import EditStudentAccount from './components/pages/EditStudentAccount';
 import Profile from './components/pages/Profile';
 import Recruiter from './components/pages/Recruiter';
+import JobDetail from './components/pages/DetailJob';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter> 
        <Routes>
         <Route path='/' element = {<_BasePage></_BasePage>}>
+        <Route path="/detail/:id" element={<JobDetail />}></Route>
             <Route path='/' element={<Home/>}></Route>
             <Route path='/job' element={<Joblistingjobs/>}/>
-            <Route path='/apply' element={<FormApply/>}/>
+            <Route path='/apply/:id' element={<FormApply/>}/>
             <Route path='/SISU' element={<Account/>}>
                 <Route path='' element={<Login/>}></Route>
                 <Route path='register' element={<Register/>}></Route>

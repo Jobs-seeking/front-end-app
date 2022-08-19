@@ -9,6 +9,7 @@ import FormApply from '../core-ui/FormApply'
 import EditStudentAccount from '../pages/EditStudentAccount'
 import Account from '../pages/Account'
 import {Outlet} from 'react-router-dom';
+import JobDetail from './DetailJob';
 export default function _BasePage() {
   return(
       <div className='wrapper'>

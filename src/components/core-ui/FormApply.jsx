@@ -3,11 +3,13 @@ import Button from './Button';
 
 import { useState } from 'react';
 import Input from './Input';
+import { useParams } from 'react-router-dom';
 
 // import Input from './Input';
 
 const FormApply = () => {
 
+    let { id } = useParams();
     const [info, setInfo] = useState([]);
     const onChangeHandle = (key, value) => {
         setInfo({ ...info, [key]: value })

@@ -10,11 +10,17 @@
     max-width: 70%;
     margin: 0 auto;
     margin-top: 100px;
-    display: flex;
     padding-bottom: 30px;
+  }
+  &__filter__list{
+    display: flex;
     justify-content: space-between;
     gap: 15px;
     flex-direction: row;
+  }
+  &__filter__reset{
+    text-align: right;
+    margin-top: 10px;
   }
   &__item{
     height: 30px;
@@ -74,7 +80,7 @@
 
 
 @media only screen and (max-width: 798px){
-  .searching__container{
+  .searching__filter__list{
     flex-direction: column;
   }
 }

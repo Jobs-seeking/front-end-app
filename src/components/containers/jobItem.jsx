@@ -3,6 +3,7 @@ import AVT from "../../assets/images/avtb.png";
 import Button from "../core-ui/Button";
 import { MdLocationOn } from "react-icons/md";
 import { RiMoneyPoundCircleLine } from "react-icons/ri";
+import {Link} from "react-router-dom";
 const JobItem = ({ dataItem }) => {
     const viewJob = (id) =>{
         console.log("clmm view cc " + id);
@@ -28,11 +29,13 @@ const JobItem = ({ dataItem }) => {
           <p>{dataItem.description}</p>
         </div>
         <div className="language__job JobItem__mid--item">
-          <p>{dataItem.technical}</p>
+          {dataItem.technical.split(", ").map((tech) => {
+                  return <p>{tech}</p>;
+                })}
         </div>
       </div>
       <div className="JobItem__right">
-        <Button onClick={()=>viewJob(dataItem.id)}>View Job</Button>
+      <Link to={`/detail/${dataItem.id}`}><Button >View Job</Button></Link>
       </div>
     </div>
   );
