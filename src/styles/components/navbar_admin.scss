@@ -1,0 +1,28 @@
+.nav {
+  width: 250px;
+  height: 100vw;
+  background-color: var(--color-1);
+  opacity: 0.9;
+  &_list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    position: fixed;
+  }
+  &_item {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  &_link {
+    color: var(--color-5);
+    text-decoration: none;
+    font-size: var(--fz-destop-2);
+    font-weight: var(--fw-3);
+  &:hover {
+    color: var(--color-3);
+  }
+  }
+}
