@@ -1,13 +1,15 @@
 
-import Button from "../core-ui/Button";
-import Input from "../core-ui/Input";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { USERS_API_URL } from "../../../utils/constants";
+import SessionHelper from "../../../utils/SessionHelper";
+import Button from "../../core-ui/Button";
+import Input from "../../core-ui/Input";
 
-export default function EditStudentAccount() {
+
+export default function EditCompanyAccount() {
   const [userEdit, setUserEdit] = useState({
     name: "",
-    gender: "",
     email: "",
     level: "",
     phone: "",
@@ -31,14 +33,15 @@ export default function EditStudentAccount() {
   };
   const getData = () => {
     axios
-      .get("http://127.0.0.1:8000/api/users/1")
+      .get(USERS_API_URL + (SessionHelper.getUserInfo().id))
 
       .then((res) => {
-        setUserEdit(res.data.data);
+        setUserEdit(res.data);
       });
   };
   useEffect(() => {
     getData();
+    console.log()
   }, []);
 
   const onChangeImage=(e)=>{
@@ -47,22 +50,24 @@ export default function EditStudentAccount() {
       const src = URL.createObjectURL(e.target.files[0]);
       image.src = src;
   }
-    
   };
   return (
     <div className="edit-account">
       <div className="form-edit">
         <div className="form-edit-account">
-          <div class="edit-avatar">
+          <div className="edit-avatar">
+            <div className="edit-avatar-img">
             <img id="img"
-              class="round"
-              src={userEdit.image?"http://localhost:8000/image/"+setUserEdit.image:'#'}
+              className="round"
+              src={userEdit.image}
+              // src={userEdit.image?"http://localhost:8000/image/"+setUserEdit.image:'#'}
               alt="user"
             />
-            <div className="user-name" value={userEdit.name}></div>
+            </div>
+            <div className="user-name" ><h3>{userEdit.name}</h3></div>
             <div className="upload-picture">
               <Button buttonStyle="btn-item">
-                Upload a picture
+                Upload Your Logo
               </Button>
               <input type="file" buttonStyle="btn-item" id="myfile" name="myfile"  onChange={onChangeImage} /> 
             </div>
@@ -74,27 +79,13 @@ export default function EditStudentAccount() {
                 <div className="edit-item">
                   <div className="edit item-left ">
                     <div className="field_item fields">
-                      <label>Username</label>
+                      <label>COMPANY NAME</label>
                       <Input
                         name="name"
                         inputStyle="field_item"
                         value={userEdit.name}
                         onChange={(e) => handleEdit(e)}
                       ></Input>
-                    </div>
-                    <div className="field_select fields">
-                      <label>Gender</label>
-                      <select
-                        id="select"
-                        name="gender"
-                        value={"male"}
-                        onChange={(e) => handleEdit(e)}
-                      >
-                        <option value="">Select an option&hellip;</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Orther</option>
-                      </select>
                     </div>
                     <div className="field_item fields">
                       <label>Email</label>
@@ -106,12 +97,21 @@ export default function EditStudentAccount() {
                         onChange={(e) => handleEdit(e)}
                       ></Input>
                     </div>
+                    <div className="fields">
+                      <label>Address</label>
+                      <textarea
+                        name="address"
+                        className="field_address"
+                        value={userEdit.address}
+                        onChange={(e) => handleEdit(e)}
+                      />
+                    </div>
                   </div>
                   <div className="edit item-right">
                     <div className="field_item fields">
                       <label>Level</label>
                       <select
-                        id="select"
+                        id="selected"
                         name="level"
                         value={"male"}
                         onChange={(e) => handleEdit(e)}
@@ -131,18 +131,18 @@ export default function EditStudentAccount() {
                       ></Input>
                     </div>
                     <div className="fields">
-                      <label> Address</label>
+                      <label> About Company</label>
                       <textarea
                         name="address"
                         className="field_address"
-                        value={userEdit.address}
+                        value={userEdit.description}
                         onChange={(e) => handleEdit(e)}
                       />
                     </div>
                   </div>
                 </div>
                 <div className="buttont-save">
-                  <Button> SAVE</Button>
+                  <Button buttonStyle="btn--register__submit"> SAVE</Button>
                 </div>
               </form>
             </div>

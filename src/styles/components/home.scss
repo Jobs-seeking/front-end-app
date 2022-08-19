@@ -1,6 +1,7 @@
 .content{
-    width: 88vw;
-    margin: 20vh auto;
+    max-width: 1200px;
+    width: calc((1200px *100%)/1440px) ;
+    margin: var(--content-magintop) auto;
     display: flex;
     flex-direction: column;
     gap: var(--gap);
@@ -10,6 +11,7 @@
         align-items: center;
         justify-content: center;
         margin: 0 auto;
+        max-width: 1200px;
         width: 100%;
         color: var(--color-3);
         font-size: var(--fz-destop-5);
@@ -29,6 +31,40 @@
         display: none;
     }
 }
+.nav-search{
+    max-width: 300px;
+    width: 300px;
+    line-height: 0;
+    & .nav-search__form{
+        height: 35px;
+        background-color: #ffefe7;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        & input{
+            width: 80%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 15px;
+        }
+        & .nav-search__icon{
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color:var(--color-4);
+            font-size: 17px;
+            color: var(--color-5);
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+    }
+}
 
 @media only screen and (max-width: 1060px) {
     .content {
@@ -40,3 +76,36 @@
         }
     }
 }
+//  animation
+
+.title-word {
+    animation: color-animation 10s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #FF8643;
+    --color-2: #000000;
+    --color-3: #22BBEA;
+  }
+  
+  .title-word-2 {
+    --color-1: #22BBEA;
+    --color-2: #FF8643;
+    --color-3: #000000;
+  }
+  
+  .title-word-3 {
+    --color-1: #000000;
+    --color-2: #22BBEA;
+    --color-3: #FF8643;
+  }
+
+  @keyframes color-animation {
+    0%    {fill: var(--color-1)}
+    32%   {fill: var(--color-1)}
+    33%   {fill: var(--color-2)}
+    65%   {fill: var(--color-2)}
+    66%   {fill: var(--color-3)}
+    99%   {fill: var(--color-3)}
+    100%  {fill: var(--color-1)}
+  }

@@ -1,22 +1,15 @@
-.container-components{
-    display: grid;
-    margin: 1% 0%;
-    z-index: -99;
-}
 .overll-component{
-    margin-top: 90px;
-    // background-color:red;
+    width: 100%;
+    min-height: 100vh;
 }
-.lef-component{
-    margin-left: 52%;
-    background-attachment: fixed;
-    position: fixed;
+.job-list__container{
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
-.offering-part{
-font-size: 30px;
-    margin: 0 6%;
-}
-
 
 @media only screen and (max-width : 850px) {
     .offering-part{

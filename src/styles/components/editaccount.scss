@@ -1,8 +1,8 @@
 .edit-account,
-.select {
+.selected {
   font-size: var(--fz-destop-1);
   font-family: "Poppins", sans-serif;
-  color: var(--color-3);
+
 }
 .form-edit {
   width: 70%;
@@ -10,27 +10,43 @@
 }
 .form-edit .main_title {
   text-align: center;
+  font-weight: var(--fw-3);
   font-size: var(--fz-destop-4);
   margin-bottom: 10px;
-  color: var(--color-3);
+  color: var(--color-1);
 }
 .form-edit-account .edit-avatar {
-  margin: 60px 76px;
-}
-.round {
   width: 100%;
-  border-radius: 50%;
-  height: 60%;
 }
+
 .edit-avatar {
-  border-radius: 10px;
-  box-shadow: rgb(0 0 0 / 20%) 0px 18px 50px -10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  gap: 20px;
   padding: 30px;
+  border-radius: 12px;
+  &-img{
+    width: 200px;
+    height: 200px;
+    & img{
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      object-fit: cover;
+
+    }
+  }
 }
 .edit-avatar .user-name {
-  margin: 25px;
+  font-size: var(--fz-destop-2);
+  font-weight: var(--fw-4);
+  color: var(--color-4);
+  margin: 10px 0;
 }
 .btn-item {
   width: 100%;
@@ -46,10 +62,10 @@
   width: 100%;
 }
 .upload-picture {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  margin-left: 5px;
+  // position: relative;
+  // overflow: hidden;
+  // display: inline-block;
+  // margin-left: 5px;
 }
 .upload-picture input[type="file"] {
   position: absolute;
@@ -73,36 +89,34 @@
   margin: 17px 40px;
 }
 .fields input,
-#select,
-textarea {
-  position: relative;
-  padding: 12px;
+#selected,
+.field_address {
+  margin: auto;
   margin-top: 10px;
+  transition: 0.3s;
   width: 100%;
-  border: none;
-  border-bottom: var(--color-3) solid 1px;
-  font-family: "Poppins", sans-serif;
+  height: 50px;
   outline: none;
+  padding-left: 20px;
   color: var(--color-3);
+  font-size: var(--fz-destop-1);
+  border-radius: 12px;
+  border: 1px solid rgb(211, 211, 211) ;
+  &::placeholder{
+    color: var(--color-3);
+    font-weight: var(--fw-2);
+  }
 }
-
-#select:hover,
-textarea:hover,
-.fields input:hover {
-  // box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
-  transition: box-shadow 0.3s;
-}
-textarea {
+.field_address {
   height: 80px;
+  padding: 20px !important;
 }
 .buttont-save {
-  padding: 10px 20px;
-  width: 120px;
-  margin-left: 300px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
-.btn-upload {
-  width: 100%;
-}
+
 @media only screen and (max-width: 1062px) {
   // .edit-account {
   //   z-index: 1;

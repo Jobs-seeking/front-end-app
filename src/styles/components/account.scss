@@ -1,5 +1,5 @@
 :root {
-  --w-lg-rgt: 50%;
+  --w-lg-rgt: 50vw;
   --pd-form: 13%;
   --w-input-field: 85%;
   --mgf-submit-btn: 12%;
@@ -10,7 +10,7 @@ html{
   font-family: 'Poppins', sans-serif;
 }
 .Account__page{
-  min-height: calc(100vh - 80px - 100px);
+  min-height: calc(100vh - 80px - 100px)
 }
 .account__intro {
   display: flex;
@@ -21,8 +21,6 @@ html{
   border-bottom: 1px solid var(--color-4);
   height: 200px;
   align-items: center;
-  margin-top: 2rem;
-
   & span:nth-child(2n+1){
     color: var(--color-3);
   }
@@ -64,10 +62,11 @@ html{
   //margin-top: 10px;
   &__login, &__register{
     width: var(--w-lg-rgt);
-    padding: 40px 0;
+    padding: 20px 0;
     margin: auto;
     &--text span{
       display: flex;
+      font-weight: var(--fw-4);
       justify-content: center;
       font-size: var(--fz-destop-4);
     }
@@ -108,87 +107,107 @@ html{
 }
 
 .form__login, .form__signup{
+  margin-top: 85px;
   //padding-left: var(--pd-form);
   & form {
-//max-width: 500px;
+    //max-width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     gap: 20px;
   }
   & .forgot__password {
     font-size: var(--fz-1);
     display: flex;
     justify-content: center;
-    padding-right: 16%;
     margin-top: 1rem;
+    & a {
+      text-decoration: none;
 
+    }
   }
 }
 
 
 .input-field{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
   width: var(--w-input-field);
-
-  & input{
-    width: 100%;
-    //height: 4.5rem;
-    padding: 20px 0 15px 0;
-    border: none;
-    border-bottom: 1px solid var(--color-3);
+  & label{
+    width: 80%;
     margin: auto;
+    font-size: var(--fz-destop-1);
+  }
+  & input, & select{
+    margin: auto;
+    margin-top: 10px;
+    transition: 0.3s;
+    width: 80%;
+    height: 50px;
     outline: none;
-    font-size: var(--fz-1);
+    padding-left: 20px;
+    color: var(--color-3);
+    font-size: var(--fz-destop-1);
+    border-radius: 12px;
+    border: 1px solid rgb(211, 211, 211) ;
     &::placeholder{
-      font-size: var(--fz-destop-2);
       color: var(--color-3);
-      font-weight: var(--fw-1);
+      font-weight: var(--fw-2);
     }
+  }
+  & input:hover, & select:hover, textarea:hover{
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
  }
 
-.form__signup{
-  & input{
-    border-bottom: 1px solid var(--color-4);
-    &::placeholder{
-      color: var(--color-4);
-    }
-  }
-}
+
 
 .btn--login__submit, .btn--register__submit{
-  //margin-top: 1.5rem;
-  width: 60%;
-  border: none;
-  height: 4.5rem;
+  width: 150px;
+  margin-top: 20px;
   transition: 0.5s;
-  margin-left: var(--mgf-submit-btn);
   font-weight: var(--fw-3);
   font-size: var(--fz-destop-2);
   color: white;
   cursor: pointer;
-}
-.form__bottom{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.btn--register__submit{
-  background-color: var(--color-3);
-  &:hover{
-    background-color: var(--color-4);
-  }
-}
-
-.btn--login__submit{
+  box-shadow: var(--color-4) 0px 7px 29px 0px;
   background-color: var(--color-4);
-  &:hover{
-    background-color: var(--color-3);
+}
+.btn--login__submit:hover, .btn--register__submit:hover{
+  box-shadow: var(--color-3) 0px 7px 29px 0px;
+}
+.active1{
+  border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.link{
+  text-decoration: none;
+}
+.tauCoTaiKhoanRoi{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-weight: var(--fw-3);
+  text-decoration: none;
+  color: var(--color-1);
+  
+}
+.check__box{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 50px;
+  &--item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }
+
 @media only screen and (max-width: 500px) {
   :root{
     --w-lg-rgt: 100%;

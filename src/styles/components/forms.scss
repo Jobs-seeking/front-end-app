@@ -1,6 +1,4 @@
-// * {
-//     box-sizing: border-box;
-// }
+
 :root {
     --w-lg-rgt: 50%;
     --pd-form: 13%;
@@ -8,127 +6,114 @@
     --mgf-submit-btn: 12%;
 }
 
-// .core-ui {
-//     &__formApply {
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         height: 100vh;
-//         width: 100%;
-//         margin: 12px 0;
-//         font-size: var(--fz-destop-2);
-//         .form {
-//             color: var(--color-4);
-//             width: 40%;
-//             .row:after {
-//                 content: "";
-//                 display: table;
-//                 clear: both;
-//             }
-//             .col-left {
-//                 float: left;
-//             }
-//             .col-right {
-//                 float: right;
-//             }
-//             .col-left,
-//             .col-right {
-//                 width: 45%;
-//                 // margin-right: 15px;
-//             }
-//             .col {
-//                 width: 100%;
-//             }
-//             input,
-//             select {
-//                 padding: 15px;
-//                 margin: 20px 0;
-//                 width: 100%;
-//                 text-transform: capitalize;
-//                 font-weight: bolder;
-//                 border: 1px solid white;
-//                 outline: none;
-//                 border-radius: 10px;
-//                 box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-//                 font-size: var(--fz-destop-1);
-//             }
-//             input::placeholder {
-//                 color: var(--color-4);
-//             }
-//             input:focus {
-//                 box-shadow: 5px 10px 10px 5px rgb(223, 231, 234);
-//             }
-//         }
-//     }
-// }
-
 .formApply {
-    // width: 50%;
-    height: 100vh;
-    margin: 80px auto;
-    text-align: center;
-    &-heading {
-        font-size: var(--fz-destop-4);
-        color: var(--color-4);
+    &__container{
+        margin: 80px auto;
+        display: flex;
+        flex-direction: row;
+        max-width: 90%;
+        min-height: 90vh;
     }
-    &__field {
+    &__input{
+        width: 50%;
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        padding-left: 14%;
+        justify-content: left;
+        align-items: flex-start;
+        &--text{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            padding-bottom: 5px;
+            gap: 10px;
+            & input{
+                outline: none;
+                padding-left: 20px;
+                color: var(--color-3);
+                font-size: var(--fz-destop-1);
+                border-radius: 12px;
+                border: 1px solid rgb(211, 211, 211);
+                height: 50px;
+            }
+            & input:hover{
+                border: none;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+        }
+        
+
+  &--file::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  
+  &--file::before {
+    content: 'Select your CV';
+    color: var(--color-5);
+    display: inline-block;
+    background: var(--color-3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 10px 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  &--file:active {
+    outline: 0;
+  }
+
+
+  &--file__cover-letter::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  
+  &--file__cover-letter::before {
+    content: 'Select your cover letter';
+    color: var(--color-5);
+    display: inline-block;
+    background: var(--color-3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 10px 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  &--file__cover-letter:active {
+    outline: 0;
+  }
+  &--submit {
+    background-color: var(--color-4);
+    color: var(--color-5);
+  }
+  &--control {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 10px;
+  }
     }
-    .select {
-        width: 100%;
-        padding: 20px 0 15px 0;
-        margin: auto;
-        border: none;
-        border-bottom: 1px solid var(--color-3);
-        outline: none;
-        border-radius: 0;
-        font-size: var(--fz-destop-2);
-        color: var(--color-3);
-        font-weight: var(--fw-1);
+    &__preview{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid var(--color-3);
     }
 }
 
-.input-field {
-    width: var(--w-input-field);
-    & input {
-        width: 100%;
-        //height: 4.5rem;
-        padding: 20px 0 15px 0;
-        border: none;
-        border-bottom: 1px solid var(--color-3);
-        margin: auto;
-        outline: none;
-        font-size: var(--fz-1);
-        &::placeholder {
-            font-size: var(--fz-destop-2);
-            color: var(--color-3);
-            font-weight: var(--fw-1);
-        }
-        // & [type="file"]::-webkit-file-upload-button {
-        //     visibility: hidden;
-        // }
-        // & [type="file"]::before {
-        //     content: "Select some files";
-        //     display: inline-block;
-        //     background: linear-gradient(top, #f9f9f9, #e3e3e3);
-        //     border: 1px solid #999;
-        //     border-radius: 3px;
-        //     padding: 5px 8px;
-        //     outline: none;
-        //     white-space: nowrap;
-        //     -webkit-user-select: none;
-        //     cursor: pointer;
-        //     text-shadow: 1px 1px #fff;
-        //     font-weight: 700;
-        //     font-size: 10pt;
-        // }
-        & [type = "file"] {
-            outline: none;
-        }
+@media only screen and (max-width: 1020px){
+    .formApply__container{
+      flex-direction: column;
     }
-}
-@media screen and (max-width: 1060px) {
-}
+    .formApply__input{
+        width: 100%;
+    }
+    .formApply__preview{
+        width: 100%;
+    }
+  }
