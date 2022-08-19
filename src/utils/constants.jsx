@@ -7,5 +7,6 @@ export const COMPANIES_API = BASE_API_URL + "companies/";
 export const STUDENT_API = BASE_API_URL + "students/" ;
 export const SEARCH_JOB_API = BASE_API_URL + "search-job" ;
 export const APPLICANT_API = BASE_API_URL + "applicants" ;
+export const SEND_MAIL_EMPLOYEER = BASE_API_URL + "send-mail" ;
 
 

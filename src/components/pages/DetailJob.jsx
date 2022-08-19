@@ -28,8 +28,6 @@ const JobDetail = () => {
     getData();
   }, []);
 
-  const isDisabled = userInfo.role === "company" ? "pointerEvents: 'none'" : null;
-  console.log(isDisabled);
   return (
     <div className="jobDetail__page">
       {detailJob ? (
@@ -47,8 +45,8 @@ const JobDetail = () => {
           <div className="jobDetail__page--center">
             <div className="jobDetail__detail">
               <div className="jobDetail__technical">
-                {detailJob.jobDetail.technical.split(", ").map((tech) => {
-                  return <p>{tech}</p>;
+                {detailJob.jobDetail.technical.split(", ").map((tech, index) => {
+                  return <p key={index}>{tech}</p>;
                 })}
               </div>
               <div className="jobDetail__address">

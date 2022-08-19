@@ -4,8 +4,16 @@ import { useEffect, useState } from "react";
 import Input from "./Input";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import { APPLICANT_API } from "../../utils/constants";
+import {
+  APPLICANT_API,
+  COMPANIES_API,
+  JOBS_API,
+  SEND_MAIL_EMPLOYEER,
+  USERS_API_URL,
+} from "../../utils/constants";
 import SessionHelper from "../../utils/SessionHelper";
+import {ToastContainer, toast, Zoom} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 // import Input from './Input';
 
@@ -13,11 +21,16 @@ const FormApply = () => {
   let { id } = useParams();
 
   const userInfo = SessionHelper.getUserInfo();
+  const [company, setCompany] = useState({});
+
   if (userInfo.role === "company") {
     window.location = "/";
   }
   const [cvPreview, setCvPreview] = useState(null);
-  const [info, setInfo] = useState({});
+  const [info, setInfo] = useState({
+    name: userInfo.name ?? "",
+    phone: userInfo.phone ?? "",
+  });
   const [applicant, setApplicant] = useState({});
 
   const onChangeInfo = (e) => {
@@ -26,8 +39,7 @@ const FormApply = () => {
       [e.target.name]: e.target.value,
     }));
   };
-  console.log(info);
-  console.log(applicant);
+
   const handleSubmitFile = () => {
     if (applicant.cv !== null) {
       let formData = new FormData();
@@ -43,7 +55,30 @@ const FormApply = () => {
           },
         })
         .then((res) => {
-          console.log(`Success` + res.data);
+          
+          // Update user
+          axios
+            .put(USERS_API_URL + `${userInfo.id}`, info)
+            .then((u) => {
+              let request = {
+                params: {
+                  cv: res.data.cv,
+                  cover_letter: res.data.cover_letter ?? "none",
+                  student: u.data.name,
+                  mailTo: company.email,
+                  name: company.name,
+                },
+              };
+              axios.get(SEND_MAIL_EMPLOYEER, request).then(()=>{
+                toast.success("Applied successful! Please wait a minutes");
+                setTimeout(() => {
+                    window.location.reload();
+                }, 4000);
+              })
+            })
+            .catch((err) => {
+              console.log(err);
+            });
         })
         .catch((err) => {
           console.log(err);
@@ -51,6 +86,17 @@ const FormApply = () => {
     }
   };
 
+  useEffect(() => {
+    axios.get(JOBS_API + `${id}`).then((res) => {
+      axios.get(COMPANIES_API).then((cpn)=>{
+        cpn.data.filter((f)=>{
+            if(f.id===res.data.companyId){
+                setCompany(f);
+            }
+        })
+      })
+    });
+  }, []);
   return (
     <div className="formApply__container">
       <div className="formApply__input">
@@ -61,18 +107,7 @@ const FormApply = () => {
             name="name"
             id="name"
             placeholder="Enter your name"
-            value={info.name ?? ""}
-            onChange={onChangeInfo}
-          />
-        </div>
-        <div className="formApply__input--text">
-          <label htmlFor="email">Email</label>
-          <Input
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Enter your email"
-            value={info.email ?? ""}
+            value={info.name}
             onChange={onChangeInfo}
           />
         </div>
@@ -83,7 +118,7 @@ const FormApply = () => {
             name="phone"
             id="phone"
             placeholder="Enter your phone"
-            value={info.phone ?? ""}
+            value={info.phone}
             onChange={onChangeInfo}
           />
         </div>
@@ -153,6 +188,7 @@ const FormApply = () => {
           </>
         )}
       </div>
+      <ToastContainer draggable={false} transition={Zoom} autoClose={3000}/>
     </div>
   );
 };
