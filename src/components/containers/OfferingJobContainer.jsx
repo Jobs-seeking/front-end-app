@@ -1,31 +1,18 @@
-import { useEffect, useState } from 'react';
-import Offeringjob from '../layouts/Joblistingg/Offeringjob';
-import Savingjob from '../layouts/Joblistingg/Savingjob';
-import axios from 'axios';
+import { useEffect, useState } from "react";
+import Offeringjob from "../layouts/Joblistingg/Offeringjob";
+import Savingjob from "../layouts/Joblistingg/Savingjob";
+import axios from "axios";
+import Form from "../core-ui/Joblisting/Formmodel";
+import { JOBS_API } from "../../utils/constants";
+import JobItem from "./jobItem";
 
-function OfferingJobContainer(){
-    const [jobs,setJobs] = useState( {isLoaded: false, data:[]})
-    const [detailJob,setDetailJob]= useState(0);
-    const handleClick = (i)=>{
-        setDetailJob(i);
-    }
-    const getData = () => {
-        axios.get("https://629191d6cd0c91932b64d9c6.mockapi.io/job").then((res) => {
-          setJobs({isLoaded:true,data:res.data});
-        });
-      };
-      useEffect(() => {
-          getData();
-        }, []);
-    return(
-        <div className='container-components'>
-        <div className='offering-part'>
-            {jobs.isLoaded   ? <Offeringjob   onClickJob={handleClick}  data={jobs.data}></Offeringjob> : "loading..."}
-        </div>
-        <div className='lef-component'>
-            {jobs.isLoaded ? <Savingjob  data={jobs.data[detailJob]}></Savingjob> : "loading..."}  
-        </div>
+const OfferingJobContainer = ({data})=> {
+  return (
+    <div className="job-list__container">
+    {data.map((jobs, index)=>{
+        return (<JobItem dataItem={jobs} key={index} />);
+    })}
     </div>
-    )
-}          
+  );
+}
 export default OfferingJobContainer;
