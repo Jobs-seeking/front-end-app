@@ -19,8 +19,12 @@
     flex-direction: row;
   }
   &__filter__reset{
-    text-align: right;
     margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    & .searching__item{
+      width: fit-content;
+    }
   }
   &__item{
     height: 30px;

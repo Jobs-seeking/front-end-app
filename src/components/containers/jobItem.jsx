@@ -2,6 +2,7 @@ import React from "react";
 import AVT from "../../assets/images/avtb.png";
 import Button from "../core-ui/Button";
 import { MdLocationOn } from "react-icons/md";
+
 import { RiMoneyPoundCircleLine } from "react-icons/ri";
 import {Link} from "react-router-dom";
 const JobItem = ({ dataItem }) => {
@@ -17,7 +18,8 @@ const JobItem = ({ dataItem }) => {
       </div>
       <div className="JobItem__mid">
         <div className="name__job JobItem__mid--item">
-          <p title={dataItem.title}>{dataItem.title}</p>
+          <p title={dataItem.title}>{dataItem.title}</p> 
+          <p>{dataItem.job_type}</p> 
         </div>
         <div className="location__job JobItem__mid--item">
           <MdLocationOn className="icon" /> <p>{dataItem.address}</p>
@@ -29,8 +31,8 @@ const JobItem = ({ dataItem }) => {
           <p>{dataItem.description}</p>
         </div>
         <div className="language__job JobItem__mid--item">
-          {dataItem.technical.split(", ").map((tech) => {
-                  return <p>{tech}</p>;
+          {dataItem.technical.split(", ").map((tech, index) => {
+                  return <p key={index}>{tech}</p>;
                 })}
         </div>
       </div>

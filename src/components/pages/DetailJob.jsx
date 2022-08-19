@@ -7,8 +7,10 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { COMPANIES_API, JOBS_API } from "../../utils/constants";
+import SessionHelper from "../../utils/SessionHelper";
 const JobDetail = () => {
   let { id } = useParams();
+  const userInfo = SessionHelper.getUserInfo();
   const [detailJob, setDetailJob] = useState(null);
   const [companies, setCompanies] = useState([]);
   const getData = () => {
@@ -25,6 +27,9 @@ const JobDetail = () => {
   useEffect(() => {
     getData();
   }, []);
+
+  const isDisabled = userInfo.role === "company" ? "pointerEvents: 'none'" : null;
+  console.log(isDisabled);
   return (
     <div className="jobDetail__page">
       {detailJob ? (
@@ -34,7 +39,9 @@ const JobDetail = () => {
               <h3>{detailJob.jobDetail.title}</h3>
             </div>
             <div className="jobDetail__btn">
-              <Link to={`/apply/${detailJob.id}`}><Button>Apply</Button></Link>
+              <Link to={`/apply/${detailJob.id}`}>
+                {userInfo.role !== "company" ? <Button>Apply</Button> : null}
+              </Link>
             </div>
           </div>
           <div className="jobDetail__page--center">
@@ -66,18 +73,22 @@ const JobDetail = () => {
             <div className="jobDetail__logo">
               <div className="jobDetail__logo__desc">
                 <h2 className="jobDetail__logo__desc--top">
-                {companies
-                  .filter((cpn) => cpn.id === detailJob.companyId)
-                  .map((filted) => {
-                    return filted.name;
-                  })}
+                  {companies
+                    .filter((cpn) => cpn.id === detailJob.companyId)
+                    .map((filted) => {
+                      return filted.name;
+                    })}
                 </h2>
-                <div className="jobDetail__logo__desc--bottom"><span className="jobDetail__logo__desc--bottom__title">Company description:</span> <br />
-                {companies
-                  .filter((cpn) => cpn.id === detailJob.companyId)
-                  .map((filted) => {
-                    return filted.description;
-                  })}
+                <div className="jobDetail__logo__desc--bottom">
+                  <span className="jobDetail__logo__desc--bottom__title">
+                    Company description:
+                  </span>{" "}
+                  <br />
+                  {companies
+                    .filter((cpn) => cpn.id === detailJob.companyId)
+                    .map((filted) => {
+                      return filted.description;
+                    })}
                 </div>
               </div>
               <img

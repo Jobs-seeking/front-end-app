@@ -32,17 +32,14 @@ export default function CompanyProfile({ companyProfile }) {
         <div className="company__about">
           <h3>About</h3>
           <div className="company__about--detail">
-            <p>The NAB Innovation Centre Vietnam is part of National Australia Bank (NAB) Technology & Enterprise Operations division. The mission of the NICV is to connect the talents of Vietnam to NAB
-              and together improve the lives of those in the Vietnam technology community.</p>
+            <p>{companyProfile.description}</p>
           </div>
-
         </div>
         <div className="company-profile-job">
           <div className="company-profile-job-list">
             <span>All Jobs</span>
             <div className="jobs__list">
-              {jobs.map(ele => <JobItem data={ele}/>)}
-
+              {jobs.map(ele => <JobItem key={ele.id}data={ele}/>)}
             </div>
           </div>
         </div>

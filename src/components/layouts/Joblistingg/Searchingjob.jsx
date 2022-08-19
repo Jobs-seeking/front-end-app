@@ -23,6 +23,7 @@ const Searchingjob = (props) => {
       min: null,
       max: null,
       title: "",
+      type: "",
     });
   };
   return (
@@ -39,9 +40,11 @@ const Searchingjob = (props) => {
           />
         </div>
         <div className="searching__item">
-          <select name="location"
-          value={searchFields.location ?? ""}
-           onChange={onChangeHandle}>
+          <select
+            name="location"
+            value={searchFields.location ?? ""}
+            onChange={onChangeHandle}
+          >
             <option value="">Location</option>
             <option value="ha noi">Hà Nội</option>
             <option value="da nang">Đà Nẵng</option>
@@ -60,6 +63,7 @@ const Searchingjob = (props) => {
                 step="100"
                 name="min"
                 id="min"
+                className="min"
                 onClick={onChangeHandle}
                 defaultValue={searchFields.min ?? 100}
               />
@@ -74,6 +78,7 @@ const Searchingjob = (props) => {
                 step="100"
                 name="max"
                 id="max"
+                className="max"
                 onClick={onChangeHandle}
                 defaultValue={searchFields.max ?? 5000}
               />
@@ -93,6 +98,21 @@ const Searchingjob = (props) => {
         </div>
       </div>
       <div className="searching__filter__reset">
+        <div className="searching__item">
+          <select
+            name="type"
+            value={searchFields.type ?? ""}
+            onChange={onChangeHandle}
+          >
+            <option defaultChecked value="">Job type</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Testing">Testing</option>
+            <option value="Front end">Front end</option>
+            <option value="Back end">Back end</option>
+            <option value="Full Stack">Full Stack </option>
+            <option value="BA">BA</option>
+          </select>
+        </div>
         <Button onClick={resetFilter}>Reset filter</Button>
       </div>
     </div>

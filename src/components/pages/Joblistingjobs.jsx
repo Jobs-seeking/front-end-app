@@ -16,7 +16,7 @@ const Joblistingjobs = () => {
   useEffect(() => {
     getData();
   }, []);
-  const log = (e) => {
+  const search = (e) => {
     let request = {
       params: {
         technical: e.technical,
@@ -24,6 +24,7 @@ const Joblistingjobs = () => {
         min: e.min,
         max: e.max,
         title: e.title,
+        type: e.type,
       },
     };
     axios.get(SEARCH_JOB_API, request).then((res) => {
@@ -32,7 +33,7 @@ const Joblistingjobs = () => {
   };
   return (
     <div className="overll-component">
-      <Searchingjob data={jobs} searchHandle={log} />
+      <Searchingjob data={jobs} searchHandle={search} />
       <OfferingJobContainer data={jobs} />
     </div>
   );
