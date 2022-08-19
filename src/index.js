@@ -14,6 +14,11 @@ import EditAccount from './components/pages/EditAccount';
 import Profile from './components/pages/Profile';
 import Recruiter from './components/pages/Recruiter';
 import JobDetail from './components/pages/DetailJob';
+import MainLayOut from "./admin/layouts/mainLayOut";
+import DashBoard from "./admin/pages/dashBoard";
+import JobAdmin from "./admin/pages/jobAdmin";
+import StudentAdmin from "./admin/pages/studentAdmin";
+import CompanyAdmin from "./admin/pages/companyAdmin";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -31,7 +36,12 @@ root.render(
             <Route path="/recruter" element={<Recruiter/>}></Route>
             <Route path='/Profile' element={<Profile/>}></Route>
             <Route path='/edit-account' element={<EditAccount/>}></Route>
-        </Route>
+        </Route><Route path = "/admin" element={<MainLayOut />} >
+         <Route path = "dashboard"  element={<DashBoard />} />
+         <Route path = "job"  element={<JobAdmin />} />
+         <Route path = "student"  element={<StudentAdmin />} />
+         <Route path = "company"  element={<CompanyAdmin />} />
+       </Route>
        </Routes>
     </BrowserRouter>
   </React.StrictMode>

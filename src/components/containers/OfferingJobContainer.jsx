@@ -1,9 +1,4 @@
-import { useEffect, useState } from "react";
-import Offeringjob from "../layouts/Joblistingg/Offeringjob";
-import Savingjob from "../layouts/Joblistingg/Savingjob";
-import axios from "axios";
-import Form from "../core-ui/Joblisting/Formmodel";
-import { JOBS_API } from "../../utils/constants";
+
 import JobItem from "./jobItem";
 
 const OfferingJobContainer = ({data})=> {
