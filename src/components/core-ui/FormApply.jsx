@@ -177,7 +177,7 @@ const FormApply = () => {
           <embed src={cvPreview} width="100%" height="100%" />
         ) : (
           <>
-            <p>Preview CV</p>{" "}
+            <p className="pl">Preview CV</p>{" "}
             <img
               src="https://cdn-icons-png.flaticon.com/512/142/142336.png"
               width="120px"

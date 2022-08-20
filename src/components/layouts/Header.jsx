@@ -10,7 +10,7 @@ import MenuStudent from "../containers/menu/menuStudent";
 import NavAccount from "../containers/NavAccount";
 import AVT from "../../assets/images/avtb.png";
 export default function Header() {
-    
+
     window.onscroll = function () { ScrollNav() };
     const ScrollNav = () => {
         var x = document.getElementById('navigation');
@@ -28,42 +28,42 @@ export default function Header() {
         } else {
             x.className = "nav-list";
         }
-    } 
+    }
     const dataUser = SessionHelper.getUserInfo();
     return (
-        <section className="navigation" id="navigation">
-            <div className="nav-container">
-                <div className="logo">
-                    <a href="#"><LogoPNV /></a>
-                </div>
-                
-                    {SessionHelper.isUserLogedIn() ? <>
-                        <div className="nav-search">
-                        <form className="nav-search__form">
-                            <input className="nav-search__input" placeholder="Search" type="text" />
-                            <div className="nav-search__icon">
-                                <BiSearchAlt />
-                            </div>
-                        </form>
-                        </div>
+      <section className="navigation" id="navigation">
+          <div className="nav-container">
+              <div className="logo">
+                  <a href="#"><LogoPNV /></a>
+              </div>
 
-                    </> : null}
-    
-                <nav>
-                    {SessionHelper.isUserLogedIn() ? (dataUser.role === "company" ? <MenuCompany></MenuCompany> : <MenuStudent />) : <Menu></Menu>}
-                    <div onClick={OpentNavMobile} className="nav-mobile" id="nav-mobile"><span></span><span></span><span></span></div>
-                    <div className="nav-button">
-                        {SessionHelper.isUserLogedIn() ? ( !dataUser.image ? <NavAccount img={AVT}/>
-                        : <NavAccount img={dataUser.image}/>):
-                            (
-                                <>
-                                    <Link to="/SISU"><Button buttonStyle="btn--outline">LOGIN</Button></Link>
-                                    <Link to="/SISU/Register"><Button >SIGN UP</Button></Link>
-                                </>
-                            )}
-                    </div>
-                </nav>
-            </div>
-        </section>
+              {SessionHelper.isUserLogedIn() ? <>
+                  <div className="nav-search">
+                      <form className="nav-search__form">
+                          <input className="nav-search__input" placeholder="Search" type="text" />
+                          <div className="nav-search__icon">
+                              <BiSearchAlt />
+                          </div>
+                      </form>
+                  </div>
+
+              </> : null}
+
+              <nav>
+                  {SessionHelper.isUserLogedIn() ? (dataUser.role === "company" ? <MenuCompany></MenuCompany> : <MenuStudent />) : <Menu></Menu>}
+                  <div onClick={OpentNavMobile} className="nav-mobile" id="nav-mobile"><span></span><span></span><span></span></div>
+                  <div className="nav-button">
+                      {SessionHelper.isUserLogedIn() ? ( !dataUser.image ? <NavAccount img={AVT}/>
+                          : <NavAccount img={dataUser.image}/>):
+                        (
+                          <>
+                              <Link to="/SISU"><Button buttonStyle="btn--outline">LOGIN</Button></Link>
+                              <Link to="/SISU/Register"><Button >SIGN UP</Button></Link>
+                          </>
+                        )}
+                  </div>
+              </nav>
+          </div>
+      </section>
     )
 };
